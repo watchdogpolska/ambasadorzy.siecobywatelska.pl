@@ -3,6 +3,21 @@
 include_once('functions.inc');
 showHead("Kontakt");
 
+if(isset($_POST['submit'])) {
+
+	$topic = htmlspecialchars($_POST['topic']);
+	$name = htmlspecialchars($_POST['name']);
+	$email = htmlspecialchars($_POST['email']);
+	$text = htmlspecialchars($_POST['msg']);
+
+	$headers  = 'MIME-Version: 1.0' . "\r\n";
+	$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+	$headers .= 'To: Biuro Watchdog <'.NET_MAIL.'>' . "\r\n";
+	$headers .= "From: $name <$email>" . "\r\n";
+	
+	mail(NET_MAIL, "Wiadomość z formularza kontaktowego Ambasadorów Jawności", "Temat: <br/>".$topic."<br/><br/>Treść wiadomości: <br/>".$text."<br/><br/>IP: ".htmlspecialchars(get_client_ip_env()), $headers);
+}
+
 ?>
 
 <div id="contactInfoBlock">
@@ -54,14 +69,21 @@ showHead("Kontakt");
     </div>
     <div class="blockContent">
         <h2>Skontaktuj się z nami</h2>
-        
+      <?php if(isset($_POST['submit'])) {
+      	echo "Dziękujemy! Twoja wiadomość została przesłana!";
+      }
+      else {  ?>
         <div id="reqNote">Pola oznaczone gwiazdką (*) są wymagane</div>
-        
+        <br/>
         <form method=POST action=contact.php>
         	<input type=hidden name=csrfprotection value="<?php echo $_SESSION['csrf']; ?>"/>
-        
+        	Twój email *<br/><input class="textinput textInput form-control" maxlength="150" name="email" type="text" required /><br/>
+        	Imię (i nazwisko) *<br/><input class="textinput textInput form-control" maxlength="150" name="name" type="text" required /><br/>
+        	Temat *<br/><input class="textinput textInput form-control" maxlength="150" name="topic" type="text" required /><br/>
+        	Wiadomość *<br/><textarea class="textinput textInput form-control" name=msg required></textarea><br/>
+        	<div class="form-actions"><input type="submit" name="submit" value="Wyślij" class="btn btn-primary btn-lg btn-block" id="submit-id-submit"> </div>
         </form>
-        
+        <?php } ?>
     </div>
 </div>
 
