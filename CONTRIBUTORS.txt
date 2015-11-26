@@ -1,3 +1,6 @@
+Tymon Radzik (author of this PHP port of prezydent.siecobywatelska.pl)
+---
+Cotributors to prezydent.siecobywatelska.pl:
+
 Adam Dobrawy
 Krzysztof Blachnicki
-Tymon Radzik
