@@ -1,7 +1,10 @@
-{% extends 'contact/base.html' %}
-{% load crispy_forms_tags %}
+<?php
 
-{% block content %}
+include_once('functions.inc');
+showHead("Kontakt");
+
+?>
+
 <div id="contactInfoBlock">
     <div id="contactInfo1" class="block grayBlock">
         <div class="blockFoldHold">
@@ -51,10 +54,19 @@
     </div>
     <div class="blockContent">
         <h2>Skontaktuj się z nami</h2>
-        {% block form %}
+        
         <div id="reqNote">Pola oznaczone gwiazdką (*) są wymagane</div>
-        {% crispy form %}
-        {% endblock %}
+        
+        <form method=POST action=contact.php>
+        	<input type=hidden name=csrfprotection value="<?php echo $_SESSION['csrf']; ?>"/>
+        
+        </form>
+        
     </div>
 </div>
-{% endblock %}
+
+<?php
+
+showFooter();
+
+?>
