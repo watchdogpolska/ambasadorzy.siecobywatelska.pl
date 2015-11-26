@@ -1,0 +1,33 @@
+{% extends 'petition/base.html' %}
+{% load crispy_forms_tags webdesign %}
+
+{% block content %}
+<div class="float-left">
+    <div id="movieBlock" class="block blackBlock">
+        <div class="blockFoldHold"><div class="blockFold"></div><div class="blockFoldClear"></div></div>
+        <div class="blockContent">
+            <h2>Posłuchaj eksperta</h2>
+            {{config.ISSUE_SPOT | safe}}
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="descriptionBlock" class="block grayBlock">
+        <div class="blockFoldHold"><div class="blockFold"></div><div class="blockFoldClear"></div></div>
+        <div class="blockContent">
+            <h2>Opis problemu</h2>
+        {{config.ISSUE_DESCRIPTION | safe}}
+        </div>
+    </div>
+</div>
+<div id="signFormBlock" class="block redBlock">
+    <div class="blockFoldHold"><div class="blockFold"></div><div class="blockFoldClear"></div></div>
+    <div class="blockContent">
+        <h2>Podpisz petycję</h2>
+        {{config.LETTER_TEXT | safe}}
+            <h3 class="text-center">Twoje dane</h3>
+            <div id="reqNote">Pola oznaczone gwiazdką (*) są wymagane</div>
+            {% crispy form %}
+        </p>
+    </div>
+</div>
+{% endblock %}

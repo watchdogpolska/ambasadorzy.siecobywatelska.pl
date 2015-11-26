@@ -1,0 +1,331 @@
+body {
+    font:18px ClioRegular;
+    background:#f7f7f7;
+    text-shadow: rgba(0,0,0,0.2) 0 0 1px;
+}
+
+#container {
+    max-width:1400px;
+    margin:0 auto;
+    background:#fff;
+}
+
+#contentContainer {
+    width:1020px;
+    clear:both;
+    padding-top:5px;
+    margin:10px auto;
+}
+
+a {
+    color:#d82727;
+}
+
+a:hover,a:visited,a:active {
+    color:#d82727;
+}
+
+.ffMedium {
+    font-family:ClioMedium-Medium;
+}
+
+.float-left {
+    float:left;
+}
+
+.float-right {
+    float:right;
+}
+
+header img {
+    float:left;
+    margin:20px;
+}
+
+#mainMenu {
+    float:right;
+    height:90px;
+    background:#4d4d4d;
+}
+
+#mainMenu a {
+    display:-webkit-flex;
+    -webkit-align-items:center;
+    display:flex;
+    align-items:center;
+    float:left;
+    color:#fff;
+    text-transform:uppercase;
+    padding:0 45px;
+    height:90px;
+    font:18px ClioMedium-Medium;
+}
+
+#mainMenu a:hover,#mainMenu a.activeMenu {
+    background:#d82727;
+    text-decoration:none;
+}
+
+.block {
+    margin:15px 20px 15px 10px;
+}
+
+.blockContent {
+    padding:10px 25px 40px;
+    text-align:justify;
+    font-size:18px;
+}
+
+.block h2 {
+    font:35px ClioMedium-Medium;
+}
+
+.blockFoldHold {
+    position:relative;
+    top:0;
+    right:0;
+}
+
+.blockFold {
+    position:absolute;
+    top:0;
+    right:0;
+    width:0;
+    height:0;
+    border-style:solid;
+    border-width:40px 0 0 40px;
+    border-color:transparent #fff transparent transparent;
+}
+
+.blockFoldClear {
+    position:absolute;
+    top:0;
+    right:0;
+    border-style:solid;
+    border-width:0 40px 40px 0;
+    border-color:transparent #fff transparent transparent;
+}
+
+.redBlock {
+    background:#d82727;
+    color:#fff;
+}
+
+.blackBlock {
+    background:#4d4d4d;
+    color:#fff;
+}
+
+.grayBlock {
+    background:#F0F0F0;
+    color:#000;
+}
+
+.redBlock a,.blackBlock a {
+    color:#fff;
+    border-bottom:1px dotted #fff;
+}
+
+.redBlock a:hover,.blackBlock a:hover {
+    text-decoration:none;
+    border-bottom:1px solid #fff;
+}
+
+.redBlock .blockFold {
+    border-left-color:#7a1a1a;
+}
+
+.blackBlock .blockFold {
+    border-left-color:gray;
+}
+
+.grayBlock .blockFold {
+    border-left-color:gray;
+}
+
+#movieBlock {
+    float:left;
+    width:450px;
+}
+
+#descriptionBlock {
+    width:450px;
+    float:left;
+}
+
+#signFormBlock {
+    float:right;
+    width:500px;
+}
+
+#mainForm button,#contactForm button {
+    font-weight:700;
+    background:#444;
+    color:#fff;
+    margin:0 auto;
+    width:50%;
+}
+
+#mainForm button:hover,#contactForm button:hover {
+    background:#565656;
+}
+
+form .asteriskField {
+    font-weight:400;
+    padding-left:3px;
+}
+
+#signFormBlock h3 {
+    margin:15px 0;
+}
+
+#reqNote {
+    font-size:12px;
+    line-height:2em;
+}
+
+.fooBar span:after {
+    font-family:FontAwesome;
+    content:"\f1fa";
+}
+
+.fooBar:after {
+    content:"siecobywatelska.pl";
+}
+
+footer {
+    padding:20px 5px;
+    background:#eee;
+}
+
+#footHeaders {
+    font-size:22px;
+    line-height:1.5em;
+}
+
+#footHeaders span {
+    border-bottom:1px dotted #bbb;
+    line-height:2em;
+}
+
+#footBottomHR {
+    border-top:1px solid #bbb;
+    width:40%;
+    height:10px;
+    margin:0 auto;
+}
+
+#footSocialMedia a {
+    font-size:35px;
+    padding:13px;
+}
+
+#footBottom {
+    font-size:15px;
+    padding:30px 15px 0;
+}
+
+#footBottomLinks {
+    float:left;
+    padding-left:15px;
+}
+
+#footBottomLinks li:before {
+    content:"\f0c8";
+    margin:0 5px 0 -15px;
+    color:#d82727;
+    vertical-align:middle;
+    font:4px FontAwesome;
+}
+
+#license {
+    float:right;
+    text-align:right;
+}
+
+#license div {
+    line-height:2em;
+    font-size:25px;
+}
+
+#license div i {
+    padding:4px;
+}
+
+#authorInfo {
+    font-size:13px;
+    text-align:center;
+    margin:10px 0;
+}
+
+#authorInfo span {
+    color:#aaa;
+}
+
+#voteBlock {
+    width:410px;
+}
+
+#voteBlock h2 {
+    margin:0;
+    font-size:30px;
+    text-align:center;
+}
+
+#voteCount {
+    text-align:center;
+    font-weight:700;
+    font-size:60px;
+}
+
+#mapBlock {
+    width:410px;
+}
+
+#voteListBlock {
+    float:left;
+    width:550px;
+}
+
+#pagination {
+    text-align:center;
+    font-size:14px;
+}
+
+#pagination a {
+    display:inline-block;
+    background:#d82727;
+    width:30px;
+    color:#fff;
+    margin:2px;
+    line-height:2em;
+}
+
+#pagination .pageActive,#pagination a:hover {
+    background:#fff;
+    width:30px;
+    color:#d82727;
+    border:1px solid #d82727;
+    text-decoration:none;
+}
+
+#contactForm {
+    width:600px;
+    float:left;
+}
+
+#contactForm textarea {
+    height:300px;
+}
+
+#contactInfoBlock {
+    width:390px;
+    float:right;
+}
+
+#mediaInfoBlock {
+    width:630px;
+}
+.has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, .has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label, .has-error.radio-inline label {
+    color: #F5FF50;
+}

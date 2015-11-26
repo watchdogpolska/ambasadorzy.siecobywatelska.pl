@@ -1,0 +1,108 @@
+{% extends 'petition/base.html' %}
+{% load crispy_forms_tags webdesign %}
+
+{% block css %}
+{{block.super}}
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+<style>
+    #map {
+        height: 450px;
+    }
+    .leaflet-popup-content {
+        color:#000;
+    }
+
+</style>
+{% endblock %}
+{% block javascript %}
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script> 
+{{block.super}}
+<script>
+    $(function() {
+        map = new L.Map('map');
+        var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+        var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+        var osm = new L.TileLayer(osmUrl, {minZoom: 1, maxZoom: 18, attribution: osmAttrib});
+
+        map.setView(new L.LatLng(54.26, 21.137), 5);
+        $.getJSON( "{% url 'petition:list_api' %}").done(function(data){ 
+            $.each(data, function(i, val){
+                var marker = L.marker([val['lat'], val['lng']]).addTo(map);
+                marker.bindPopup(val['first_name']+" "+val['second_name']);
+            });
+        });
+        map.addLayer(osm);
+    });
+</script>
+{% endblock %}
+
+{% block content %}
+<div id="voteListBlock" class="block grayBlock">
+    <div class="blockFoldHold">
+        <div class="blockFold"></div>
+        <div class="blockFoldClear"></div>
+    </div>
+    <div class="blockContent">
+        <h2>
+            Lista podpisów
+        </h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Imię i nazwisko</th>
+                    <th>Miejscowość{% include 'petition/_links_sort.html' with column='city'%}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for object in object_list %}
+                <tr>
+                    <th scope="row">{{ object.pk }}</th>
+                    <td>{{ object.name }}</td>
+                    <td>{{ object.city }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% if page_obj.has_previous or page_obj.has_next %}
+        <div id="pagination">
+            {% if page_obj.has_previous %}
+            <a href="?order_by={{order_by}}&ordering={{ordering}}&page={{page.previous_page_number}}">«</a>
+            {% endif %}
+            {{page_obj.number}} z {{page_obj.paginator.num_pages}}
+            {% if page_obj.has_next %}
+            <a href="?order_by={{order_by}}&ordering={{ordering}}&page={{page_obj.next_page_number}}">»</a>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</div>
+<div class="float-right">
+    <div id="voteBlock" class="block redBlock">
+        <div class="blockFoldHold">
+            <div class="blockFold"></div>
+            <div class="blockFoldClear"></div>
+        </div>
+        <div class="blockContent">
+            <div id="voteCount">{{ count }}</div>
+            <h2>
+                podpisów
+            </h2>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="mapBlock" class="block blackBlock">
+        <div class="blockFoldHold">
+            <div class="blockFold"></div>
+            <div class="blockFoldClear"></div>
+        </div>
+        <div class="blockContent">
+            <h2>
+                Mapa głosujących
+            </h2>
+            <div id="map"></div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

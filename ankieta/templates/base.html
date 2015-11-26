@@ -1,0 +1,60 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{config.META_DESCRIPTION}}">
+    <meta property="og:site_name" content="{{config.PAGE_NAME}}"/>
+    <meta property="og:description" content="{{config.META_DESCRIPTION}}" />
+    <meta property="og:locale" content="pl_PL" />
+    <meta property="og:image" content="http://{{ request.META.HTTP_HOST }}{% static 'img/facebook.jpg'%}" />
+
+    {% block css %}
+    <link rel="stylesheet" href="{% static 'css/reset.min.css'%}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://siecobywatelska.pl/font-wybory/MyFontsWebfontsKit.css">
+    <link rel="stylesheet" href="{% static 'css/cc-icons.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    {% endblock %}
+    <title>{{config.PAGE_NAME}}</title>
+
+</head>
+
+    <body>
+        <div id="container">
+            <header>
+            <a href="http://siecobywatelska.pl"><img src="{% static 'img/watchdog.png'%}" width="259" height="61" alt="Logo Watchdog"></a>
+                
+                <nav id="mainMenu">
+                    <ul>
+                    <a href="/"><li><i class="fa fa-home fa-2x"></i></li></a>
+                    <a href="{% url 'petition:list'%}"><li>Nasi Ambasadorzy</li></a>
+                    <a href="{% url 'contact:form' %}"><li>Kontakt</li></a>
+                    <a href="{% url 'media' %}"><li>Dla mediów</li></a>
+                    </ul>
+                </nav>
+            </header>
+
+            <div id="contentContainer">
+                <h1>{{config.PAGE_NAME}}</h1>
+                {% block content %}
+                    <p>Use this document as a way to quick start any new project.</p>
+                {% endblock content %}
+            </div>
+            <div class="clearfix"></div>
+            <footer>
+                {% include '_footer.html' %}
+            </footer>
+        </div>
+        <div id="authorInfo">
+            silnik: <a href="http://jawne.info.pl">jawne.info.pl</a>{% if config.GITHUB_URL %} | <a href="{{config.GITHUB_URL}}">Github</a>{% endif %}
+        </div>
+    {% block javascript %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    {% endblock %}
+    </body>
+</html>
