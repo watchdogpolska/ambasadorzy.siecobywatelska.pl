@@ -5,17 +5,20 @@ showHead("Kontakt");
 
 if(isset($_POST['submit'])) {
 
-	$topic = htmlspecialchars($_POST['topic']);
-	$name = htmlspecialchars($_POST['name']);
-	$email = htmlspecialchars($_POST['email']);
-	$text = htmlspecialchars($_POST['msg']);
+	if(csrf_validate($_POST['csrfprotection'])) {
 
-	$headers  = 'MIME-Version: 1.0' . "\r\n";
-	$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-	$headers .= 'To: Biuro Watchdog <'.NET_MAIL.'>' . "\r\n";
-	$headers .= "From: $name <$email>" . "\r\n";
+		$topic = htmlspecialchars($_POST['topic']);
+		$name = htmlspecialchars($_POST['name']);
+		$email = htmlspecialchars($_POST['email']);
+		$text = htmlspecialchars($_POST['msg']);
+
+		$headers  = 'MIME-Version: 1.0' . "\r\n";
+		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+		$headers .= 'To: Biuro Watchdog <'.NET_MAIL.'>' . "\r\n";
+		$headers .= "From: $name <$email>" . "\r\n";
 	
-	mail(NET_MAIL, "Wiadomość z formularza kontaktowego Ambasadorów Jawności", "Temat: <br/>".$topic."<br/><br/>Treść wiadomości: <br/>".$text."<br/><br/>IP: ".htmlspecialchars(get_client_ip_env()), $headers);
+		mail(NET_MAIL, "Wiadomość z formularza kontaktowego Ambasadorów Jawności", "Temat: <br/>".$topic."<br/><br/>Treść wiadomości: <br/>".$text."<br/><br/>IP: ".htmlspecialchars(get_client_ip_env()), $headers);
+	}
 }
 
 ?>
