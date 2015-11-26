@@ -13,12 +13,12 @@ setup(
     author="Adam Dobrawy",
     author_email="naczelnik@jawnosc.tk",
     packages=[
-        "ankieta",
+        "ambasadorzy",
     ],
     include_package_data=True,
     install_requires=[
         "Django==1.7.6",
     ],
     zip_safe=False,
-    scripts=["ankieta/manage.py"],
+    scripts=["ambasadorzy/manage.py"],
 )

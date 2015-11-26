@@ -158,14 +158,14 @@ class Common(Configuration):
         'django.contrib.auth.context_processors.auth',
         #'allauth.account.context_processors.account',
         #'allauth.socialaccount.context_processors.socialaccount',
-        #'django.core.context_processors.debug',
-        #'django.core.context_processors.i18n',
-        #'django.core.context_processors.media',
-        #'django.core.context_processors.static',
-        #'django.core.context_processors.tz',
-        #'django.contrib.messages.context_processors.messages',
+        'django.core.context_processors.debug',
+        'django.core.context_processors.i18n',
+        'django.core.context_processors.media',
+        'django.core.context_processors.static',
+        'django.core.context_processors.tz',
+        'django.contrib.messages.context_processors.messages',
         'django.core.context_processors.request' #,
-       # 'constance.context_processors.config',
+        #'constance.context_processors.config',
         # Your stuff: custom template context processors go here
     )
 
@@ -288,7 +288,7 @@ class Common(Configuration):
         "programowej Sieci Obywatelskiej Watchdog Polska", "Text of newsletter confirmation"),
         "SUCCESS_CONTACT": ("<p>Dziękujemy za wiadomość. Postaramy się udzielić "
             "odpowiedzi tak szybko jak to możliwe.</p>", "Text of success text in contact form"),
-        "PAGE_NAME": ("Jawna kampania wyborcza", "ASCII name of page"),
+        "PAGE_NAME": ("Ambasadorzy Jawności", "ASCII name of page"),
         'ISSUE_SPOT': ("<p>Lorem ipsum</p>", "HTML code of video about petition"),
         'ISSUE_DESCRIPTION': ("<p>Lorem ipsum</p>", "HTML code of description of petition"),
         'LETTER_TEXT': ("<p><b>To:</b>Lorem</p><p>ipsum</p>", "HTML code of letter with recipient"),
