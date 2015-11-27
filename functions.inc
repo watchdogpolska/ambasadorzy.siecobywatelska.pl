@@ -105,8 +105,7 @@ function showFooter() {
 			    
 			    <nav id="footBottomLinks">
 				<ul>
-				    <li><a href="{% url 'django.contrib.flatpages.views.flatpage' url='privacy/' %}">Polityka prywatności</a></li>
-				    <li><a href="{% url 'django.contrib.flatpages.views.flatpage' url='law/' %}">Opracowanie prawne</a></li>
+				    <li><a href="privacy.php">Polityka prywatności</a></li>
 				</ul>
 			    </nav>
 			    
