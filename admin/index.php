@@ -16,7 +16,7 @@ if(!isset($_SESSION['admin'])) header('Location: login.php');
 <?php
 
 $link = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_BASE);
-$ambasadorzy = mysqli_query($link, "SELECT * from ambassadors");
+$ambasadorzy = mysqli_query($link, "SELECT * from ambassadors WHERE zaakceptowany = 1");
 $ambasadorzy_new = mysqli_query($link, "SELECT * from ambassadors WHERE odrzucony = 0 AND zaakceptowany = 0");
 
 
