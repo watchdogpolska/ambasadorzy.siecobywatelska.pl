@@ -2,12 +2,16 @@
 
 include_once('constants.inc');
 
+if(!file_exists("db.inc")) header('Location: config.php'); //redirect to config when no base settings
+
 error_reporting(-1); //Comments these two lines to disable error reporting - NEED TO BE DONE IN PRODUCTION PHRASE!
 ini_set('display_errors', 'On');
 
 session_start();
 session_regenerate_id();
 if(!isset($_SESSION['csrf'])) csrf_gen();
+
+if(file_exists("db.inc") && file_exists("config.php")) unlink("config.php");
 
 // Display basic website head section + body beginning
 function showHead($subname) {
