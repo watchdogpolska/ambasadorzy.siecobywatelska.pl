@@ -22,7 +22,8 @@ if(isset($_POST['sent']) && csrf_validate($_POST['csrf'])) {
 	else {
 		$user = mysqli_fetch_row($user);
 		$_SESSION['admin'] = 1;
-		$_SESSION['admin_name'] = $user[3];
+		$_SESSION['admin_name'] = htmlspecialchars($user[3]);
+		$_SESSION['admin_id'] = htmlspecialchars($user[0]);
 		header('Location: index.php');
 	}
 

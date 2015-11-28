@@ -19,7 +19,7 @@ $link = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_BASE);
 $ambasadorzy = mysqli_query($link, "SELECT * from ambassadors WHERE zaakceptowany = 1");
 $ambasadorzy_new = mysqli_query($link, "SELECT * from ambassadors WHERE odrzucony = 0 AND zaakceptowany = 0");
 
-
+if(isset($_GET['action'])) if($_GET['action'] == "created") echo "<span style='color: green'>Użytkownik został utworzony!</span><br/>";
 echo "Aktualna liczba ambasadorów: ".$ambasadorzy->num_rows;
 echo "<br/><i><a href=lista.php>(lista i dane)</a></i><br/>";
 
