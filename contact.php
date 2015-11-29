@@ -34,7 +34,7 @@ if(isset($_POST['submit'])) {
             <h3>Koordynator projektu</h3>
             <address>
                 <i class="fa fa-envelope fa-fw"></i> 
-                <a class="fooBar" href="http://www.google.com/recaptcha/mailhide/d?k=019SfyeYoOBXz-HBQPiC1dMw==&amp;c=n2luU5mPbHzPitgNjd8j2XKcA0jsnCKbdwK9fCkXEJk="><span>adam.sawicki</span></a>
+                <a class="fooBar" href="http://www.google.com/recaptcha/mailhide/d?k=0133IYp4KK6_WtYnLoma6bsg==&c=xkFwb7Xs0uxvl9Kz56Fp9GHpm9kZRxoc6SI4Du0zXyGFIJpvo_XHt-_ksaeX7i92"><span>roksana.maslankiewicz</span></a>
                 <br>
                 <i class="fa fa-phone fa-fw"></i> 22 844 73 55 
             </address>

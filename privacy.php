@@ -26,7 +26,7 @@ ul. Ursynowska 22/2</br>
 <ol>
 <li>Serwis zbiera informacje podane dobrowolnie przez użytkownika.</li>
 <li>Serwis może zapisać ponadto informacje o parametrach połączenia (oznaczenie czasu, adres IP)</li>
-<li>Dane dotyczące imienia, nazwiska i miejscowości zamieszkania zadeklarowane przez osoby podpisującej „Apel” są podawane do publicznej wiadomości i przekazywane przewodniczącym partii politycznych.</li>
+<li>Dane dotyczące imienia, nazwiska i miejscowości zamieszkania zadeklarowane przez osoby zgłaszające się są podawane do publicznej wiadomości.</li>
 <li>Dane podane w formularzu stanowią zbiór, który poszerzy bazę danych prowadzoną przez Operatora i zgłoszoną do Generalnego Inspektora Ochrony Danych Osobowych.</li>
 <li>Dane podane w formularzu są przetwarzane w celu wynikającym z funkcji konkretnego formularza.</li>
 </ol>
