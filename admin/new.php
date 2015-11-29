@@ -9,7 +9,7 @@ $failed = 0;
 if(isset($_POST['sent']) && csrf_validate($_POST['csrf'])) {
 
 	$newname = $_POST['name'];
-	$newlogin = $_POST['login']; 
+	$newlogin = $_POST['user']; 
 	$newpass = $_POST['pass'];
 	
 	$link = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_BASE);
