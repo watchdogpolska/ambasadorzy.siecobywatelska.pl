@@ -1,7 +1,7 @@
 <?php
 
 include_once('functions.inc');
-showHead("Strona główna");
+showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 
 if(isset($_POST['submit']) && csrf_validate($_POST['csrf'])) {
 	
@@ -9,37 +9,86 @@ if(isset($_POST['submit']) && csrf_validate($_POST['csrf'])) {
 }
 
 ?>
-
+<div class="float-left">
 <div id="descriptionBlock" class="block grayBlock">
 <div class="blockFoldHold"><div class="blockFold"></div><div class="blockFoldClear"></div></div>
 <div class="blockContent">
 <h2>Dlaczego warto?</h2>
-<p>Lorem ipsum dolor sit amet tellus. Donec erat volutpat. Curabitur est vitae mauris. Nam hendrerit. Donec aliquam id, ornare non, vehicula sit amet eleifend magna vitae odio id felis. In lacinia ut, tempus vehicula, enim aliquam imperdiet. Nullam et magnis dis parturient montes, nascetur ridiculus mus. Donec id mauris lacus diam at tortor. Praesent.</p>
-
-<p>Aenean scelerisque, dui dui, eget leo. Suspendisse eu fermentum vestibulum. Aenean libero. Maecenas interdum dapibus non, tristique libero posuere dui. Morbi augue a dolor urna fringilla mi, rutrum sit amet, nonummy faucibus scelerisque. Maecenas nec dui. Nullam et odio. Nunc erat lacinia id, eleifend velit. Suspendisse turpis nec quam. Nam turpis egestas. Aenean ipsum at libero. Suspendisse porttitor egestas. Cum sociis natoque penatibus et odio.</p>
-
-<p>Curabitur feugiat leo. Phasellus adipiscing. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus arcu vitae faucibus quis, tincidunt justo. Curabitur scelerisque a, vestibulum quis, dui. In gravida sagittis. Aliquam erat eget leo vitae libero odio consequat et, vehicula sapien vitae pede quis massa quis dolor.</p>
-
-<p>Aenean massa molestie a, condimentum convallis. Donec accumsan id, tortor. In congue arcu accumsan vitae, vestibulum tincidunt varius laoreet. Nam urna. Quisque sed justo. Donec accumsan eget, auctor vitae, faucibus vestibulum. Nunc viverra auctor, urna felis, volutpat a, lacinia eget, eros. Phasellus pulvinar diam turpis at magna hendrerit nulla ipsum primis in neque eu ligula non eros cursus sapien. Maecenas viverra auctor, urna vitae ornare mi quam, ultrices eget, accumsan.</p>
+<p>Na przestrzeni ostatnich kilku lat mogliśmy obserwować wiele pozytywnych zmian w dziedzinie
+dostępu do informacji publicznej -  wzrosła świadomość praw przysługujących obywatelom, nie 
+boimy się pytać urzędników i egzekwować odpowiedzi. Jednak jest wiele obszarów życia publicznego, 
+w których panuje kultura tajemnicy. Prawo dostępu do informacji i transparentność, to 
+niezaprzeczalne fundamenty zdrowej demokracji oraz praw człowieka i dlatego wciąż wymagają 
+naszej ochrony i promocji.</p>
+<p>Dołącz do programu Ambasadorów/Ambasadorek Jawności, jeśli chcesz wesprzeć naszą ideę państwa  
+otwartego, przyjaznego i po prostu lepszego. Pomóżmy dowiedzieć  się innym jakie mają prawa i  
+jakie mają prawa i jak mogą z nich korzystać. Stwórzmy grupę osób z różnych środowisk,  która 
+będzie zmieniać państwo na wszystkich poziomach.</p>
+<p>Bycie Ambasadorem/Ambasadorką Jawności wiąże się również z indywidulanymi korzyściami m.in. 
+możliwością uczestniczenia w wydarzeniach organizowanych  przez Sieć Obywatelską Watchdog 
+Polska takich jak szkolenia, dyskusje oraz coroczny ,,Toast za jawność’’. Zapraszamy!
+Jeśli nie możesz  dołączyć  do grona Ambasadorów/Ambasadorek, dowiedz się, jak <a href="http://siecobywatelska.pl/wlacz-sie-5min/">inaczej wspierać 
+jawność.</a></p>
 </div>
 </div>
-
+<div class="clearfix"></div>
+<div id="descriptionBlock" class="block grayBlock">
+<div class="blockFoldHold"><div class="blockFold"></div><div class="blockFoldClear"></div></div>
+<div class="blockContent">
+<h2>Jak zostać Ambasadorem Jawności?</h2>
+<p>Przygotowaliśmy propozycje, które pozwolą Ci wspierać jawność każdego dnia. Realizacja niektórych 
+zajmie najwyżej kilka sekund, inne pozwalają wykazać się w szerszym zakresie. Mamy nadzieję, że w 
+przedstawionym poniżej katalogu działań znajdziesz takie, które Cię zainteresują. 
+A może masz swoje propozycje? Zarejestruj się i przedstaw je nam. Ambasadorstwo można 
+realizować na wiele różnych sposobów!</p>
+<p><b>Na początek</b></p>
+<ul>
+<li>1. Zostaw nam informacje o sobie, zapoznaj się z regulaminem i podpisz Kodeks Ambasadora. 
+Pamiętaj, że w ten sposób deklarujesz, iż bliskie Ci są nasze wartości. Informację o możliwości 
+dołączenia do  Ambasadorów i Ambasadorek udostępnij znajomym.</li>
+<li>2. Pochwal się znajomym swoim zdjęciem z hasłem promującym jawność (możesz skorzystać 
+z naszych gotowych propozycji – w zakładce do pobrania) lub ilustrującym, co robisz dla tej 
+sprawy. Wyjaśnij, czym się zajmujemy, dlaczego dołączyłaś/dołączyłeś do tej idei. Wyślij 
+nam to zdjęcie, abyśmy mogli zamieścić je na naszej stronie.</li>
+<li>3. Udostępniaj informacje zamieszczane przez Sieć Obywatelską Watchdog Polska. Obserwuj, 
+co się u nas dzieje (np. przez nasz portal i profil na Facebooku) i dziel się artykułami, postami, 
+ulotkami, wydarzeniami przez media społecznościowe lub tradycyjnie (wydrukuj materiał lub 
+o nim opowiedz). <a href="http://siecobywatelska.pl/wp-content/uploads/2015/09/Informacja-Publiczna_ulotka-A4-skladana-do-A5-DRUK.pdf">Możesz zacząć od ulotki o dostępie do informacji publicznej.</a></li>
+<li>4. Poleć nam kogoś. Znasz osobę, która podziela nasze wartości? Zaproponuj ją na kolejnego 
+Ambasadora/Ambasadorkę jawności i opowiedz jej o naszych działaniach. Może znasz firmę 
+bądź instytucję, z którą powinniśmy się skontaktować?</li>
+</ul>
+</div>
+</div>
+</div>
 <div id="signFormBlock" class="block redBlock">
 <div class="blockFoldHold"><div class="blockFold"></div><div class="blockFoldClear"></div></div>
 <div class="blockContent">
 <h2>Zostań Ambasadorem/Ambasadorką Jawności!</h2>
-<p style="text-align:center"><b>Kodeks Ambasadora</b></p>
-
-<p>1. Lorem ipsum dolor sit amet libero ante, tincidunt tellus wisi, fermentum ante eget volutpat eu, leo. Suspendisse vel risus. Vestibulum.</p>
-
-<p>2. Aenean sodales, velit suscipit lectus. Fusce et nunc hendrerit nulla a odio at nulla. Vivamus fermentum eu, nisl. Nam non.</p>
-
-<p>3. Nulla facilisi. Nam consectetuer adipiscing diam bibendum id, libero. Aenean justo. Ut a purus. Aenean quis erat sed felis sit.</p>
-
-<p>4. Duis ut aliquet lacinia dignissim, sapien eleifend et, fermentum ut, dolor. Praesent lacinia eget, neque. Etiam aliquam lacinia, diam magna.</p>
-
-<p>5. Mauris ultrices. Vestibulum laoreet, enim molestie elit, dictum lectus varius nec, accumsan sit amet leo. Quisque nunc. Etiam malesuada fames.</p>
-
+<p>Zostaw nam krótką informację o sobie, zapoznaj się z regulaminem i podpisz Kodeks Ambasadora.
+Na naszej stronie widoczne będą jedynie Twoje imię, nazwisko i miejscowość oraz zdjęcie, jeśli 
+wyrazisz zgodę na jego opublikowanie.</p> 
+<p style="text-align: center"><b>Wstęp do kodeksu</b></p>
+<p>Dziękujemy, że zechciałeś/-aś dołączyć do grona Ambasadorów Jawności. Mamy nadzieję, że razem 
+będziemy działać na rzecz otwartej, przyjaznej i po prostu lepszej rzeczywistości. Realizacja tego 
+ważnego i odpowiedzialnego zadania będzie możliwa jedynie wtedy, gdy wartości i idee 
+reprezentowane przez Sieć Obywatelską Watchdog Polska będą istotne także dla Ciebie.
+Jeśli się z nimi zgadzasz i zamierzasz się nimi kierować, prosimy o podpisanie Kodeksu 
+Ambasadora/Ambasadorki.</p>
+<p style="text-align: center"><b>Kodeks Ambasadora/Ambasadorki</b><p>
+<p>Jako Ambasador/Ambasadorka Jawności zobowiązuję się:<ul>
+<li>1. Działać na rzecz  jawności w życiu publicznym i szeroko rozumianego dobra wspólnego,</li>
+<li>2. Wystrzegać się sytuacji, w których moje działania mogłyby być postrzegane jako nieetyczne 
+lub bezprawne,</li>
+<li>3. Rzetelnie realizować działania ambasadorskie w oparciu o przygotowane przez Sieć 
+Obywatelską Watchdog Polska dyspozycje, a w szczególności - informować otoczenie o 
+prawie dostępu do informacji oraz wadze jawności w sferze publicznej,</li>
+<li>4. Oddzielać  działalność ambasadorską od przynoszącej indywidualne korzyści oraz politycznej.</li>
+<li>5.  Swoim uczciwym, tolerancyjnym i godnym postępowaniem  budować pozytywny wizerunek 
+Ambasadorów i Ambasadorek Jawności.</li></ul></p>
+<p>
+Oświadczam, że zapoznałem/łam się ze wszystkimi punktami Kodeksu i  zobowiązuję się do jego 
+przestrzegania.</p>
 <h3 class="text-center">Twoje dane</h3>
 <div id="reqNote">Pola oznaczone gwiazdką (*) są wymagane</div>
 <form action="index.php" method="post">

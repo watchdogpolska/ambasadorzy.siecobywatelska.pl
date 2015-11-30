@@ -14,7 +14,7 @@ if(!isset($_SESSION['csrf'])) csrf_gen();
 if(file_exists("db.inc") && file_exists("config.php")) unlink("config.php");
 
 // Display basic website head section + body beginning
-function showHead($subname) {
+function showHead($subname, $header = "Ambasadorzy Jawności") {
 
 	?>
 
@@ -58,7 +58,7 @@ function showHead($subname) {
 		    </header> 
 		    
 		    <div id="contentContainer">
-                	<h1><?php echo PAGE_NAME; ?></h1>
+                	<h1><?php echo $header; ?></h1>
 	    <?php
 
 
@@ -73,7 +73,7 @@ function showFooter() {
 		    <footer>
 			<div id="footHeaders" class="ffMedium">
 			    <div class="col-md-4 text-left"><span>Autor</span></div>
-			    <div class="col-md-4 text-center"><span>Partnerzy</span></div>
+			    <div class="col-md-4 text-center"><!-- FEAUTURE DISABLED <span>Partnerzy</span> --></div>
 			    <div class="col-md-4 text-right"><span>Obserwuj nas na</span></div>
 			</div>
 			<div class="clearfix"></div>
