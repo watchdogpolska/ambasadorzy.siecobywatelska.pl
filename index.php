@@ -107,6 +107,8 @@ Wyrażam zgodę na wykorzystanie mojego wizerunku przez Sieć Obywatelską Watch
 <div class="form-actions"><input type="submit" name="submit" value="Wyślij" class="btn btn-primary btn-lg btn-block" id="submit-id-submit"> </div>
 </form>
 <p></p>
+<p><a href="files/kodeks.pdf" target="_blank">Pobierz Kodeks Ambasadora w formie PDF</a></p>
+<p><a href="files/dyspozycje.pdf" target="_blank">Pobierz przykładowe dyspozycje</a></p>
 </div>
 </div>
 
