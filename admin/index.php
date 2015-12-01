@@ -30,6 +30,7 @@ echo "
 
 <a href=login.php>Wyloguj się</a><br/>
 <a href=new.php>Nowy użytkownik</a><br/>
+<a href=users.php>Lista użytkowników</a><br/>
 <a href=newpass.php>Zmień hasło</a><br/>
 <a href=newdata.php>Zmień dane osobowe</a><br/>
 

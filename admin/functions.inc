@@ -33,4 +33,11 @@ function generateRandomString($length = 10) {
     return $randomString;
 }
 
+if(isset($_SESSION['admin'])) { //security mechanism if user was removed when loggen in
+	$f_link = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_BASE);
+	$f_userzy = mysqli_query($f_link, "SELECT * from users WHERE idusers = ".mysqli_real_escape_string($f_link,$_SESSION['admin_id']));
+	if($f_userzy->num_rows == 0) { header("location: login.php"); }
+
+}
+
 ?>
