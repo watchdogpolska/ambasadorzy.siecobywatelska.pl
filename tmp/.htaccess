@@ -1,1 +1,4 @@
-Deny from all
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !index.php
+RewriteRule .* validate.php?url=$0 [QSA,L]

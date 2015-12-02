@@ -19,7 +19,7 @@ if(isset($_POST['submit']) && csrf_validate($_POST['csrf'])) {
 	$job = mysqli_real_escape_string($link, $_POST['job']);
 	$mail = mysqli_real_escape_string($link, $_POST['mail']);
 	$why = mysqli_real_escape_string($link, $_POST['why']);
-	if(isset($_FILES['photo'])) $foto = $_FILES['photo'];
+	if(isset($_FILES['photo'])) if(file_exists($_FILES['photo']['tmp_name'])) $foto = $_FILES['photo'];
 	
 	$nam="";$ext="";
 	
@@ -35,8 +35,11 @@ if(isset($_POST['submit']) && csrf_validate($_POST['csrf'])) {
 				if(is_uploaded_file($foto["tmp_name"]) && $foto['size'] <= (1024*1024*1024)) {
 	 				$x = explode(".",$foto["name"]);
 	 				$ext = mysqli_real_escape_string($link, $x[sizeof($x)-1]);
-	 				$nam = generateRandomString(32);
-	 				move_uploaded_file($foto["tmp_name"], $_SERVER['DOCUMENT_ROOT']."/tmp/$nam.$ext");
+	 				if($ext == "jpg" || $ext == "png" || $ext == "bmp" || $ext == "gif" || $ext == "jpeg") {
+	 					$nam = generateRandomString(32);
+	 					move_uploaded_file($foto["tmp_name"], $_SERVER['DOCUMENT_ROOT']."/tmp/$nam.$ext");
+	 				}
+	 				else $failed = 1;
 	 			}
 	 			else {
 	 				$failed = 1;
