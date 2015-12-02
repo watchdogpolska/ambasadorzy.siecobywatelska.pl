@@ -33,7 +33,7 @@ while($ambasador = mysqli_fetch_array($waiting, MYSQLI_ASSOC)) {
 	$adres = htmlspecialchars($ambasador['adres']);
 	$id = htmlspecialchars($ambasador['idambassadors']);
 	$foto = htmlspecialchars($ambasador['zdjecie']);
-	echo "<tr><td>$imie</td><td>$nazwisko</td><td>$miasto</td><td>$telefon</td><td>$email</td><td>$dlaczego</td><td>$zawod</td><td>$adres</td><td><img style='max-width: 200px' src='../pic/$foto' alt=''></td></tr>";
+	echo "<tr><td>$imie</td><td>$nazwisko</td><td>$miasto</td><td>$telefon</td><td>$email</td><td>$dlaczego</td><td>$zawod</td><td>$adres</td><td><img style='max-width: 200px; max-height: 300px' src='../pic/$foto' alt=''></td></tr>";
 	
 }
 
