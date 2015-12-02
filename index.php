@@ -1,5 +1,7 @@
 <?php
 
+ob_start();
+
 include_once('functions.inc');
 include_once('db.inc');
 
@@ -54,6 +56,7 @@ if(isset($_POST['submit']) && csrf_validate($_POST['csrf'])) {
 	 			
 	 			$_SESSION['registered'] = 1;
 	 			header('Location: registered.php');
+	 			echo "<script>document.location.href = registered.php</script>";
  			}
 		}
 	}
@@ -169,6 +172,7 @@ Twoje zdjęcie - max 1 MB <span style="border-bottom: 1px dotted" title="Poprzez
 <?php
 
 showFooter();
+ob_end_flush();
 
 ?>
             
