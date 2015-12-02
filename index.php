@@ -1,11 +1,64 @@
 <?php
 
 include_once('functions.inc');
+include_once('db.inc');
 showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
+
+$failed = 0;
 
 if(isset($_POST['submit']) && csrf_validate($_POST['csrf'])) {
 	
+	$link = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_BASE);
 
+	$first = mysqli_real_escape_string($link, $_POST['first']);
+	$name = mysqli_real_escape_string($link, $_POST['name']);
+	$phone = mysqli_real_escape_string($link, $_POST['phone']);
+	$city = mysqli_real_escape_string($link, $_POST['city']);
+	$address = mysqli_real_escape_string($link, $_POST['address']);
+	$job = mysqli_real_escape_string($link, $_POST['job']);
+	$mail = mysqli_real_escape_string($link, $_POST['mail']);
+	$why = mysqli_real_escape_string($link, $_POST['why']);
+	if(isset($_FILES['photo'])) $foto = $_FILES['photo'];
+	
+	$nam="";$ext="";
+	
+	if(empty($_POST['first']) || empty($_POST['name']) || empty($_POST['phone']) || empty($_POST['city']) || empty($_POST['job'])  || empty($_POST['why']) || empty($_POST['mail']) || empty($_POST['data'])) {
+		$failed = 1;
+	}
+	
+	else {	
+		$q = mysqli_query($link, "SELECT * FROM ambassadors WHERE email = '$mail' LIMIT 1");
+		if($q->num_rows != 0) $failed = 1;
+		else {
+			if(isset($foto)) {
+				if(is_uploaded_file($foto["tmp_name"]) && $foto['size'] <= (1024*1024*1024)) {
+	 				$x = explode(".",$foto["name"]);
+	 				$ext = mysqli_real_escape_string($link, $x[sizeof($x)-1]);
+	 				$nam = generateRandomString(32);
+	 				move_uploaded_file($foto["tmp_name"], $_SERVER['DOCUMENT_ROOT']."/tmp/$nam.$ext");
+	 			}
+	 			else {
+	 				$failed = 1;
+	 			}
+ 			}
+ 				
+ 			if(!$failed) {
+	 			$ip = mysqli_real_escape_string($link,get_client_ip_env());
+				$sql = "INSERT INTO ambassadors (imie,nazwisko,email,miasto,telefon,zawod,dlaczego,adres,zdjecie,zaakceptowany,odrzucony,ip) VALUES ('$first','$name','$mail','$city','$phone','$job','$why',";
+	 			if(empty($address)) $sql .= "NULL,";
+	 			else $sql .= "'$address',";
+	 			if(isset($foto)) $sql .= "'".$nam.".".$ext."',";
+	 			else $sql .= "NULL,";
+	 			$sql .= "0,0,'$ip')";			
+	 			
+	 			mysqli_query($link, $sql);
+	 			
+	 			$_SESSION['registered'] = 1;
+	 			header('Location: registered.php');
+ 			}
+		}
+	}
+	
 }
 
 ?>
@@ -90,8 +143,9 @@ Ambasadorów i Ambasadorek Jawności.</li></ul></p>
 Oświadczam, że zapoznałem/łam się ze wszystkimi punktami Kodeksu i  zobowiązuję się do jego 
 przestrzegania.</p>
 <h3 class="text-center">Twoje dane</h3>
+<?php if($failed) echo '<div id="reqNote">NIE MOŻNA ZAREJESTROWAĆ. SPRAWDŹ POPRAWNOŚĆ DANYCH.</div><br/>'; ?>
 <div id="reqNote">Pola oznaczone gwiazdką (*) są wymagane</div>
-<form action="index.php" method="post">
+<form action="index.php" method="post" enctype="multipart/form-data">
 <input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf']; ?>">
 Imię *<br/><input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['first']); ?>" class="textinput textInput form-control" maxlength="45" name="first" type="text" required /><br/>
 Nazwisko *<br/><input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['name']); ?>" class="textinput textInput form-control" maxlength="45" name="name" type="text" required /><br/>
@@ -99,9 +153,9 @@ Email *<br/><input value="<?php if(isset($_POST['submit'])) echo htmlspecialchar
 Miasto *<br/><input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['city']); ?>" class="textinput textInput form-control" maxlength="45" name="city" type="text" required /><br/>
 Telefon *<br/><input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['phone']); ?>" class="textinput textInput form-control" maxlength="45" name="phone" type="tel" required /><br/>
 Opisz, czym zajmujesz się zawodowo? *<br/><textarea value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['job']); ?>" class="textinput textInput form-control" maxlength="200" name="job" type="text" required></textarea><br/>
-Adres korespondencyjny<br/><input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['address']); else echo 'ul. Ulica 1/1, 00-001 Miejscowość' ?>" class="textinput textInput form-control" maxlength="200" name="address" type="text" /><br/>
+Adres korespondencyjny<br/><input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['address']); ?>" class="textinput textInput form-control" placeholder="ul. Ulica 1/1, 00-001 Miejscowość" maxlength="200" name="address" type="text" /><br/>
 Dlaczego chcesz zostać Ambasadorem Jawności? *<br/><textarea value="<?php echo htmlspecialchars($_POST['why']); ?>" class="textinput textInput form-control" maxlength="3000" name="why" type="text" required></textarea><br/>
-Twoje zdjęcie <span style="border-bottom: 1px dotted" title="Poprzez przesłanie zdjęcia wyrażam zgodę na wykorzystanie wizerunku i przesłanej fotografii przez Sieć Obywatelską Watchdog Polska.">(dodatkowe informacje)</span><br/><input class="textinput textInput form-control" name="photo" type="file" /><br/>
+Twoje zdjęcie - max 1 MB <span style="border-bottom: 1px dotted" title="Poprzez przesłanie zdjęcia wyrażam zgodę na wykorzystanie wizerunku i przesłanej fotografii przez Sieć Obywatelską Watchdog Polska.">(dodatkowe informacje)</span><br/><input class="textinput textInput form-control" name="photo" type="file" /><br/>
 <p><input type="checkbox" name="data" required />Oświadczam, iż wyrażam zgodę na przetwarzanie moich danych osobowych przez Sieć Obywatelską Watchdog Polska, ul. Ursynowska 22/2, 02-605 Warszawa w celu informowania o uczestnictwie w programie. Jednocześnie potwierdzam, iż zostałem/zostałam poinformowany/a o możliwości sprawdzenia w jaki sposób i w jakim zakresie moje dane są przetwarzane, co zawierają, jak są udostępniane oraz o możliwości usunięcia danych z bazy Sieci Obywatelskiej Watchdog Polska.</p>
 <div class="form-actions"><input type="submit" name="submit" value="Wyślij" class="btn btn-primary btn-lg btn-block" id="submit-id-submit"> </div>
 </form>

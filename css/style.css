@@ -61,7 +61,7 @@ header img {
     font:18px ClioMedium-Medium;
 }
 
-#mainMenu a:hover,#mainMenu a.activeMenu {
+#mainMenu a:hover, a.activeMenu {
     background:#d82727;
     text-decoration:none;
 }

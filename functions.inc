@@ -52,7 +52,7 @@ function showHead($subname, $header = "Ambasadorzy Jawności") {
 		            <a href="/"><li><i class="fa fa-home fa-2x"></i></li></a>
 		            <a href="ambassadors.php"><li>Nasi Ambasadorzy</li></a>
 		            <a href="contact.php"><li>Kontakt</li></a>
-		            <a href="media.php"><li>Dla mediów</li></a>
+		            <a href="kancelarie.php"><li>Dla kancelarii</li></a>
 		            </ul>
 		        </nav>
 		    </header> 

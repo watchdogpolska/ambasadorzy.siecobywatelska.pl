@@ -40,7 +40,7 @@ while($user = mysqli_fetch_array($userzy, MYSQLI_ASSOC)) {
 	$name = htmlspecialchars($user['name']);
 	$id = htmlspecialchars($user['idusers']);
 	echo "<tr><td>$nick</td><td>$name</td>";
-	if($id!=$_SESSION['admin_id']) echo "<td><input type=button value=\"Usuń!\" onclick=\"document.location.href = 'users.php?remove=$id';\" /></td>";
+	if($id != $_SESSION['admin_id']) echo "<td><input type=button value=\"Usuń!\" onclick=\"document.location.href = 'users.php?remove=$id';\" /></td>";
 	else echo "<td></td>";
 	echo "</tr>";
 }
