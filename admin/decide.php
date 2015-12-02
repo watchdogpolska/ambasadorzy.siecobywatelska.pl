@@ -17,11 +17,11 @@ if(isset($_GET['uid']) && isset($_GET['a']) && isset($_GET['photoid'])) {
 	if($test->num_rows != 0) {
 		if($a == "true") {
 			mysqli_query($link, "UPDATE ambassadors SET zaakceptowany = 1 WHERE idambassadors = $u");
-			rename("../tmp/$photoid","../pic/$photoid");
+			if(!empty($photoid)) rename("../tmp/$photoid","../pic/$photoid");
 		}
 		else {
 			mysqli_query($link, "UPDATE ambassadors SET odrzucony = 1 WHERE idambassadors = $u");
-			unlink("../tmp/$photoid");
+			if(!empty($photoid)) unlink("../tmp/$photoid");
 		}
 		
 	}
