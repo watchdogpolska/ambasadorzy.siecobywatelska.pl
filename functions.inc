@@ -42,7 +42,7 @@ function showHead($subname, $header = "Ambasadorzy Jawności") {
 	    <?php echo PAGE_NAME; if(!empty($subname)) echo " - ".$subname; ?>
 	    </title>
 	    </head>
-	    <body>
+	    <body style='font-family: "GloberRegular",Helvetica,Arial,sans-serif;'>
         	<div id="container">
 		    <header>
 		    <a href="http://siecobywatelska.pl"><img src="<?php echo htmlspecialchars(url_origin($_SERVER)); ?>/img/watchdog.png" width="259" height="61" alt="Logo Watchdog"></a>
