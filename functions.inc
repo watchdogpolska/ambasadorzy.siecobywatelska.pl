@@ -164,20 +164,10 @@ function generateRandomString($length = 10) {
     return $randomString;
 }
 
-//getting user's IP - code from https://www.virendrachandak.com/techtalk/getting-real-client-ip-address-in-php-2/
+//getting user's IP
 function get_client_ip_env() {
 	$ipaddress = '';
-	if (getenv('HTTP_CLIENT_IP'))
-		$ipaddress = getenv('HTTP_CLIENT_IP');
-	else if(getenv('HTTP_X_FORWARDED_FOR'))
-		$ipaddress = getenv('HTTP_X_FORWARDED_FOR');
-	else if(getenv('HTTP_X_FORWARDED'))
-		$ipaddress = getenv('HTTP_X_FORWARDED');
-	else if(getenv('HTTP_FORWARDED_FOR'))
-		$ipaddress = getenv('HTTP_FORWARDED_FOR');
-	else if(getenv('HTTP_FORWARDED'))
-		$ipaddress = getenv('HTTP_FORWARDED');
-	else if(getenv('REMOTE_ADDR'))
+	if(getenv('REMOTE_ADDR'))
 		$ipaddress = getenv('REMOTE_ADDR');
 	else
 		$ipaddress = 'UNKNOWN';
