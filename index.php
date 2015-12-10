@@ -2,8 +2,8 @@
 
 ob_start();
 
-include_once('functions.inc');
-include_once('db.inc');
+include_once('functions.inc.php');
+include_once('db.inc.php');
 
 $failed = 0;
 

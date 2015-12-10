@@ -1,6 +1,6 @@
 <?php
 
-if(file_exists("db.inc")) header('Location: index.php'); //prevent reconfiguration
+if(file_exists("db.inc.php")) header('Location: index.php'); //prevent reconfiguration
 
 if(isset($_POST['sent'])) {
 	$login = $_POST['user'];
@@ -23,7 +23,7 @@ if(isset($_POST['sent'])) {
 		$content .= "define('DB_PASS','".$pass."');\r\n";
 		$content .= "define('DB_BASE','".$db."'); ?>";
 		
-		file_put_contents("db.inc", $content);
+		file_put_contents("db.inc.php", $content);
 		
 		header("Location: index.php");
 	}

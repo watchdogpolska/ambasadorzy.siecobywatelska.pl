@@ -1,7 +1,8 @@
 <?php
 
-include_once('functions.inc');
-include_once('db.inc');
+include_once('functions.inc.php');
+include_once('db.inc.php');
+
 showHead("Kontakt");
 
 $link = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_BASE);

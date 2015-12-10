@@ -1,6 +1,6 @@
 <?php
 
-include_once('functions.inc');
+include_once('functions.inc.php');
 showHead("Kontakt");
 
 if(isset($_POST['submit'])) {

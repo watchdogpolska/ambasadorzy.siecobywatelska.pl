@@ -1,6 +1,6 @@
 <?php
 
-include_once("functions.inc");
+include_once("functions.inc.php");
 
 if(!isset($_SESSION['admin'])) header('Location: login.php');
 
