@@ -15,7 +15,7 @@ if(isset($_POST['sent']) && csrf_validate($_POST['csrf'])) {
 	$pass = hash("sha512", $pass);
 	$pass = mysqli_real_escape_string($link, $pass);
 	
-	$user = mysqli_query($link, "SELECT * FROM users WHERE login = '$login' AND password = '$pass' LIMIT 1");
+	$user = mysqli_query($link, "SELECT * FROM users WHERE usuniety = 0 AND login = '$login' AND password = '$pass' LIMIT 1");
 	if($user->num_rows == 0) {
 		$failed = 1;	
 	}

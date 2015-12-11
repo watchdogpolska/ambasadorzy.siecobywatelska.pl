@@ -10,10 +10,10 @@ if(isset($_GET['remove'])) {
 	$id = $_GET['remove'];
 	if($id != $_SESSION['admin_id']) {
 		$link = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_BASE);
-		$user = mysqli_query($link, "SELECT * FROM users WHERE idusers = ".mysqli_real_escape_string($link, $id));
+		$user = mysqli_query($link, "SELECT * FROM users WHERE usuniety = 0 AND idusers = ".mysqli_real_escape_string($link, $id));
 		if($user->num_rows == 0) $errormsg = "Użytkownik o zadanym ID nie istnieje. Nie można usunąć.";
 		else {
-			mysqli_query($link, "DELETE FROM users WHERE idusers = ".mysqli_real_escape_string($link, $id));
+			mysqli_query($link, "UPDATE users SET usuniety = 1 WHERE idusers = ".mysqli_real_escape_string($link, $id));
 			$errormsg = "Użytkownik #".htmlspecialchars($id)." został pomyślnie usunięty!";
 		}
 	}
@@ -40,7 +40,7 @@ while($user = mysqli_fetch_array($userzy, MYSQLI_ASSOC)) {
 	$name = htmlspecialchars($user['name']);
 	$id = htmlspecialchars($user['idusers']);
 	echo "<tr><td>$nick</td><td>$name</td>";
-	if($id != $_SESSION['admin_id']) echo "<td><input type=button value=\"Usuń!\" onclick=\"document.location.href = 'users.php?remove=$id';\" /></td>";
+	if($id != $_SESSION['admin_id']) if(!$user['usuniety']) echo "<td><input type=button value=\"Usuń!\" onclick=\"document.location.href = 'users.php?remove=$id';\" /></td>"; else echo "<td>Usunięty</td>";
 	else echo "<td></td>";
 	echo "</tr>";
 }
