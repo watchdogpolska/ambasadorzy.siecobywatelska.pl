@@ -38,6 +38,13 @@ if(isset($_SESSION['admin'])) { //security mechanism if user was removed when lo
 	$f_userzy = mysqli_query($f_link, "SELECT * from users WHERE usuniety = 0 AND idusers = ".mysqli_real_escape_string($f_link,$_SESSION['admin_id']));
 	if($f_userzy->num_rows == 0) { header("location: login.php"); }
 
+	$f_user = mysqli_fetch_array($f_userzy, MYSQLI_ASSOC);
+	if(strtotime($f_user['lastchange']) < strtotime("1 month ago")) {
+		$f_noloop = explode("/",debug_backtrace()[0]["file"]);
+		if($f_noloop[count($f_noloop)-1] != "newpass.php") header('location: newpass.php');
+	}
+	
+	
 }
 
 ?>

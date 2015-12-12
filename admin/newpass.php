@@ -14,14 +14,26 @@ if(isset($_POST['sent']) && csrf_validate($_POST['csrf'])) {
 	if(strlen($pass1) < 8 || strlen($pass2) < 8 || $pass1 != $pass2) {
 		$failed = 1;
 	}
-	else {
+	
+	if(strtoupper($pass1) == $pass1 || strtolower($pass1) == $pass1 || !preg_match("[\W]", $pass1)) {
+		$failed = 1;
+	}
+	
+	if(!$failed) {
 		$link = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_BASE);
 		
 		$pass1 = mysqli_real_escape_string($link, $pass1);
 		$pass1 = hash("sha512", $pass1);
 		
-		mysqli_query($link, "UPDATE users SET password = '$pass1' WHERE idusers = {$_SESSION['admin_id']}");
-		header("location: login.php");
+		$test = mysqli_query($link, "SELECT * FROM users WHERE idusers = {$_SESSION['admin_id']}");
+		$test = mysqli_fetch_array($test,MYSQLI_ASSOC);
+		
+		if($pass1 == $test['password']) $failed = 1;	
+		
+		else {
+			mysqli_query($link, "UPDATE users SET password = '$pass1', lastchange='".date("Y-m-d")."' WHERE idusers = {$_SESSION['admin_id']}");
+			header("location: login.php");
+		}
 	}
 }
 
@@ -35,9 +47,9 @@ if(isset($_POST['sent']) && csrf_validate($_POST['csrf'])) {
 <h2>Zmiana hasła</h2>
 <hr/>
 <br/>
-Uzupełnij poniższy formularz, aby zmienić swoje hasło!<br/> Pamiętaj, że nowe hasło powinno mieć co najmniej 8 znaków!<br/>
-Po wysłaniu formularza, zostaniesz wylogowany(a).<br/><br/>
-<?php if($failed) echo "<span style='color: red'><b>Nie można zmienić hasła. Sprawdź, czy podane wartości są takie same i czy mają co najmniej 8 znaków!</b></span><br/><br/>"; ?>
+Uzupełnij poniższy formularz, aby zmienić swoje hasło!<br/> Pamiętaj, że nowe hasło powinno mieć co najmniej 8 znaków, zawierać małe, duże litery, znaki specjalne oraz cyfry!<br/>Musi ono być różne od poprzedniego!<br/>
+Po wysłaniu formularza, zostaniesz wylogowany(a).<br/>(Istnieje prawny wymóg zmiany hasła co 30 dni)<br/><br/>
+<?php if($failed) echo "<span style='color: red'><b>Nie można zmienić hasła. Sprawdź, czy podane wartości są takie same i czy mają co najmniej 8 znaków oraz spełniają wymogi!</b></span><br/><br/>"; ?>
 <form action=newpass.php method=post>
 <input type=hidden name=csrf value="<?php echo $_SESSION['csrf']; ?>"/>
 Nowe hasło: <input type=password minlength=8 required name=pass1 /><br/><br/>
