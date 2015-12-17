@@ -51,7 +51,7 @@ function showHead($subname, $header = "Ambasadorzy Jawności") {
 		        <nav id="mainMenu">
 		            <ul>
 		            <a href="/"><li><i class="fa fa-home fa-2x"></i></li></a>
-		            <a href="ambassadors.php"><li>Nasi Ambasadorzy</li></a>
+		            <a href="ambassadors.php"><li>Ambasadorzy</li></a>
 		            <a href="withus.php"><li>Są z nami</li></a>
 		            <a href="firmy.php"><li>Dla firm</li></a>
 		            <a href="download.php"><li>Do pobrania</li></a>
