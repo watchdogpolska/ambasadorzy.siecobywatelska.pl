@@ -82,8 +82,8 @@ w których panuje kultura tajemnicy. Prawo dostępu do&nbsp;informacji i&nbsp;tr
 niezaprzeczalne fundamenty zdrowej demokracji oraz praw człowieka i&nbsp;dlatego wciąż wymagają 
 naszej ochrony i&nbsp;promocji.</p>
 <p>Dołącz do&nbsp;programu Ambasadorów/Ambasadorek Jawności, jeśli chcesz wesprzeć naszą ideę państwa  
-otwartego, przyjaznego i&nbsp;po prostu lepszego. Pomóżmy dowiedzieć  się innym jakie mają prawa i&nbsp; 
-jakie mają prawa i&nbsp;jak mogą z&nbsp;nich korzystać. Stwórzmy grupę osób z&nbsp;różnych środowisk,  która 
+otwartego, przyjaznego i&nbsp;po prostu lepszego. Pomóżmy dowiedzieć się innym jakie mają prawa i&nbsp;
+jak mogą z&nbsp;nich korzystać. Stwórzmy grupę osób z&nbsp;różnych środowisk, która 
 będzie zmieniać państwo na wszystkich poziomach.</p>
 <p>Bycie Ambasadorem/Ambasadorką Jawności wiąże się również z&nbsp;indywidulanymi korzyściami m.in. 
 możliwością uczestniczenia w&nbsp;wydarzeniach organizowanych  przez Sieć Obywatelską Watchdog 
@@ -104,15 +104,15 @@ A może masz swoje propozycje? Zarejestruj się i&nbsp;przedstaw je nam. Ambasad
 realizować na wiele różnych sposobów!</p>
 <p><b>Na początek</b></p>
 <ul>
-<li>1. Zostaw nam informacje o&nbsp;sobie, zapoznaj się z&nbsp;regulaminem i&nbsp;podpisz Kodeks Ambasadora. 
+<li>1. Zostaw nam informacje o&nbsp;sobie, zapoznaj się z&nbsp;regulaminem i&nbsp;podpisz Kodeks Ambasadora/Ambasadorki. 
 Pamiętaj, że w&nbsp;ten sposób deklarujesz, iż bliskie Ci są nasze wartości. Informację o&nbsp;możliwości 
 dołączenia do&nbsp; Ambasadorów i&nbsp;Ambasadorek udostępnij znajomym.</li>
 <li>2. Pochwal się znajomym swoim zdjęciem z&nbsp;hasłem promującym jawność (możesz skorzystać 
-z naszych gotowych propozycji – w&nbsp;zakładce do&nbsp;pobrania) lub ilustrującym, co robisz dla tej 
+z naszych gotowych propozycji – <a href="http://localhost/download.php" title="Do pobrania">w&nbsp;zakładce do&nbsp;pobrania</a>) lub ilustrującym, co robisz dla tej 
 sprawy. Wyjaśnij, czym się zajmujemy, dlaczego dołączyłaś/dołączyłeś do&nbsp;tej idei. Wyślij 
 nam to zdjęcie, abyśmy mogli zamieścić je na naszej stronie.</li>
 <li>3. Udostępniaj informacje zamieszczane przez Sieć Obywatelską Watchdog Polska. Obserwuj, 
-co się u nas dzieje (np. przez nasz portal i&nbsp;profil na Facebooku) i&nbsp;dziel się artykułami, postami, 
+co się u nas dzieje (np. przez nasz <a href="http://siecobywatelska.pl" target="_blank" title="Sieć Obywatelska Watchdog Polska">portal</a> i&nbsp;<a href="https://www.facebook.com/SiecObywatelskaWatchdogPolska?_rdr=p" target="_blank" title="Nasz FB">profil na Facebooku</a>) i&nbsp;dziel się artykułami, postami, 
 ulotkami, wydarzeniami przez media społecznościowe lub tradycyjnie (wydrukuj materiał lub 
 o nim opowiedz). <a href="http://siecobywatelska.pl/wp-content/uploads/2015/09/Informacja-Publiczna_ulotka-A4-skladana-do-A5-DRUK.pdf">Możesz zacząć od ulotki o&nbsp;dostępie do&nbsp;informacji publicznej.</a></li>
 <li>4. Poleć nam kogoś. Znasz osobę, która podziela nasze wartości? Zaproponuj ją na kolejnego 
@@ -121,18 +121,23 @@ bądź instytucję, z&nbsp;którą powinniśmy się skontaktować?</li>
 </ul>
 </div>
 </div>
+<div class="clearfix"></div>
+<div id="descriptionBlock" class="block">
+<div class="blockContent" style="margin: 0 auto">
+<a target="_blank" href="http://watchdogportal.pl"><img src="img/sprzyja.jpg" style="display: block; margin: 0 auto; max-width: 100%; max-height: 200px" alt="Jawność sprzyja!" title="Jawność sprzyja!" /></a>
+</div>
+</div>
 </div>
 <div id="signFormBlock" class="block redBlock">
 <div class="blockFoldHold"><div class="blockFold"></div><div class="blockFoldClear"></div></div>
 <div class="blockContent">
-<h2>Zostań Ambasadorem/Ambasadorką Jawności!</h2>
-<p>Zostaw nam krótką informację o&nbsp;sobie, zapoznaj się z&nbsp;regulaminem i&nbsp;podpisz Kodeks Ambasadora.
+<h2>Dołącz do wspierających jawność!</h2>
+<p>Zostaw nam krótką informację o&nbsp;sobie, zapoznaj się z&nbsp;regulaminem i&nbsp;podpisz Kodeks Ambasadora/Ambasadorki.
 Na naszej stronie widoczne będą jedynie Twoje imię, nazwisko i&nbsp;miejscowość oraz zdjęcie, jeśli 
 wyrazisz zgodę na jego opublikowanie.</p> 
-<p style="text-align: center"><b>Wstęp do&nbsp;kodeksu</b></p>
-<p>Dziękujemy, że zechciałeś/-aś dołączyć do&nbsp;grona Ambasadorów Jawności. Mamy nadzieję, że razem 
-będziemy działać na rzecz otwartej, przyjaznej i&nbsp;po prostu lepszej rzeczywistości. Realizacja tego 
-ważnego i&nbsp;odpowiedzialnego zadania będzie możliwa jedynie wtedy, gdy wartości i&nbsp;idee 
+<p style="text-align: center"><img src="img/jawnosc.jpg" alt="Ambasador jawności" style="max-width: 100%; max-height: 300px"/></p>
+<p>Dziękujemy, że zechciałeś/-aś dołączyć do&nbsp;grona Ambasadorów/Ambasadorek Jawności. Mamy nadzieję, że razem będziemy dążyć do zmiany otaczającej nas rzeczywistości na przejrzystszą, przyjaźniejszą oraz wspólnie ją udoskonalać.
+Realizacja tego ważnego i&nbsp;odpowiedzialnego zadania będzie możliwa jedynie wtedy, gdy wartości i&nbsp;idee 
 reprezentowane przez Sieć Obywatelską Watchdog Polska będą istotne także dla Ciebie.
 Jeśli się z&nbsp;nimi zgadzasz i&nbsp;zamierzasz się nimi kierować, prosimy o&nbsp;podpisanie Kodeksu 
 Ambasadora/Ambasadorki.</p>
@@ -164,7 +169,7 @@ Adres korespondencyjny<br/><input value="<?php if(isset($_POST['submit'])) echo 
 Dlaczego chcesz zostać Ambasadorem Jawności? *<br/><textarea value="<?php echo htmlspecialchars($_POST['why']); ?>" class="textinput textInput form-control" maxlength="3000" name="why" type="text" required></textarea><br/>
 Twoje zdjęcie - max 1 MB <span style="border-bottom: 1px dotted" title="Poprzez przesłanie zdjęcia wyrażasz zgodę na wykorzystanie wizerunku i&nbsp;przesłanej fotografii przez Sieć Obywatelską Watchdog Polska.">(dodatkowe informacje)</span><br/><input class="textinput textInput form-control" name="photo" type="file" /><br/>
 <p><input type="checkbox" name="datatrue" required />Oświadczam, że zawarte w&nbsp;powyższym formularzu dane są zgodne ze stanem faktycznym. *</p>
-<p><input type="checkbox" name="datareg" required />Oświadczam, że zapoznałem się z&nbsp;<a href="files/regulamin.pdf" target="_blank">Regulaminem Programu</a> i&nbsp;akceptuję jego postanowienia. *</p>
+<p><input type="checkbox" name="datareg" required />Oświadczam, że zapoznałem(-am) się z&nbsp;<a href="files/regulamin.pdf" target="_blank">Regulaminem Programu</a> i&nbsp;akceptuję jego postanowienia. *</p>
 <p><input type="checkbox" name="data" required />Oświadczam, iż wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z&nbsp;ustawą o&nbsp;ochronie danych osobowych (z 29 sierpnia 1997 roku) przez Sieć Obywatelską Watchdog Polska, ul. Ursynowska 22/2, 02-605 Warszawa w&nbsp;celach związanych z&nbsp;realizacją programu Ambasadorów i&nbsp;Ambasadorek Jawności oraz na podanie do&nbsp;wiadomości publicznej mojego imienia, nazwiska oraz miejscowości w&nbsp;przypadku zostania Ambasadorem/Ambasadorką Jawności. Jednocześnie potwierdzam, iż zostałem/zostałam poinformowany/a o&nbsp;możliwości sprawdzenia w&nbsp;jaki sposób i&nbsp;w jakim zakresie moje dane są przetwarzane, co zawierają, jak są udostępniane oraz o&nbsp;możliwości usunięcia danych z&nbsp;bazy Sieci Obywatelskiej Watchdog Polska. *</p>
 <div class="form-actions"><input type="submit" name="submit" value="Wyślij" class="btn btn-primary btn-lg btn-block" id="submit-id-submit"> </div>
 </form>

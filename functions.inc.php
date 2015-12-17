@@ -53,9 +53,10 @@ function showHead($subname, $header = "Ambasadorzy Jawności") {
 		            <a href="/"><li><i class="fa fa-home fa-2x"></i></li></a>
 		            <a href="ambassadors.php"><li>Nasi Ambasadorzy</li></a>
 		            <a href="withus.php"><li>Są z nami</li></a>
-		            <a href="kancelarie.php"><li>Dla kancelarii</li></a>
+		            <a href="firmy.php"><li>Dla firm</li></a>
 		            <a href="download.php"><li>Do pobrania</li></a>
 		            <a href="contact.php"><li>Kontakt</li></a>
+		            <a href="http://siecobywatelska.pl/wlacz-sie-5min/#wspieraj_siec" style="background-color: #e84343" target="_blank">Wspieraj nas</a>
 		            </ul>
 		        </nav>
 		    </header> 
@@ -104,7 +105,7 @@ function showFooter() {
 			<div class="clearfix"></div>
 
 			<div id="footBottom">
-			    <div id="footBottomHR"></div>
+			    <div id="footBottomHR" style="width: 100%"></div>
 			    
 			    <nav id="footBottomLinks">
 				<ul>
