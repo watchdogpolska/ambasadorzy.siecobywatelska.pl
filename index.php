@@ -93,6 +93,12 @@ jawność.</a></p>
 </div>
 </div>
 <div class="clearfix"></div>
+<div id="descriptionBlock" class="block">
+<div class="blockContent" style="margin: 0 auto">
+<a target="_blank" href="http://watchdogportal.pl"><img src="img/sprzyja.jpg" style="display: block; margin: 0 auto; max-width: 100%; max-height: 200px" alt="Jawność sprzyja!" title="Jawność sprzyja!" /></a>
+</div>
+</div>
+<div class="clearfix"></div>
 <div id="descriptionBlock" class="block grayBlock">
 <div class="blockFoldHold"><div class="blockFold"></div><div class="blockFoldClear"></div></div>
 <div class="blockContent">
@@ -119,12 +125,6 @@ o nim opowiedz). <a href="http://siecobywatelska.pl/wp-content/uploads/2015/09/I
 Ambasadora/Ambasadorkę jawności i&nbsp;opowiedz jej o&nbsp;naszych działaniach. Może znasz firmę 
 bądź instytucję, z&nbsp;którą powinniśmy się skontaktować?</li>
 </ul>
-</div>
-</div>
-<div class="clearfix"></div>
-<div id="descriptionBlock" class="block">
-<div class="blockContent" style="margin: 0 auto">
-<a target="_blank" href="http://watchdogportal.pl"><img src="img/sprzyja.jpg" style="display: block; margin: 0 auto; max-width: 100%; max-height: 200px" alt="Jawność sprzyja!" title="Jawność sprzyja!" /></a>
 </div>
 </div>
 </div>

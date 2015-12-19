@@ -34,7 +34,6 @@ function showHead($subname, $header = "Ambasadorzy Jawności") {
 	    <link rel="stylesheet" href="<?php echo htmlspecialchars(url_origin($_SERVER)); ?>/css/reset.min.css">
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-	    <link rel="stylesheet" href="http://siecobywatelska.pl/font-wybory/MyFontsWebfontsKit.css">
 	    <link rel="stylesheet" href="<?php echo htmlspecialchars(url_origin($_SERVER)); ?>/css/cc-icons.min.css">
 	    <link rel="stylesheet" href="<?php echo htmlspecialchars(url_origin($_SERVER)); ?>/css/style.css">
 	    <link rel='shortcut icon' type='image/x-icon' href='<?php echo htmlspecialchars(url_origin($_SERVER)); ?>/favicon.ico' />

@@ -27,7 +27,10 @@ if($ambasadorzy_new->num_rows > 0) echo "<br/><b>Oczekujących na weryfikację:<
 echo "<hr/><br/>";
 
 echo "
-
+<a href=famous.php>Zarządzaj celebrytami</a><br/>
+<a href=orgs.php>Zarządzaj organizacjami</a><br/>
+<hr/>
+<br/>
 <a href=login.php>Wyloguj się</a><br/>
 <a href=new.php>Nowy użytkownik</a><br/>
 <a href=users.php>Lista użytkowników</a><br/>
