@@ -12,7 +12,6 @@ h3 {
 </style>
 
 <div class="block redBlock" >
-<div class="blockFoldHold"><div class="blockFold"></div><div class="blockFoldClear"></div></div>
 <div class="blockContent">
 <h2>Dla firm</h2>
 Do naszego programu Ambasadorów/Ambasadorek Jawności zapraszamy firmy, 

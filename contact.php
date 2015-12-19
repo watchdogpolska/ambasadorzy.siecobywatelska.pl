@@ -22,73 +22,67 @@ if(isset($_POST['submit'])) {
 }
 
 ?>
+<div class="row">
+    <div class="col-md-4 col-md-push-8">
+        <div id="contactInfoBlock">
+            <div id="contactInfo1" class="block grayBlock">
+                <div class="blockContent">
+                    <h2>Kontakt</h2>
+                    <h3>Koordynator projektu</h3>
+                    <address>
+                        <i class="fa fa-envelope fa-fw"></i> 
+                        <a class="fooBar" href="http://www.google.com/recaptcha/mailhide/d?k=0133IYp4KK6_WtYnLoma6bsg==&c=xkFwb7Xs0uxvl9Kz56Fp9GHpm9kZRxoc6SI4Du0zXyGFIJpvo_XHt-_ksaeX7i92"><span>roksana.maslankiewicz</span></a>
+                        <br>
+                        <i class="fa fa-phone fa-fw"></i> 22 844 73 55 
+                    </address>
+                    <h3>Nasze biuro</h3>
+                    <address>
+                        <i class="fa fa-envelope fa-fw"></i> 
+                        <a class="fooBar" href="http://www.google.com/recaptcha/mailhide/d?k=019SfyeYoOBXz-HBQPiC1dMw==&amp;c=7t4uleBGHACWoT6pq8zcubkAl0UxUqb94jcrqtFq5N0="><span>biuro</span></a>
+                        <br>
+                        <i class="fa fa-phone fa-fw"></i> 22 844 73 55 
+                    </address>
+                </div>
+            </div>
+            <div id="contactInfo2" class="block grayBlock">
+                <div class="blockContent">
+                    <h2>Adres</h2>
+                    <address>
+                        <b>Sieć obywatelska - Watchdog Polska</b>
+                        <br>
+                        ul. Ursynowska 22/2
+                        <br>
+                        02-605 Warszawa 
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8 col-md-pull-4">
+        <div id="contactForm" class="block redBlock">
+            <div class="blockContent">
+                <h2>Skontaktuj się z nami</h2>
+              <?php if(isset($_POST['submit'])) {
+                echo "Dziękujemy! Twoja wiadomość została przesłana!";
+              }
+              else {  ?>
+                <div id="reqNote">Pola oznaczone gwiazdką (*) są wymagane</div>
+                <br/>
+                <form method=POST action=contact.php>
+                    <input type=hidden name=csrfprotection value="<?php echo $_SESSION['csrf']; ?>"/>
+                    Twój email *<br/><input class="textinput textInput form-control" maxlength="150" name="email" type="text" required /><br/>
+                    Imię (i nazwisko) *<br/><input class="textinput textInput form-control" maxlength="150" name="name" type="text" required /><br/>
+                    Temat *<br/><input class="textinput textInput form-control" maxlength="150" name="topic" type="text" required /><br/>
+                    Wiadomość *<br/><textarea class="textinput textInput form-control" name=msg required></textarea><br/>
+                    <div class="form-actions"><input type="submit" name="submit" value="Wyślij" class="btn btn-primary btn-lg btn-block" id="submit-id-submit"> </div>
+                </form>
+                <?php } ?>
+            </div>
+        </div>
+    </div>
+</div>
 
-<div id="contactInfoBlock">
-    <div id="contactInfo1" class="block grayBlock">
-        <div class="blockFoldHold">
-            <div class="blockFold"></div>
-            <div class="blockFoldClear"></div>
-        </div>
-        <div class="blockContent">
-            <h2>Kontakt</h2>
-            <h3>Koordynator projektu</h3>
-            <address>
-                <i class="fa fa-envelope fa-fw"></i> 
-                <a class="fooBar" href="http://www.google.com/recaptcha/mailhide/d?k=0133IYp4KK6_WtYnLoma6bsg==&c=xkFwb7Xs0uxvl9Kz56Fp9GHpm9kZRxoc6SI4Du0zXyGFIJpvo_XHt-_ksaeX7i92"><span>roksana.maslankiewicz</span></a>
-                <br>
-                <i class="fa fa-phone fa-fw"></i> 22 844 73 55 
-            </address>
-            <h3>Nasze biuro</h3>
-            <address>
-                <i class="fa fa-envelope fa-fw"></i> 
-                <a class="fooBar" href="http://www.google.com/recaptcha/mailhide/d?k=019SfyeYoOBXz-HBQPiC1dMw==&amp;c=7t4uleBGHACWoT6pq8zcubkAl0UxUqb94jcrqtFq5N0="><span>biuro</span></a>
-                <br>
-                <i class="fa fa-phone fa-fw"></i> 22 844 73 55 
-            </address>
-        </div>
-    </div>
-    <div class="clearfix"></div>
-    <div id="contactInfo2" class="block grayBlock">
-        <div class="blockFoldHold">
-            <div class="blockFold"></div>
-            <div class="blockFoldClear"></div>
-        </div>
-        <div class="blockContent">
-            <h2>Adres</h2>
-            <address>
-                <b>Sieć obywatelska - Watchdog Polska</b>
-                <br>
-                ul. Ursynowska 22/2
-                <br>
-                02-605 Warszawa 
-            </address>
-        </div>
-    </div>
-</div>
-<div id="contactForm" class="block redBlock">
-    <div class="blockFoldHold">
-        <div class="blockFold"></div>
-        <div class="blockFoldClear"></div>
-    </div>
-    <div class="blockContent">
-        <h2>Skontaktuj się z nami</h2>
-      <?php if(isset($_POST['submit'])) {
-      	echo "Dziękujemy! Twoja wiadomość została przesłana!";
-      }
-      else {  ?>
-        <div id="reqNote">Pola oznaczone gwiazdką (*) są wymagane</div>
-        <br/>
-        <form method=POST action=contact.php>
-        	<input type=hidden name=csrfprotection value="<?php echo $_SESSION['csrf']; ?>"/>
-        	Twój email *<br/><input class="textinput textInput form-control" maxlength="150" name="email" type="text" required /><br/>
-        	Imię (i nazwisko) *<br/><input class="textinput textInput form-control" maxlength="150" name="name" type="text" required /><br/>
-        	Temat *<br/><input class="textinput textInput form-control" maxlength="150" name="topic" type="text" required /><br/>
-        	Wiadomość *<br/><textarea class="textinput textInput form-control" name=msg required></textarea><br/>
-        	<div class="form-actions"><input type="submit" name="submit" value="Wyślij" class="btn btn-primary btn-lg btn-block" id="submit-id-submit"> </div>
-        </form>
-        <?php } ?>
-    </div>
-</div>
+
 
 <?php
 

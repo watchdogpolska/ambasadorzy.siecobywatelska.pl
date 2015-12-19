@@ -5,8 +5,11 @@ showHead("Do pobrania");
 
 ?>
 
+<div class="row">
+	<div class="col-md-push-2 col-md-8">
+		
+
 <div class="block redBlock" >
-<div class="blockFoldHold"><div class="blockFold"></div><div class="blockFoldClear"></div></div>
 <div class="blockContent">
 <h2>Materiały do pobrania</h2>
 <p>Zachęcamy do pobrania przygotowanych przez nas materiałów:</p>
@@ -20,7 +23,8 @@ showHead("Do pobrania");
 <li><a target="_blank" href="files/pub_zeby.pdf">* Publikacja pt. "Zdrowe zęby demokracji" (PDF)</a></li>
 </ul>
 </div></div>
-
+	</div>
+</div>
 <?php
 
 showFooter();

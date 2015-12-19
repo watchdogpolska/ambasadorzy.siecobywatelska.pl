@@ -1,16 +1,17 @@
 <?php
 
+$toasts = array();
 if(file_exists("db.inc.php")) header('Location: index.php'); //prevent reconfiguration
 
 if(isset($_POST['sent'])) {
-	$login = $_POST['user'];
-	$pass = $_POST['pass'];
-	$db = $_POST['base'];
-	$host = $_POST['host'];
+	$login = isset($_POST['user']) ? $_POST['user'] : 'root';
+	$pass = isset($_POST['pass']) ? $_POST['pass'] : '';
+	$db = isset($_POST['base']) ? $_POST['base'] : 'ambasadorzy_siecobywatelska_pl';
+	$host = isset($_POST['host']) ? $_POST['host'] : '127.0.0.1';
 	
-	$link = mysqli_connect($host,$login,$pass,$db);
+	$link = mysqli_connect($host, $login, $pass, $db);
 	if(mysqli_connect_errno()) {
-		echo "<span style='color: red'>Nie można połączyć się z bazą danych! (Can't connect to DB)</span><br/>";
+		$toasts[]  = '<div class="alert alert-danger" role="alert">Can\'t connect to DB('.mysqli_connect_errno().')'. mysqli_connect_error().'</div>';
 	}
 	else {
 		mysqli_query($link,"CREATE TABLE IF NOT EXISTS `users` (`idusers` INT NOT NULL AUTO_INCREMENT,`login` VARCHAR(45) NOT NULL,`password` VARCHAR(128) NOT NULL,`name` VARCHAR(60) NOT NULL, `usuniety` TINYINT(1) NOT NULL DEFAULT 0, `lastchange` DATE NOT NULL, PRIMARY KEY (`idusers`)) ENGINE = InnoDB;");
@@ -32,16 +33,57 @@ if(isset($_POST['sent'])) {
 
 
 ?>
-
-Podaj poniższe dane, aby skonfigurować (fill the form below to configure): <br/>
-<form action=config.php method=post>
-User: <input type=text name=user required />
-<br/>
-Password: <input type=password name=pass required />
-<br/>
-DB Name: <input type=text name=base required />
-<br/>
-Host: <input type=text name=host required />
-<br/>
-<input type=submit name=sent value="Konfiguruj/configure!" />
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konfiguracja ambasadorzy.siecobywatelska.pl</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <img src="/img/watchdog.png" alt="" class="pull-right">
+        <h1>Installer</h1>
+        <?php
+        foreach ($toasts as $toast) {
+            echo $toast;
+        }
+        ?>
+        To install the application, please fill out the form: 
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-md-offset-3">
+                <form action="config.php" class="form-horizontal" method="post">
+                    <div class="form-group">
+                        <label for="input_user" class="col-sm-4 control-label">User</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="input_user" name="user" placeholder="root" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input_password" class="col-sm-4 control-label">Pasword</label>
+                        <div class="col-sm-8">
+                            <input type="password" class="form-control" id="input_password" name="pass" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input_dbname" class="col-sm-4 control-label">Database name</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="input_dbname" name="base" placeholder="ambasadorzy_siecobywatelska_pl" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input_dbhost" class="col-sm-4 control-label">Database address</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="input_dbhost" name="host" placeholder="127.0.0.1" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-8">
+                            <button type="submit" class="btn btn-primary" name="sent">Save</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
