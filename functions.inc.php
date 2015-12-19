@@ -88,34 +88,26 @@ function showFooter() {
 		</div>
 		<div class="clearfix"></div>
 		    <footer>
-			<div id="footHeaders" class="ffMedium">
-			    <div class="col-md-4 text-left"><span>Autor</span></div>
-			    <div class="col-md-4 text-center"><!-- FEAUTURE DISABLED <span>Partnerzy</span> --></div>
-			    <div class="col-md-4 text-right"><span>Obserwuj nas na</span></div>
-			</div>
-			<div class="clearfix"></div>
-			<div id="footData">             
-			    <div id="contactInfo" class="col-md-4">
-				<address>
-				    <a href="http://siecobywatelska.pl">Sieć obywatelska - Watchdog Polska</a><br>
-				    <a class="fooBar" href="http://www.google.com/recaptcha/mailhide/d?k=019SfyeYoOBXz-HBQPiC1dMw==&c=7t4uleBGHACWoT6pq8zcubkAl0UxUqb94jcrqtFq5N0="><span>biuro</span></a><br>
-				    +48 22 844 73 55
-				</address>
-			    </div>
-			    
-			    <div class="col-md-4">
-				<?php echo FOOTER_TEXT; ?>
-			    </div>
-			    
-			    <div id="footSocialMedia" class="col-md-4 text-right">
-				<a href="http://facebook.com/SiecObywatelskaWatchdogPolska"><i class="fa fa-facebook-official"></i></a>
-				<a href="http://twitter.com/SiecObywatelska"><i class="fa fa-twitter"></i></a>
-				<a href="https://www.youtube.com/channel/UC1d-Dkxrw5O9unN5FkB7inw"><i class="fa fa-youtube"></i></a>
-				<a href="#"><i class="fa fa-rss"></i></a>
-			    </div>
-			</div>
-
-			<div class="clearfix"></div>
+		    <div class="row footTop">
+		    	<div class="col-md-4">
+		    		<div class="footHeader">Autor</div>
+					<address>
+					    <a href="http://siecobywatelska.pl">Sieć obywatelska - Watchdog Polska</a><br>
+					    <a class="fooBar" href="http://www.google.com/recaptcha/mailhide/d?k=019SfyeYoOBXz-HBQPiC1dMw==&c=7t4uleBGHACWoT6pq8zcubkAl0UxUqb94jcrqtFq5N0="><span>biuro</span></a><br>
+					    +48 22 844 73 55
+					</address>
+		    	</div>
+		    	<div class="col-md-4 text-center">
+		    		
+		    	</div>
+		    	<div class="col-md-4 text-right"  id="footSocialMedia">
+		    		<div class="footHeader">Obserwuj nas na</div>
+		    		<a href="http://facebook.com/SiecObywatelskaWatchdogPolska"><i class="fa fa-facebook-official"></i></a>
+					<a href="http://twitter.com/SiecObywatelska"><i class="fa fa-twitter"></i></a>
+					<a href="https://www.youtube.com/channel/UC1d-Dkxrw5O9unN5FkB7inw"><i class="fa fa-youtube"></i></a>
+					<a href="#"><i class="fa fa-rss"></i></a>
+		    	</div>
+		    </div>
 
 			<div id="footBottom">
 			    <div id="footBottomHR" style="width: 100%"></div>

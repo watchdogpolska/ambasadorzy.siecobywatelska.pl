@@ -10,33 +10,35 @@ $amb = mysqli_query($link, "SELECT * FROM ambassadors WHERE zaakceptowany = 1");
 
 ?>
 
-<div id="voteListBlock" class="block grayBlock">
-	<div class="blockContent">
-		<h2>
-			Lista ambasadorów i ambasadorek
-		</h2>
-	</div>
-</div>
-
-<div class="float-right">
-	<div id="voteBlock" class="block redBlock">
-		<div class="blockContent">
-			<div id="voteCount"><?php echo $amb->num_rows; ?></div>
-			<h2>Ambasadorów Jawności</h2>
+<div class="row">
+	<div class="col-md-6">
+		<div id="voteListBlock" class="block grayBlock">
+			<div class="blockContent">
+				<h2>
+					Lista ambasadorów i ambasadorek
+				</h2>
+			</div>
 		</div>
 	</div>
-	<div class="clearfix"></div>
-	<div id="mapBlock" class="block blackBlock">
-		<div class="blockContent">
-		<h2>
-		Mapa Ambasadorów
-		</h2>
-		<div style="height:450px" id="map"></div>
-	</div>
+	<div class="col-md-6">
+		<div id="voteBlock" class="block redBlock">
+			<div class="blockContent">
+				<div id="voteCount"><?php echo $amb->num_rows; ?></div>
+				<h2>Ambasadorów Jawności</h2>
+				<?php /* TODO: Display list with paggination*/ ?>	
+			</div>
+		</div>
+		<div id="mapBlock" class="block blackBlock">
+			<div class="blockContent">
+				<h2>
+					Mapa Ambasadorów
+				</h2>
+				<div style="height:450px" id="map"></div>
+			</div>
+		</div>
 	</div>
 </div>
 
-<div class="clearfix"></div>
 
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 <script type="text/javascript">

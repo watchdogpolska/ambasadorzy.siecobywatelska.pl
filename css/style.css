@@ -5,9 +5,10 @@ body {
 }
 
 #container {
-    max-width:1400px;
+    width:1400px;
     margin:0 auto;
     background:#fff;
+    max-width: 100%;
 }
 
 #contentContainer {
@@ -15,6 +16,7 @@ body {
     clear:both;
     padding-top:5px;
     margin:10px auto;
+    max-width: 100%;
 }
 
 a {
@@ -141,20 +143,6 @@ header img {
     border-left-color:gray;
 }
 
-#movieBlock {
-    float:left;
-    width:450px;
-}
-
-#descriptionBlock {
-    width:450px;
-    float:left;
-}
-
-#signFormBlock {
-    float:right;
-    width:500px;
-}
 
 #mainForm button,#contactForm button {
     font-weight:700;
@@ -195,16 +183,15 @@ footer {
     padding:20px 5px;
     background:#eee;
 }
-
-#footHeaders {
-    font-size:22px;
-    line-height:1.5em;
+.footTop{
+    padding: 15px;
 }
-
-#footHeaders span {
+.footHeader {
+    font-size:22px;
     border-bottom:1px dotted #bbb;
     line-height:2em;
 }
+
 
 #footBottomHR {
     border-top:1px solid #bbb;
@@ -260,9 +247,6 @@ footer {
     color:#aaa;
 }
 
-#voteBlock {
-    width:410px;
-}
 
 #voteBlock h2 {
     margin:0;
@@ -274,15 +258,6 @@ footer {
     text-align:center;
     font-weight:700;
     font-size:60px;
-}
-
-#mapBlock {
-    width:410px;
-}
-
-#voteListBlock {
-    float:left;
-    width:550px;
 }
 
 #pagination {
@@ -307,23 +282,10 @@ footer {
     text-decoration:none;
 }
 
-#contactForm {
-    width:600px;
-    float:left;
-}
-
 #contactForm textarea {
     height:300px;
 }
 
-#contactInfoBlock {
-    width:390px;
-    float:right;
-}
-
-#mediaInfoBlock {
-    width:630px;
-}
 .has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, .has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label, .has-error.radio-inline label {
     color: #F5FF50;
 }
