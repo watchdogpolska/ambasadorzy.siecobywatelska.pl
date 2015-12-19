@@ -49,13 +49,27 @@ function showHead($subname, $header = "Ambasadorzy Jawności") {
 		        
 		        <nav id="mainMenu">
 		            <ul>
-		            <a href="/"><li><i class="fa fa-home fa-2x"></i></li></a>
-		            <a href="ambassadors.php"><li>Ambasadorzy</li></a>
-		            <a href="withus.php"><li>Są z nami</li></a>
-		            <a href="firmy.php"><li>Dla firm</li></a>
-		            <a href="download.php"><li>Do pobrania</li></a>
-		            <a href="contact.php"><li>Kontakt</li></a>
-		            <a href="http://siecobywatelska.pl/wlacz-sie-5min/#wspieraj_siec" style="background-color: #e84343" target="_blank">Wspieraj nas</a>
+			            <li>
+			                <a href="/"><i class="fa fa-home fa-2x"></i></a>
+			            </li>
+			            <li>
+			                <a href="ambassadors.php">Ambasadorzy</a>
+			            </li>
+			            <li>
+			                <a href="withus.php">Są z nami</a>
+			            </li>
+			            <li>
+			                <a href="firmy.php">Dla firm</a>
+			            </li>
+			            <li>
+			                <a href="download.php">Do pobrania</a>
+			            </li>
+			            <li>
+			                <a href="contact.php">Kontakt</a>
+			            </li>
+						<li class="support">
+							<a href="http://siecobywatelska.pl/wlacz-sie-5min/#wspieraj_siec" class="support" target="_blank">Wspieraj nas</a>
+						</li>
 		            </ul>
 		        </nav>
 		    </header> 

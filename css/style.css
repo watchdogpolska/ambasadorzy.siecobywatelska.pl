@@ -38,33 +38,43 @@ a:hover,a:visited,a:active {
 }
 
 header img {
-    float:left;
     margin:20px;
 }
 
 #mainMenu {
-    float:right;
-    height:90px;
     background:#4d4d4d;
+    float: right;
+}
+
+#mainMenu ul{
+    display:flex;
+    flex-wrap:wrap;
+    margin:0;
 }
 
 #mainMenu a {
-    display:-webkit-flex;
-    -webkit-align-items:center;
-    display:flex;
-    align-items:center;
-    float:left;
+    display:block;
     color:#fff;
     text-transform:uppercase;
     padding:0 45px;
-    height:90px;
     font:18px "GloberSemibold","GloberRegular",Helvetica,Arial,sans-serif;
+    line-height: 90px;
 }
 
-#mainMenu a:hover, a.activeMenu {
+
+#mainMenu a:hover, #mainMenu a.activeMenu {
     background:#d82727;
     text-decoration:none;
 }
+
+#mainMenu .support a{
+    background: #e84343;
+}
+
+#mainMenu .support a:hover{
+    background: #dd1b1b;
+}
+
 
 .block {
     margin:15px 20px 15px 10px;
