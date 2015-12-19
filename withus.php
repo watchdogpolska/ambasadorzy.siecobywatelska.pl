@@ -8,7 +8,6 @@ showHead("Są z nami", "Znani(-ne) Ambasadorzy/Ambasadorki Jawności");
 ?>
 <div class="float-left">
 <div id="descriptionBlock" class="block grayBlock" >
-<div class="blockFoldHold"><div class="blockFold"></div><div class="blockFoldClear"></div></div>
 <div class="blockContent">
 <h2>Autorytety o tym, czy można żyć bez informacji?</h2>
 <p>Zachęcamy do pobrania przygotowanych przez nas materiałów:</p>
@@ -26,7 +25,6 @@ showHead("Są z nami", "Znani(-ne) Ambasadorzy/Ambasadorki Jawności");
 </div>
 
 <div id="signFormBlock" class="block redBlock">
-<div class="blockFoldHold"><div class="blockFold"></div><div class="blockFoldClear"></div></div>
 <div class="blockContent">
 <h2>Autorytety o tym, czy można żyć bez informacji?</h2>
 <iframe width="420" height="315" src="https://www.youtube.com/embed/5feZrqYOisY" frameborder="0" allowfullscreen></iframe>

@@ -11,23 +11,15 @@ $amb = mysqli_query($link, "SELECT * FROM ambassadors WHERE zaakceptowany = 1");
 ?>
 
 <div id="voteListBlock" class="block grayBlock">
-<div class="blockFoldHold">
-<div class="blockFold"></div>
-<div class="blockFoldClear"></div>
-<div class="blockContent">
-<h2>
-Lista ambasadorów i ambasadorek
-</h2>
-</div>
-</div>
+	<div class="blockContent">
+		<h2>
+			Lista ambasadorów i ambasadorek
+		</h2>
+	</div>
 </div>
 
 <div class="float-right">
 	<div id="voteBlock" class="block redBlock">
-		<div class="blockFoldHold">
-		<div class="blockFold"></div>
-		<div class="blockFoldClear"></div>
-		</div>
 		<div class="blockContent">
 			<div id="voteCount"><?php echo $amb->num_rows; ?></div>
 			<h2>Ambasadorów Jawności</h2>
@@ -35,10 +27,6 @@ Lista ambasadorów i ambasadorek
 	</div>
 	<div class="clearfix"></div>
 	<div id="mapBlock" class="block blackBlock">
-		<div class="blockFoldHold">
-		<div class="blockFold"></div>
-		<div class="blockFoldClear"></div>
-		</div>
 		<div class="blockContent">
 		<h2>
 		Mapa Ambasadorów

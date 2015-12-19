@@ -68,6 +68,19 @@ header img {
 
 .block {
     margin:15px 20px 15px 10px;
+    position:relative;
+}
+
+.block:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    width:0;
+    height:0;
+    border-style:solid;
+    border-width:40px 0 0 40px;
+    border-color:white #fff transparent transparent;
 }
 
 .blockContent {
@@ -79,32 +92,6 @@ header img {
 .block h2 {
     font-size: 35px;
     font-family: "GloberSemibold","GloberRegular",Helvetica,Arial,sans-serif;
-}
-
-.blockFoldHold {
-    position:relative;
-    top:0;
-    right:0;
-}
-
-.blockFold {
-    position:absolute;
-    top:0;
-    right:0;
-    width:0;
-    height:0;
-    border-style:solid;
-    border-width:40px 0 0 40px;
-    border-color:transparent #fff transparent transparent;
-}
-
-.blockFoldClear {
-    position:absolute;
-    top:0;
-    right:0;
-    border-style:solid;
-    border-width:0 40px 40px 0;
-    border-color:transparent #fff transparent transparent;
 }
 
 .redBlock {
@@ -132,15 +119,15 @@ header img {
     border-bottom:1px solid #fff;
 }
 
-.redBlock .blockFold {
+.redBlock:after {
     border-left-color:#7a1a1a;
 }
 
-.blackBlock .blockFold {
+.blackBlock:after {
     border-left-color:gray;
 }
 
-.grayBlock .blockFold {
+.grayBlock:after {
     border-left-color:gray;
 }
 

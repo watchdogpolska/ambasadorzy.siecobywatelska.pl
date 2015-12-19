@@ -72,7 +72,6 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 
 <div class="float-left">
 <div id="descriptionBlock" class="block grayBlock">
-<div class="blockFoldHold"><div class="blockFold"></div><div class="blockFoldClear"></div></div>
 <div class="blockContent">
 <h2>Dlaczego warto?</h2>
 <p>Na przestrzeni ostatnich kilku lat mogliśmy obserwować wiele pozytywnych zmian w&nbsp;dziedzinie
@@ -100,7 +99,6 @@ jawność.</a></p>
 </div>
 <div class="clearfix"></div>
 <div id="descriptionBlock" class="block grayBlock">
-<div class="blockFoldHold"><div class="blockFold"></div><div class="blockFoldClear"></div></div>
 <div class="blockContent">
 <h2>Jak zostać Ambasadorem / Ambasadorką Jawności?</h2>
 <p>Przygotowaliśmy propozycje, które pozwolą Ci wspierać jawność każdego dnia. Realizacja niektórych 
@@ -129,7 +127,6 @@ bądź instytucję, z&nbsp;którą powinniśmy się skontaktować?</li>
 </div>
 </div>
 <div id="signFormBlock" class="block redBlock">
-<div class="blockFoldHold"><div class="blockFold"></div><div class="blockFoldClear"></div></div>
 <div class="blockContent">
 <h2>Dołącz do wspierających jawność!</h2>
 <p>Zostaw nam krótką informację o&nbsp;sobie, zapoznaj się z&nbsp;regulaminem i&nbsp;podpisz Kodeks Ambasadora/Ambasadorki.

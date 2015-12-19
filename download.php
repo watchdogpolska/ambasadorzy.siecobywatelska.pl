@@ -6,7 +6,6 @@ showHead("Do pobrania");
 ?>
 
 <div class="block redBlock" >
-<div class="blockFoldHold"><div class="blockFold"></div><div class="blockFoldClear"></div></div>
 <div class="blockContent">
 <h2>Materiały do pobrania</h2>
 <p>Zachęcamy do pobrania przygotowanych przez nas materiałów:</p>

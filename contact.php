@@ -25,10 +25,6 @@ if(isset($_POST['submit'])) {
 
 <div id="contactInfoBlock">
     <div id="contactInfo1" class="block grayBlock">
-        <div class="blockFoldHold">
-            <div class="blockFold"></div>
-            <div class="blockFoldClear"></div>
-        </div>
         <div class="blockContent">
             <h2>Kontakt</h2>
             <h3>Koordynator projektu</h3>
@@ -49,10 +45,6 @@ if(isset($_POST['submit'])) {
     </div>
     <div class="clearfix"></div>
     <div id="contactInfo2" class="block grayBlock">
-        <div class="blockFoldHold">
-            <div class="blockFold"></div>
-            <div class="blockFoldClear"></div>
-        </div>
         <div class="blockContent">
             <h2>Adres</h2>
             <address>
@@ -66,10 +58,6 @@ if(isset($_POST['submit'])) {
     </div>
 </div>
 <div id="contactForm" class="block redBlock">
-    <div class="blockFoldHold">
-        <div class="blockFold"></div>
-        <div class="blockFoldClear"></div>
-    </div>
     <div class="blockContent">
         <h2>Skontaktuj się z nami</h2>
       <?php if(isset($_POST['submit'])) {

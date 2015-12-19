@@ -6,7 +6,6 @@ showHead("Polityka prywatności");
 ?>
 
 <div class="block grayBlock">
-<div class="blockFoldHold"><div class="blockFold"></div><div class="blockFoldClear"></div></div>
 <div class="blockContent">
 <h2>Polityka prywatności</h2>
 <p>1. Informacje ogólne</p>
