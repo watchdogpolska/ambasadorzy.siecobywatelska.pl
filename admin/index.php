@@ -29,6 +29,7 @@ echo "<hr/><br/>";
 echo "
 <a href=famous.php>Zarządzaj celebrytami</a><br/>
 <a href=orgs.php>Zarządzaj organizacjami</a><br/>
+<a href=uploader.php>Uploader zdjęć</a><br/>
 <hr/>
 <br/>
 <a href=login.php>Wyloguj się</a><br/>
