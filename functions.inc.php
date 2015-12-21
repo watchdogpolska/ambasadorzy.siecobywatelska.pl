@@ -127,7 +127,7 @@ function showFooter() {
 		    </footer>
 		</div>
 		<div id="authorInfo">
-		    <a href="<?php echo GITHUB_URL; ?>">Github</a>
+			<a href="<?php echo GITHUB_URL; ?>"><i class="fa fa-github"></i> Github</a>
 		</div>
 	    
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
