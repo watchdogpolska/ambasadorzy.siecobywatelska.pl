@@ -16,30 +16,30 @@ showHead("Są z nami", "Znani(-ne) Ambasadorzy/Ambasadorki Jawności");
 		$link = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_BASE);
 		$celebryci = mysqli_query($link, "SELECT * from famous");
 		while($celebryta = mysqli_fetch_array($celebryci, MYSQLI_ASSOC)) {
-		  $id = $celebryta['idfamous'];
-		  $name = htmlspecialchars($celebryta['name']);
-		  $link = htmlspecialchars($celebryta['videolink']);
-		  $desc = htmlspecialchars($celebryta['desc']);
+			$id = $celebryta['idfamous'];
+			$name = htmlspecialchars($celebryta['name']);
+			$link = htmlspecialchars($celebryta['videolink']);
+			$desc = htmlspecialchars($celebryta['desc']);
 
-		?>
-		<div id="descriptionBlock" class="block grayBlock" >
-			<div class="blockContent">
-				<h2><?php echo $name; ?></h2>
-				<?php
-				if (strpos($link,'youtube') !== false) {
-					echo '<iframe width="560" height="315" src="'.$link.'" frameborder="0" allowfullscreen></iframe>';
-				}
-				else echo "<img style='max-height: 200px; display: block; margin: 0 auto' src='$link' alt='$name'>";
+			?>
+			<div id="descriptionBlock" class="block grayBlock" >
+				<div class="blockContent">
+					<h2><?php echo $name; ?></h2>
+					<?php
+					if (strpos($link,'youtube') !== false) {
+						echo '<iframe width="560" height="315" src="'.$link.'" frameborder="0" allowfullscreen></iframe>';
+					}
+					else echo "<img style='max-height: 200px; display: block; margin: 0 auto' src='$link' alt='$name'>";
 
-				echo $desc;
-				?>
+					echo $desc;
+					?>
+
+				</div>
 
 			</div>
-
-		</div>
-		<?php
-	}
-		 ?>
+			<?php
+		}
+		?>
 	</div>
 
 

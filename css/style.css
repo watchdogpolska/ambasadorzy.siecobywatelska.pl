@@ -9,6 +9,8 @@ body {
     margin:0 auto;
     background:#fff;
     max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 #contentContainer {
@@ -182,6 +184,7 @@ form .asteriskField {
 footer {
     padding:20px 5px;
     background:#eee;
+    margin: 0 -15px;
 }
 .footTop{
     padding: 15px;
