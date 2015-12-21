@@ -24,13 +24,13 @@ function csrf_validate($given = "") {
 
 //Random string generation - code from http://stackoverflow.com/questions/4356289/php-random-string-generator (CC license)
 function generateRandomString($length = 10) {
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    $charactersLength = strlen($characters);
-    $randomString = '';
-    for ($i = 0; $i < $length; $i++) {
-        $randomString .= $characters[rand(0, $charactersLength - 1)];
-    }
-    return $randomString;
+	$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	$charactersLength = strlen($characters);
+	$randomString = '';
+	for ($i = 0; $i < $length; $i++) {
+		$randomString .= $characters[rand(0, $charactersLength - 1)];
+	}
+	return $randomString;
 }
 
 if(isset($_SESSION['admin'])) { //security mechanism if user was removed when loggen in
@@ -43,8 +43,8 @@ if(isset($_SESSION['admin'])) { //security mechanism if user was removed when lo
 		$f_noloop = explode("/",debug_backtrace()[0]["file"]);
 		if($f_noloop[count($f_noloop)-1] != "newpass.php") header('location: newpass.php');
 	}
-	
-	
+
+
 }
 
 ?>
