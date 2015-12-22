@@ -54,5 +54,5 @@ if(isset($_GET['remove'])) {
 	<a href=index.php>Strona główna</a><br/>
 	<br/>
 	<hr/>
-	<img src="../img/watchdog.png" alt="Logo Watchdog" /><br/><br/>
+	<img src="/static/images/watchdog.png" alt="Logo Watchdog" /><br/><br/>
 </body>

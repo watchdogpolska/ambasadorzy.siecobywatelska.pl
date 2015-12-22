@@ -1,3 +1,6 @@
+@import 'variables';
+@import 'bootstrap';
+
 body {
     font:18px ClioRegular;
     background:#f7f7f7;
@@ -22,11 +25,11 @@ body {
 }
 
 a {
-    color:#d82727;
+    color:$brand-primary;
 }
 
 a:hover,a:visited,a:active {
-    color:#d82727;
+    color:$brand-primary;
 }
 
 .ffMedium {
@@ -67,7 +70,7 @@ header img {
 
 
 #mainMenu a:hover, #mainMenu a.activeMenu {
-    background:#d82727;
+    background:$brand-primary;
     text-decoration:none;
 }
 
@@ -109,7 +112,7 @@ header img {
 }
 
 .redBlock {
-    background:#d82727;
+    background:$brand-primary;
     color:#fff;
 }
 
@@ -221,7 +224,7 @@ footer {
 #footBottomLinks li:before {
     content:"\f0c8";
     margin:0 5px 0 -15px;
-    color:#d82727;
+    color:$brand-primary;
     vertical-align:middle;
     font:4px FontAwesome;
 }
@@ -270,7 +273,7 @@ footer {
 
 #pagination a {
     display:inline-block;
-    background:#d82727;
+    background:$brand-primary;
     width:30px;
     color:#fff;
     margin:2px;
@@ -280,8 +283,8 @@ footer {
 #pagination .pageActive,#pagination a:hover {
     background:#fff;
     width:30px;
-    color:#d82727;
-    border:1px solid #d82727;
+    color:$brand-primary;
+    border:1px solid $brand-primary;
     text-decoration:none;
 }
 

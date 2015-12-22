@@ -1,1 +1,5 @@
+.sass-cache/
+bower_components/
+node_modules/
 db.inc.php
+static/
