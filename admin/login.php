@@ -47,7 +47,7 @@ if(isset($_POST['sent']) && csrf_validate($_POST['csrf'])) {
 			Hasło: <input type=password name=pass required /><br/><br/>
 			<input type=submit value="Zaloguj się do Systemu!" name=sent />
 			<hr/>
-			<img src="../img/watchdog.png" alt="Logo Watchdog" /><br/><br/>
+			<img src="/static/images/watchdog.png" alt="Logo Watchdog" /><br/><br/>
 			<span style="font-size: 0.6em">System wewnętrzny Sieci Obywatelskiej Watchdog Polska. <br/>Próby uzyskania dostępu przez osoby nieuprawnione są zabronione.</span>
 		</form>
 	</div>

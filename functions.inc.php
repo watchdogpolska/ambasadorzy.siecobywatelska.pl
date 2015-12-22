@@ -28,13 +28,11 @@ function showHead($subname, $header = "Ambasadorzy Jawności") {
 		<meta property="og:site_name" content="<?php echo PAGE_NAME; ?>"/>
 		<meta property="og:description" content="<?php echo META_DESC; ?>" />
 		<meta property="og:locale" content="pl_PL" />
-		<meta property="og:image" content="<?php echo htmlspecialchars(url_origin($_SERVER)); ?>/img/facebook.jpg" />
+		<meta property="og:image" content="/static/images/facebook.jpg" />
 
-		<link rel="stylesheet" href="<?php echo htmlspecialchars(url_origin($_SERVER)); ?>/css/reset.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/static/css/style.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="<?php echo htmlspecialchars(url_origin($_SERVER)); ?>/css/cc-icons.min.css">
-		<link rel="stylesheet" href="<?php echo htmlspecialchars(url_origin($_SERVER)); ?>/css/style.css">
+		<link rel="stylesheet" href="/css/cc-icons.min.css">
 		<link rel="shortcut icon" type='image/x-icon' href='<?php echo htmlspecialchars(url_origin($_SERVER)); ?>/favicon.ico' />
 
 		<title>
@@ -129,7 +127,7 @@ function showHead($subname, $header = "Ambasadorzy Jawności") {
 			<a href="<?php echo GITHUB_URL; ?>">Github</a>
 		</div>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="/static/js/scripts.js"></script>
 
 	</body>
 	</html>

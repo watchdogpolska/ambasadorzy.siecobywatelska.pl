@@ -51,7 +51,7 @@ if(isset($_POST['sent']) && csrf_validate($_POST['csrf'])) {
 			<br/><br/>
 			<a href="index.php">Anuluj operację!</a>
 			<hr/>
-			<img src="../img/watchdog.png" alt="Logo Watchdog" /><br/><br/>
+			<img src="/static/images/watchdog.png" alt="Logo Watchdog" /><br/><br/>
 		</form>
 	</div>
 </body>

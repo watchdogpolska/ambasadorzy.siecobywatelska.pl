@@ -1,0 +1,22 @@
+{
+  "name": "ambasadorzy_siecobywatelska_pl",
+  "description": "Repozytorium strony internetowej Ambasadorów Jawności Sieci Obywatelskiej Watchdog Polska",
+  "main": "index.php",
+  "authors": [
+    "Dzakus <Dzakus13@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/watchdogpolska/ambasadorzy.siecobywatelska.pl",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.6",
+    "jquery": "~2.1.4"
+  }
+}
