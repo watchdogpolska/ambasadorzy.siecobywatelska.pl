@@ -75,14 +75,11 @@ gulp.task("js", function () {
 });
 
 gulp.task("scss", function () {
-	return plugins.rubySass(
-			config.scss.input,
-			{
-				style: "expanded",
-				loadPath: config.scss.include,
-				sourcemap: true
-			}
-		)
+	return gulp.src(config.scss.input)
+		.pipe(plugins.sass({
+			style: "expanded",
+			includePaths: config.scss.include
+		}))
 		.pipe(plugins.autoprefixer())
 		.pipe(gulp.dest(config.scss.output))
 		.pipe(reload({ stream:true }))
