@@ -48,7 +48,9 @@ showHead("Są z nami", "Znani(-ne) Ambasadorzy/Ambasadorki Jawności");
 		<div id="signFormBlock" class="block redBlock">
 			<div class="blockContent">
 				<h2>Autorytety o tym, czy można żyć bez informacji?</h2>
-				<iframe width="420" height="315" src="https://www.youtube.com/embed/5feZrqYOisY" frameborder="0" allowfullscreen></iframe>
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5feZrqYOisY" frameborder="0" allowfullscreen></iframe>
+				</div>
 			</div>
 		</div>
 	</div>
