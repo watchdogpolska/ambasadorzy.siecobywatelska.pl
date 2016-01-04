@@ -30,26 +30,26 @@ showHead("Firmy");
 		</ul>
 		Szczegółowe warunki współpracy będą omówione i ustalone z firmami deklarującymi chęć współpracy.
 		<h3>W jaki sposób firma zostaje Ambasadorem Jawności?</h3>
-		<ul>
-			<li>1. Zgłoszenie/zaproszenie do programu.</li>
-			<li>2. Weryfikacja zgłoszenia.</li>
-			<li>3. Sprawdzenie referencji kancelarii.</li>
-			<li>4. Omówienie warunków współpracy.</li>
-			<li>5. Podpisanie Deklaracji przejrzystości.</li>
-			<li>6. Realizacja działań w zakresie Programu Ambasadorzy Jawności.</li>
-		</ul>
+		<ol>
+			<li>Zgłoszenie/zaproszenie do programu.</li>
+			<li>Weryfikacja zgłoszenia.</li>
+			<li>Sprawdzenie referencji kancelarii.</li>
+			<li>Omówienie warunków współpracy.</li>
+			<li>Podpisanie Deklaracji przejrzystości.</li>
+			<li>Realizacja działań w zakresie Programu Ambasadorzy Jawności.</li>
+		</ol>
 		<h3>W jaki sposób sprawdzamy dużą firmę:</h3>
 		Śledzimy informacje na temat firmy na stronie internetowej, prasie branżowej oraz rankingach branżowych. Sprawdzamy:
 		<ul style="list-style: square inside">
-			<li> Czy współpracuje z organizacjami pozarządowymi bądź działa pro bono;</li>
-			<li> Czy prowadzi działania z zakresu CSR;</li>
-			<li> Czy wyznaje wartości zbieżne z naszymi; </li>
-			<li> opinie klientów i pracowników;</li>
+			<li>Czy współpracuje z organizacjami pozarządowymi bądź działa pro bono;</li>
+			<li>Czy prowadzi działania z zakresu CSR;</li>
+			<li>Czy wyznaje wartości zbieżne z naszymi; </li>
+			<li>opinie klientów i pracowników;</li>
 		</ul>
 		<h3>Mniejszą firmę (poniżej 10 prawników) prosimy o odpowiedź na następujące pytania:</h3>
 		<ul style="list-style: square inside">
 			<li>Dlaczego chce być Ambasadorem Jawności?</li>
-			<li> Czy i jak działa w zakresie odpowiedzialnego biznesu, czy i jakie organizacje pozarządowe wspiera?</li>
+			<li>Czy i jak działa w zakresie odpowiedzialnego biznesu, czy i jakie organizacje pozarządowe wspiera?</li>
 			<li>Prosimy o dwie referencje od klientów.</li>
 		</ul>
 		Zainteresowane firmy prosimy o <a href="contact.php">kontakt telefoniczny lub mailowy</a>

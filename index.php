@@ -114,29 +114,29 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 					realizować na wiele różnych sposobów!
 				</p>
 				<p><b>Na początek</b></p>
-				<ul>
+				<ol>
 					<li>
-						1. Zostaw nam informacje o&nbsp;sobie, zapoznaj się z&nbsp;regulaminem i&nbsp;podpisz Kodeks Ambasadora/Ambasadorki.
+						Zostaw nam informacje o&nbsp;sobie, zapoznaj się z&nbsp;regulaminem i&nbsp;podpisz Kodeks Ambasadora/Ambasadorki.
 						Pamiętaj, że w&nbsp;ten sposób deklarujesz, iż bliskie Ci są nasze wartości. Informację o&nbsp;możliwości
 						dołączenia do&nbsp; Ambasadorów i&nbsp;Ambasadorek udostępnij znajomym.
 					</li>
 					<li>
-						2. Pochwal się znajomym swoim zdjęciem z&nbsp;hasłem promującym jawność (możesz skorzystać
+						Pochwal się znajomym swoim zdjęciem z&nbsp;hasłem promującym jawność (możesz skorzystać
 						z naszych gotowych propozycji – <a href="http://localhost/download.php" title="Do pobrania">w&nbsp;zakładce do&nbsp;pobrania</a>) lub ilustrującym, co robisz dla tej
 						sprawy. Wyjaśnij, czym się zajmujemy, dlaczego dołączyłaś/dołączyłeś do&nbsp;tej idei. Wyślij
 						nam to zdjęcie, abyśmy mogli zamieścić je na naszej stronie.
 					</li>
 					<li>
-						3. Udostępniaj informacje zamieszczane przez Sieć Obywatelską Watchdog Polska. Obserwuj,
+						Udostępniaj informacje zamieszczane przez Sieć Obywatelską Watchdog Polska. Obserwuj,
 						co się u nas dzieje (np. przez nasz <a href="http://siecobywatelska.pl" target="_blank" title="Sieć Obywatelska Watchdog Polska">portal</a> i&nbsp;<a href="https://www.facebook.com/SiecObywatelskaWatchdogPolska?_rdr=p" target="_blank" title="Nasz FB">profil na Facebooku</a>) i&nbsp;dziel się artykułami, postami,
 						ulotkami, wydarzeniami przez media społecznościowe lub tradycyjnie (wydrukuj materiał lub
 						o nim opowiedz). <a href="http://siecobywatelska.pl/wp-content/uploads/2015/09/Informacja-Publiczna_ulotka-A4-skladana-do-A5-DRUK.pdf">Możesz zacząć od ulotki o&nbsp;dostępie do&nbsp;informacji publicznej.</a>
 					</li>
-					<li>4. Poleć nam kogoś. Znasz osobę, która podziela nasze wartości? Zaproponuj ją na kolejnego
+					<li>Poleć nam kogoś. Znasz osobę, która podziela nasze wartości? Zaproponuj ją na kolejnego
 						Ambasadora/Ambasadorkę jawności i&nbsp;opowiedz jej o&nbsp;naszych działaniach. Może znasz firmę
 						bądź instytucję, z&nbsp;którą powinniśmy się skontaktować?
 					</li>
-				</ul>
+				</ol>
 			</div>
 		</div>
 	</div>
@@ -161,25 +161,26 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 				</p>
 				<p style="text-align: center"><b>Kodeks Ambasadora/Ambasadorki</b></p>
 				<p>Jako Ambasador/Ambasadorka Jawności zobowiązuję się:</p>
-				<ul>
+				<ol>
 					<li>
-						1. Działać na rzecz  jawności w&nbsp;życiu publicznym i&nbsp;szeroko rozumianego dobra wspólnego,
+						Działać na rzecz  jawności w&nbsp;życiu publicznym i&nbsp;szeroko rozumianego dobra wspólnego,
 					</li>
 					<li>
-						2. Wystrzegać się sytuacji, w&nbsp;których moje działania mogłyby być postrzegane jako nieetyczne
+						Wystrzegać się sytuacji, w&nbsp;których moje działania mogłyby być postrzegane jako nieetyczne
 						lub bezprawne,
 					</li>
 					<li>
-						3. Rzetelnie realizować działania ambasadorskie w&nbsp;oparciu o&nbsp;przygotowane przez Sieć
+						Rzetelnie realizować działania ambasadorskie w&nbsp;oparciu o&nbsp;przygotowane przez Sieć
 						Obywatelską Watchdog Polska dyspozycje, a&nbsp;w&nbsp;szczególności - informować otoczenie o&nbsp;prawie dostępu do&nbsp;informacji oraz wadze jawności w&nbsp;sferze publicznej,
 					</li>
 					<li>
-						4. Oddzielać  działalność ambasadorską od przynoszącej indywidualne korzyści oraz politycznej.
+						Oddzielać  działalność ambasadorską od przynoszącej indywidualne korzyści oraz politycznej.
 					</li>
-					<li>5.  Swoim uczciwym, tolerancyjnym i&nbsp;godnym postępowaniem  budować pozytywny wizerunek
+					<li>
+						Swoim uczciwym, tolerancyjnym i&nbsp;godnym postępowaniem  budować pozytywny wizerunek
 						Ambasadorów i&nbsp;Ambasadorek Jawności.
 					</li>
-				</ul>
+				</ol>
 				<p>
 					Oświadczam, że zapoznałem/łam się ze wszystkimi punktami Kodeksu i&nbsp; zobowiązuję się do&nbsp;jego
 					przestrzegania.

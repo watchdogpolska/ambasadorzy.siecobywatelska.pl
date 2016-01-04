@@ -48,10 +48,8 @@ if(isset($_POST['submit'])) {
 				<div class="blockContent">
 					<h2>Adres</h2>
 					<address>
-						<b>Sieć obywatelska - Watchdog Polska</b>
-						<br>
-						ul. Ursynowska 22/2
-						<br>
+						<b>Sieć obywatelska - Watchdog Polska</b><br>
+						ul. Ursynowska 22/2<br>
 						02-605 Warszawa
 					</address>
 				</div>
