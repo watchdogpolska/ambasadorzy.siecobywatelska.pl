@@ -279,5 +279,25 @@ footer {
 }
 
 .text-two-column{
-	column-count: 2;
+    column-count: 2;
 }
+
+ul.list-dotted-brand{
+    list-style: none;
+    > li{
+        position: relative;
+        padding-left: 20px;
+        &:before{
+            content: '';
+            position: absolute;
+            top: .3em;
+            left: 0;
+            display: block;
+            width: .5em;
+            height: .5em;
+            background: $brand-primary;
+            border-radius: 50%;
+        }
+    }
+}
+
