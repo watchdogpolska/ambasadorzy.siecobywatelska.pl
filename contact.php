@@ -57,7 +57,7 @@ if(isset($_POST['submit'])) {
 		</div>
 	</div>
 	<div class="col-md-8 col-md-pull-4">
-		<div id="contactForm" class="block redBlock">
+		<div id="contactForm" class="block grayBlock">
 			<div class="blockContent">
 				<h2>Skontaktuj się z nami</h2>
 				<?php if(isset($_POST['submit'])) {
@@ -67,11 +67,23 @@ if(isset($_POST['submit'])) {
 				<div id="reqNote">Pola oznaczone gwiazdką (*) są wymagane</div>
 				<br/>
 				<form method=POST action=contact.php>
-					<input type=hidden name=csrfprotection value="<?php echo $_SESSION['csrf']; ?>"/>
-					Twój email *<br/><input class="textinput textInput form-control" maxlength="150" name="email" type="text" required /><br/>
-					Imię (i nazwisko) *<br/><input class="textinput textInput form-control" maxlength="150" name="name" type="text" required /><br/>
-					Temat *<br/><input class="textinput textInput form-control" maxlength="150" name="topic" type="text" required /><br/>
-					Wiadomość *<br/><textarea class="textinput textInput form-control" name=msg required></textarea><br/>
+					<input type="hidden" name="csrfprotection" value="<?php echo $_SESSION['csrf']; ?>"/>
+					<div class="form-group">
+						<label for="">Twój email *</label>
+						<input class="textinput textInput form-control" maxlength="150" name="email" type="text" required />
+					</div>
+					<div class="form-group">
+						<label for="">Imię (i nazwisko) *</label>
+						<input class="textinput textInput form-control" maxlength="150" name="name" type="text" required />
+					</div>
+					<div class="form-group">
+						<label for="">Temat *</label>
+						<input class="textinput textInput form-control" maxlength="150" name="topic" type="text" required />
+					</div>
+					<div class="form-group">
+						<label for="">Wiadomość *</label>
+						<textarea class="textinput textInput form-control" name=msg required></textarea>
+					</div>
 					<div class="form-actions"><input type="submit" name="submit" value="Wyślij" class="btn btn-primary btn-lg btn-block" id="submit-id-submit"> </div>
 				</form>
 				<?php } ?>
