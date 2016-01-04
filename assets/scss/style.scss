@@ -57,16 +57,17 @@ a.support-button{
     position: absolute;
     top: 0; right: 0;
     display: block;
-    background: #e84343;
+    background: #D72626;
     color: #fff;
     text-transform:uppercase;
     padding:0 45px;
     font:18px "GloberSemibold","GloberRegular",Helvetica,Arial,sans-serif;
     line-height: 90px;
+    transition: .2s background-color;
 }
 
 .support-button:hover{
-    background: #dd1b1b;
+    background: #E84343;
     text-decoration: none;
 }
 
