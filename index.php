@@ -69,34 +69,38 @@ if(isset($_POST['submit']) && csrf_validate($_POST['csrf'])) {
 showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 
 ?>
-<div class="row">
-	<div class="col-md-6">
-		<div id="descriptionBlock" class="block grayBlock">
-			<div class="blockContent">
-				<h2>Dlaczego warto?</h2>
-				<p>
-					Na przestrzeni ostatnich kilku lat mogliśmy obserwować wiele pozytywnych zmian w&nbsp;dziedzinie
-					dostępu do&nbsp;informacji publicznej -  wzrosła świadomość praw przysługujących obywatelom, nie
-					boimy się pytać urzędników i&nbsp;egzekwować odpowiedzi. Jednak jest wiele obszarów życia publicznego,
-					w których panuje kultura tajemnicy. Prawo dostępu do&nbsp;informacji i&nbsp;transparentność, to
-					niezaprzeczalne fundamenty zdrowej demokracji oraz praw człowieka i&nbsp;dlatego wciąż wymagają
-					naszej ochrony i&nbsp;promocji.
-				</p>
-				<p>
-					Dołącz do&nbsp;programu Ambasadorów/Ambasadorek Jawności, jeśli chcesz wesprzeć naszą ideę państwa
-					otwartego, przyjaznego i&nbsp;po prostu lepszego. Pomóżmy dowiedzieć się innym jakie mają prawa i&nbsp;
-					jak mogą z&nbsp;nich korzystać. Stwórzmy grupę osób z&nbsp;różnych środowisk, która
-					będzie zmieniać państwo na wszystkich poziomach.
-				</p>
-				<p>
-					Bycie Ambasadorem/Ambasadorką Jawności wiąże się również z&nbsp;indywidulanymi korzyściami m.in.
-					możliwością uczestniczenia w&nbsp;wydarzeniach organizowanych  przez Sieć Obywatelską Watchdog
-					Polska takich jak szkolenia, dyskusje oraz coroczny ,,Toast za jawność’’. Zapraszamy!
-					Jeśli nie możesz  dołączyć  do&nbsp;grona Ambasadorów/Ambasadorek, dowiedz się, jak <a href="http://siecobywatelska.pl/wlacz-sie-5min/">inaczej wspierać
-					jawność.</a>
-				</p>
-			</div>
+<div id="descriptionBlock" class="block grayBlock">
+	<div class="blockContent">
+		<h2>Dlaczego warto?</h2>
+		<div class="text-two-column">
+			<p>
+				Na przestrzeni ostatnich kilku lat mogliśmy obserwować wiele pozytywnych zmian w&nbsp;dziedzinie
+				dostępu do&nbsp;informacji publicznej -  wzrosła świadomość praw przysługujących obywatelom, nie
+				boimy się pytać urzędników i&nbsp;egzekwować odpowiedzi. Jednak jest wiele obszarów życia publicznego,
+				w których panuje kultura tajemnicy. Prawo dostępu do&nbsp;informacji i&nbsp;transparentność, to
+				niezaprzeczalne fundamenty zdrowej demokracji oraz praw człowieka i&nbsp;dlatego wciąż wymagają
+				naszej ochrony i&nbsp;promocji.
+			</p>
+			<p>
+				Dołącz do&nbsp;programu Ambasadorów/Ambasadorek Jawności, jeśli chcesz wesprzeć naszą ideę państwa
+				otwartego, przyjaznego i&nbsp;po prostu lepszego. Pomóżmy dowiedzieć się innym jakie mają prawa i&nbsp;
+				jak mogą z&nbsp;nich korzystać. Stwórzmy grupę osób z&nbsp;różnych środowisk, która
+				będzie zmieniać państwo na wszystkich poziomach.
+			</p>
+			<p>
+				Bycie Ambasadorem/Ambasadorką Jawności wiąże się również z&nbsp;indywidulanymi korzyściami m.in.
+				możliwością uczestniczenia w&nbsp;wydarzeniach organizowanych  przez Sieć Obywatelską Watchdog
+				Polska takich jak szkolenia, dyskusje oraz coroczny ,,Toast za jawność’’. Zapraszamy!
+				Jeśli nie możesz  dołączyć  do&nbsp;grona Ambasadorów/Ambasadorek, dowiedz się, jak <a href="http://siecobywatelska.pl/wlacz-sie-5min/">inaczej wspierać
+				jawność.</a>
+			</p>
 		</div>
+	</div>
+</div>
+<div class="row">
+
+	<div class="col-md-6">
+
 		<div class="clearfix"></div>
 		<div id="descriptionBlock" class="block">
 			<div class="blockContent" style="margin: 0 auto">
@@ -181,37 +185,41 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 						Ambasadorów i&nbsp;Ambasadorek Jawności.
 					</li>
 				</ol>
-				<p>
-					Oświadczam, że zapoznałem/łam się ze wszystkimi punktami Kodeksu i&nbsp; zobowiązuję się do&nbsp;jego
-					przestrzegania.
-				</p>
-				<h3 class="text-center">Twoje dane</h3>
-				<?php if($failed) echo '<div id="reqNote">NIE MOŻNA ZAREJESTROWAĆ. SPRAWDŹ POPRAWNOŚĆ DANYCH.</div><br/>'; ?>
-				<div id="reqNote">Pola oznaczone gwiazdką (*) są wymagane</div>
-				<form action="index.php" method="post" enctype="multipart/form-data">
-					<input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf']; ?>">
-					Imię *<br/><input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['first']); ?>" class="textinput textInput form-control" maxlength="45" name="first" type="text" required /><br/>
-					Nazwisko *<br/><input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['name']); ?>" class="textinput textInput form-control" maxlength="45" name="name" type="text" required /><br/>
-					Email *<br/><input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['mail']); ?>" class="textinput textInput form-control" maxlength="60" name="mail" type="email" required /><br/>
-					Miasto *<br/><input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['city']); ?>" class="textinput textInput form-control" maxlength="45" name="city" type="text" required /><br/>
-					Telefon *<br/><input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['phone']); ?>" class="textinput textInput form-control" maxlength="45" name="phone" type="tel" required /><br/>
-					Opisz, czym zajmujesz się zawodowo? *<br/><textarea value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['job']); ?>" class="textinput textInput form-control" maxlength="200" name="job" type="text" required></textarea><br/>
-					Adres korespondencyjny<br/><input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['address']); ?>" class="textinput textInput form-control" placeholder="ul. Ulica 1/1, 00-001 Miejscowość" maxlength="200" name="address" type="text" /><br/>
-					Dlaczego chcesz zostać Ambasadorem Jawności? *<br/><textarea value="<?php echo htmlspecialchars($_POST['why']); ?>" class="textinput textInput form-control" maxlength="3000" name="why" type="text" required></textarea><br/>
-					Twoje zdjęcie - max 1 MB <span style="border-bottom: 1px dotted" title="Poprzez przesłanie zdjęcia wyrażasz zgodę na wykorzystanie wizerunku i&nbsp;przesłanej fotografii przez Sieć Obywatelską Watchdog Polska.">(dodatkowe informacje)</span><br/><input class="textinput textInput form-control" name="photo" type="file" /><br/>
-					<p><input type="checkbox" name="datatrue" required />Oświadczam, że zawarte w&nbsp;powyższym formularzu dane są zgodne ze stanem faktycznym. *</p>
-					<p><input type="checkbox" name="datareg" required />Oświadczam, że zapoznałem(-am) się z&nbsp;<a href="files/regulamin.pdf" target="_blank">Regulaminem Programu</a> i&nbsp;akceptuję jego postanowienia. *</p>
-					<p><input type="checkbox" name="data" required />Oświadczam, iż wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z&nbsp;ustawą o&nbsp;ochronie danych osobowych (z 29 sierpnia 1997 roku) przez Sieć Obywatelską Watchdog Polska, ul. Ursynowska 22/2, 02-605 Warszawa w&nbsp;celach związanych z&nbsp;realizacją programu Ambasadorów i&nbsp;Ambasadorek Jawności oraz na podanie do&nbsp;wiadomości publicznej mojego imienia, nazwiska oraz miejscowości w&nbsp;przypadku zostania Ambasadorem/Ambasadorką Jawności. Jednocześnie potwierdzam, iż zostałem/zostałam poinformowany/a o&nbsp;możliwości sprawdzenia w&nbsp;jaki sposób i&nbsp;w jakim zakresie moje dane są przetwarzane, co zawierają, jak są udostępniane oraz o&nbsp;możliwości usunięcia danych z&nbsp;bazy Sieci Obywatelskiej Watchdog Polska. *</p>
-					<div class="form-actions"><input type="submit" name="submit" value="Wyślij" class="btn btn-primary btn-lg btn-block" id="submit-id-submit"> </div>
-				</form>
-				<p><a href="files/kodeks.pdf" target="_blank">Pobierz Kodeks Ambasadora w&nbsp;formie PDF</a></p>
-				<p><a href="files/dyspozycje.pdf" target="_blank">Pobierz przykładowe dyspozycje</a></p>
-				<p><a href="files/regulamin.pdf" target="_blank">Pobierz Regulamin Programu w&nbsp;PDF</a></p>
 			</div>
 		</div>
 	</div>
 </div>
-
+<div class="block redBlock">
+	<div class="blockContent">
+		<h2>Formularz zgłoszenia</h2>
+		<p>
+			Oświadczam, że zapoznałem/łam się ze wszystkimi punktami Kodeksu i&nbsp; zobowiązuję się do&nbsp;jego
+			przestrzegania.
+		</p>
+		<h3 class="text-center">Twoje dane</h3>
+		<?php if($failed) echo '<div id="reqNote">NIE MOŻNA ZAREJESTROWAĆ. SPRAWDŹ POPRAWNOŚĆ DANYCH.</div><br/>'; ?>
+		<div id="reqNote">Pola oznaczone gwiazdką (*) są wymagane</div>
+		<form action="index.php" method="post" enctype="multipart/form-data">
+			<input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf']; ?>">
+			Imię *<br/><input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['first']); ?>" class="textinput textInput form-control" maxlength="45" name="first" type="text" required /><br/>
+			Nazwisko *<br/><input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['name']); ?>" class="textinput textInput form-control" maxlength="45" name="name" type="text" required /><br/>
+			Email *<br/><input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['mail']); ?>" class="textinput textInput form-control" maxlength="60" name="mail" type="email" required /><br/>
+			Miasto *<br/><input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['city']); ?>" class="textinput textInput form-control" maxlength="45" name="city" type="text" required /><br/>
+			Telefon *<br/><input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['phone']); ?>" class="textinput textInput form-control" maxlength="45" name="phone" type="tel" required /><br/>
+			Opisz, czym zajmujesz się zawodowo? *<br/><textarea value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['job']); ?>" class="textinput textInput form-control" maxlength="200" name="job" type="text" required></textarea><br/>
+			Adres korespondencyjny<br/><input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['address']); ?>" class="textinput textInput form-control" placeholder="ul. Ulica 1/1, 00-001 Miejscowość" maxlength="200" name="address" type="text" /><br/>
+			Dlaczego chcesz zostać Ambasadorem Jawności? *<br/><textarea value="<?php echo htmlspecialchars($_POST['why']); ?>" class="textinput textInput form-control" maxlength="3000" name="why" type="text" required></textarea><br/>
+			Twoje zdjęcie - max 1 MB <span style="border-bottom: 1px dotted" title="Poprzez przesłanie zdjęcia wyrażasz zgodę na wykorzystanie wizerunku i&nbsp;przesłanej fotografii przez Sieć Obywatelską Watchdog Polska.">(dodatkowe informacje)</span><br/><input class="textinput textInput form-control" name="photo" type="file" /><br/>
+			<p><input type="checkbox" name="datatrue" required />Oświadczam, że zawarte w&nbsp;powyższym formularzu dane są zgodne ze stanem faktycznym. *</p>
+			<p><input type="checkbox" name="datareg" required />Oświadczam, że zapoznałem(-am) się z&nbsp;<a href="files/regulamin.pdf" target="_blank">Regulaminem Programu</a> i&nbsp;akceptuję jego postanowienia. *</p>
+			<p><input type="checkbox" name="data" required />Oświadczam, iż wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z&nbsp;ustawą o&nbsp;ochronie danych osobowych (z 29 sierpnia 1997 roku) przez Sieć Obywatelską Watchdog Polska, ul. Ursynowska 22/2, 02-605 Warszawa w&nbsp;celach związanych z&nbsp;realizacją programu Ambasadorów i&nbsp;Ambasadorek Jawności oraz na podanie do&nbsp;wiadomości publicznej mojego imienia, nazwiska oraz miejscowości w&nbsp;przypadku zostania Ambasadorem/Ambasadorką Jawności. Jednocześnie potwierdzam, iż zostałem/zostałam poinformowany/a o&nbsp;możliwości sprawdzenia w&nbsp;jaki sposób i&nbsp;w jakim zakresie moje dane są przetwarzane, co zawierają, jak są udostępniane oraz o&nbsp;możliwości usunięcia danych z&nbsp;bazy Sieci Obywatelskiej Watchdog Polska. *</p>
+			<div class="form-actions"><input type="submit" name="submit" value="Wyślij" class="btn btn-primary btn-lg btn-block" id="submit-id-submit"> </div>
+		</form>
+		<p><a href="files/kodeks.pdf" target="_blank">Pobierz Kodeks Ambasadora w&nbsp;formie PDF</a></p>
+		<p><a href="files/dyspozycje.pdf" target="_blank">Pobierz przykładowe dyspozycje</a></p>
+		<p><a href="files/regulamin.pdf" target="_blank">Pobierz Regulamin Programu w&nbsp;PDF</a></p>
+	</div>
+</div>
 <?php
 
 showFooter();
