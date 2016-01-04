@@ -3,26 +3,10 @@
 
 body {
     font:18px ClioRegular;
-    background:#f7f7f7;
+    background:white;
     text-shadow: rgba(0,0,0,0.2) 0 0 1px;
 }
 
-#container {
-    width:1400px;
-    margin:0 auto;
-    background:#fff;
-    max-width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-#contentContainer {
-    width:1020px;
-    clear:both;
-    padding-top:5px;
-    margin:10px auto;
-    max-width: 100%;
-}
 
 a {
     color:$brand-primary;
@@ -49,37 +33,41 @@ header img {
 }
 
 #mainMenu {
-    background:#4d4d4d;
-    float: right;
+    float: left;
+    font-family: "GloberRegular","helvetica",sans-serif;
 }
 
 #mainMenu ul{
-    display:flex;
-    flex-wrap:wrap;
-    margin:0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    list-style: none;
+    font-size: 24px;
+    line-height: 3;
 }
 
 #mainMenu a {
     display:block;
-    color:#fff;
+    color: #d72626;
+    padding:0 45px;
+
+}
+
+a.support-button{
+    position: absolute;
+    top: 0; right: 0;
+    display: block;
+    background: #e84343;
+    color: #fff;
     text-transform:uppercase;
     padding:0 45px;
     font:18px "GloberSemibold","GloberRegular",Helvetica,Arial,sans-serif;
     line-height: 90px;
 }
 
-
-#mainMenu a:hover, #mainMenu a.activeMenu {
-    background:$brand-primary;
-    text-decoration:none;
-}
-
-#mainMenu .support a{
-    background: #e84343;
-}
-
-#mainMenu .support a:hover{
+.support-button:hover{
     background: #dd1b1b;
+    text-decoration: none;
 }
 
 
@@ -169,11 +157,6 @@ form .asteriskField {
     margin:15px 0;
 }
 
-#reqNote {
-    font-size:12px;
-    line-height:2em;
-}
-
 .fooBar span:after {
     font-family:FontAwesome;
     content:"\f1fa";
@@ -185,7 +168,6 @@ form .asteriskField {
 
 footer {
     padding:20px 5px;
-    background:#eee;
     margin: 0 -15px;
 }
 .footTop{

@@ -40,14 +40,14 @@ function showHead($subname, $header = "Ambasadorzy Jawności") {
 		</title>
 	</head>
 	<body style='font-family: "GloberSemibold","GloberRegular",Helvetica,Arial,sans-serif;'>
-		<div id="container">
+		<div class="container">
 			<header>
 				<a href="http://siecobywatelska.pl"><img src="<?php echo htmlspecialchars(url_origin($_SERVER)); ?>/img/watchdog.png" width="259" height="61" alt="Logo Watchdog"></a>
-
+				<a href="http://siecobywatelska.pl/wlacz-sie-5min/#wspieraj_siec" class="support-button" target="_blank">Wspieraj nas</a>
 				<nav id="mainMenu">
 					<ul>
 						<li>
-							<a href="/"><i class="fa fa-home fa-2x"></i></a>
+							<a href="/">NAZWAA</a>
 						</li>
 						<li>
 							<a href="ambassadors.php">Ambasadorzy</a>
@@ -63,9 +63,6 @@ function showHead($subname, $header = "Ambasadorzy Jawności") {
 						</li>
 						<li>
 							<a href="contact.php">Kontakt</a>
-						</li>
-						<li class="support">
-							<a href="http://siecobywatelska.pl/wlacz-sie-5min/#wspieraj_siec" class="support" target="_blank">Wspieraj nas</a>
 						</li>
 					</ul>
 				</nav>
