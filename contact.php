@@ -64,24 +64,23 @@ if(isset($_POST['submit'])) {
 					echo "Dziękujemy! Twoja wiadomość została przesłana!";
 				}
 				else {  ?>
-				<div id="reqNote">Pola oznaczone gwiazdką (*) są wymagane</div>
 				<br/>
 				<form method=POST action=contact.php>
 					<input type="hidden" name="csrfprotection" value="<?php echo $_SESSION['csrf']; ?>"/>
 					<div class="form-group">
-						<label for="">Twój email *</label>
+						<label for="">Twój email <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
 						<input class="textinput textInput form-control" maxlength="150" name="email" type="text" required />
 					</div>
 					<div class="form-group">
-						<label for="">Imię (i nazwisko) *</label>
+						<label for="">Imię (i nazwisko) <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
 						<input class="textinput textInput form-control" maxlength="150" name="name" type="text" required />
 					</div>
 					<div class="form-group">
-						<label for="">Temat *</label>
+						<label for="">Temat <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
 						<input class="textinput textInput form-control" maxlength="150" name="topic" type="text" required />
 					</div>
 					<div class="form-group">
-						<label for="">Wiadomość *</label>
+						<label for="">Wiadomość <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
 						<textarea class="textinput textInput form-control" name=msg required></textarea>
 					</div>
 					<div class="form-actions"><input type="submit" name="submit" value="Wyślij" class="btn btn-primary btn-lg btn-block" id="submit-id-submit"> </div>
