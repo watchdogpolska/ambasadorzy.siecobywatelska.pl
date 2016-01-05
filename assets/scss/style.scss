@@ -73,7 +73,12 @@ a.support-button{
 
 
 .block {
-    margin:15px 20px 15px 10px;
+    margin:{
+        top: 15px;
+        right: 20px;
+        bottom: 70px;
+        left: 15px;
+    }
     position:relative;
 }
 
