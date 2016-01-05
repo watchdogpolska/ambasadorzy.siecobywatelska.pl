@@ -161,6 +161,7 @@ form .asteriskField {
 .fooBar span:after {
     font-family:FontAwesome;
     content:"\f1fa";
+    word-wrap: break-word;
 }
 
 .fooBar:after {
