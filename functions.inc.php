@@ -36,7 +36,8 @@ function showHead($subname, $header = "Ambasadorzy Jawności") {
 		<link rel="shortcut icon" type='image/x-icon' href='<?php echo htmlspecialchars(url_origin($_SERVER)); ?>/favicon.ico' />
 
 		<title>
-			<?php echo PAGE_NAME; if(!empty($subname)) echo " - ".$subname; ?>
+			<?php if(!empty($subname)) echo $subname.' - '; ?>
+			<?php echo PAGE_NAME; ?>
 		</title>
 	</head>
 	<body style='font-family: "GloberSemibold","GloberRegular",Helvetica,Arial,sans-serif;'>
