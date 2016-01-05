@@ -95,7 +95,12 @@ a.support-button{
 }
 
 .blockContent {
-    padding:10px 25px 40px;
+    padding:{
+        top: 30px;
+        right: 50px;
+        bottom: 50px;
+        left: 50px;
+    };
     font-size:18px;
 }
 

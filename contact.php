@@ -23,7 +23,7 @@ if(isset($_POST['submit'])) {
 
 ?>
 <div class="row">
-	<div class="col-md-4 col-md-push-8">
+	<div class="col-md-6 col-md-push-6 col-lg-4 col-lg-push-8 ">
 		<div id="contactInfoBlock">
 			<div id="contactInfo1" class="block grayBlock">
 				<div class="blockContent">
@@ -56,7 +56,7 @@ if(isset($_POST['submit'])) {
 			</div>
 		</div>
 	</div>
-	<div class="col-md-8 col-md-pull-4">
+	<div class="col-md-6 col-md-pull-6 col-lg-8 col-lg-pull-4 ">
 		<div id="contactForm" class="block grayBlock">
 			<div class="blockContent">
 				<h2>Skontaktuj się z nami</h2>
