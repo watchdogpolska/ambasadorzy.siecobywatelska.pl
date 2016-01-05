@@ -198,57 +198,57 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 		</p>
 		<h3 class="text-center">Twoje dane</h3>
 		<?php if($failed) echo '<div id="reqNote">NIE MOŻNA ZAREJESTROWAĆ. SPRAWDŹ POPRAWNOŚĆ DANYCH.</div><br/>'; ?>
-		<form action="index.php" method="post" enctype="multipart/form-data">
+		<form action="index.php" method="post" enctype="multipart/form-data" id="register_form">
 			<input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf']; ?>">
 			<div class="form-group">
-				<label for="first">Imię <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
-				<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['first']); ?>" class="form-control" maxlength="45" name="first" type="text" required />
+				<label for="register_form_first">Imię <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
+				<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['first']); ?>" class="form-control" maxlength="45" name="first" type="text" required id="register_form_first"/>
 			</div>
 			<div class="form-group">
-				<label for="name">Nazwisko <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
-				<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['name']); ?>" class="form-control" maxlength="45" name="name" type="text" required />
+				<label for="register_form_name">Nazwisko <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
+				<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['name']); ?>" class="form-control" maxlength="45" name="name" type="text" required id="register_form_name"/>
 			</div>
 			<div class="form-group">
-				<label for="mail">Email <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
-				<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['mail']); ?>" class="form-control" maxlength="60" name="mail" type="email" required />
+				<label for="register_form_mail">Email <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
+				<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['mail']); ?>" class="form-control" maxlength="60" name="mail" type="email" required id="register_form_mail"/>
 			</div>
 			<div class="form-group">
-				<label for="city">Miasto <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
-				<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['city']); ?>" class="form-control" maxlength="45" name="city" type="text" required />
+				<label for="register_form_city">Miasto <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
+				<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['city']); ?>" class="form-control" maxlength="45" name="city" type="text" required id="register_form_city"/>
 			</div>
 			<div class="form-group">
-				<label for="phone">Telefon <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
-				<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['phone']); ?>" class="form-control" maxlength="45" name="phone" type="tel" required />
+				<label for="register_form_phone">Telefon <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
+				<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['phone']); ?>" class="form-control" maxlength="45" name="phone" type="tel" required id="register_form_phone"/>
 			</div>
 			<div class="form-group">
-				<label for="job">Opisz, czym zajmujesz się zawodowo? <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
-				<textarea value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['job']); ?>" class="form-control" maxlength="200" name="job" type="text" required></textarea>
+				<label for="register_form_job">Opisz, czym zajmujesz się zawodowo? <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
+				<textarea value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['job']); ?>" class="form-control" maxlength="200" name="job" type="text" required id="register_form_job"></textarea>
 			</div>
 			<div class="form-group">
-				<label for="address">Adres korespondencyjny</label>
-				<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['address']); ?>" class="form-control" placeholder="ul. Ulica 1/1, 00-001 Miejscowość" maxlength="200" name="address" type="text" />
+				<label for="register_form_address">Adres korespondencyjny</label>
+				<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['address']); ?>" class="form-control" placeholder="ul. Ulica 1/1, 00-001 Miejscowość" maxlength="200" name="address" type="text" id="register_form_address"/>
 			</div>
 			<div class="form-group">
-				<label for="why">Dlaczego chcesz zostać Ambasadorem Jawności? <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
-				<textarea value="<?php echo htmlspecialchars($_POST['why']); ?>" class="textinput textInput form-control" maxlength="3000" name="why" type="text" required></textarea>
+				<label for="register_form_why">Dlaczego chcesz zostać Ambasadorem Jawności? <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
+				<textarea value="<?php echo htmlspecialchars($_POST['why']); ?>" class="textinput textInput form-control" maxlength="3000" name="why" type="text" required id="register_form_why"></textarea>
 			</div>
 			<div class="form-group">
-				<label for="photo">Twoje zdjęcie - max 1 MB <abbr title="Poprzez przesłanie zdjęcia wyrażasz zgodę na wykorzystanie wizerunku i&nbsp;przesłanej fotografii przez Sieć Obywatelską Watchdog Polska.">(dodatkowe informacje)</abbr></label>
-				<input class="form-control" name="photo" type="file" />
+				<label for="register_form_photo">Twoje zdjęcie - max 1 MB <abbr title="Poprzez przesłanie zdjęcia wyrażasz zgodę na wykorzystanie wizerunku i&nbsp;przesłanej fotografii przez Sieć Obywatelską Watchdog Polska.">(dodatkowe informacje)</abbr></label>
+				<input class="form-control" name="photo" type="file" id="register_form_photo"/>
 			</div>
 			<div class="checkbox">
-				<label>
-					<input type="checkbox" name="datatrue" required />Oświadczam, że zawarte w&nbsp;powyższym formularzu dane są zgodne ze stanem faktycznym. *
+				<label for="register_form_datatrue">
+					<input type="checkbox" name="datatrue" required id="register_form_datatrue"/>Oświadczam, że zawarte w&nbsp;powyższym formularzu dane są zgodne ze stanem faktycznym. *
 				</label>
 			</div>
 			<div class="checkbox">
-				<label>
-					<input type="checkbox" name="datareg" required />Oświadczam, że zapoznałem(-am) się z&nbsp;<a href="files/regulamin.pdf" target="_blank">Regulaminem Programu</a> i&nbsp;akceptuję jego postanowienia. *
+				<label for="register_form_datareg">
+					<input type="checkbox" name="datareg" required id="register_form_datareg"/>Oświadczam, że zapoznałem(-am) się z&nbsp;<a href="files/regulamin.pdf" target="_blank">Regulaminem Programu</a> i&nbsp;akceptuję jego postanowienia. *
 				</label>
 			</div>
 			<div class="checkbox">
-				<label>
-					<input type="checkbox" name="data" required />Oświadczam, iż wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z&nbsp;ustawą o&nbsp;ochronie danych osobowych (z 29 sierpnia 1997 roku) przez Sieć Obywatelską Watchdog Polska, ul. Ursynowska 22/2, 02-605 Warszawa w&nbsp;celach związanych z&nbsp;realizacją programu Ambasadorów i&nbsp;Ambasadorek Jawności oraz na podanie do&nbsp;wiadomości publicznej mojego imienia, nazwiska oraz miejscowości w&nbsp;przypadku zostania Ambasadorem/Ambasadorką Jawności. Jednocześnie potwierdzam, iż zostałem/zostałam poinformowany/a o&nbsp;możliwości sprawdzenia w&nbsp;jaki sposób i&nbsp;w jakim zakresie moje dane są przetwarzane, co zawierają, jak są udostępniane oraz o&nbsp;możliwości usunięcia danych z&nbsp;bazy Sieci Obywatelskiej Watchdog Polska. *
+				<label for="register_form_data">
+					<input type="checkbox" name="data" required id="register_form_data"/>Oświadczam, iż wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z&nbsp;ustawą o&nbsp;ochronie danych osobowych (z 29 sierpnia 1997 roku) przez Sieć Obywatelską Watchdog Polska, ul. Ursynowska 22/2, 02-605 Warszawa w&nbsp;celach związanych z&nbsp;realizacją programu Ambasadorów i&nbsp;Ambasadorek Jawności oraz na podanie do&nbsp;wiadomości publicznej mojego imienia, nazwiska oraz miejscowości w&nbsp;przypadku zostania Ambasadorem/Ambasadorką Jawności. Jednocześnie potwierdzam, iż zostałem/zostałam poinformowany/a o&nbsp;możliwości sprawdzenia w&nbsp;jaki sposób i&nbsp;w jakim zakresie moje dane są przetwarzane, co zawierają, jak są udostępniane oraz o&nbsp;możliwości usunięcia danych z&nbsp;bazy Sieci Obywatelskiej Watchdog Polska. *
 				</label>
 			</div>
 			<div class="form-actions"><input type="submit" name="submit" value="Wyślij" class="btn btn-primary btn-lg btn-block" id="submit-id-submit"> </div>
