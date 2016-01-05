@@ -253,9 +253,11 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 			</div>
 			<div class="form-actions"><input type="submit" name="submit" value="Wyślij" class="btn btn-primary btn-lg btn-block" id="submit-id-submit"> </div>
 		</form>
-		<p><a href="files/kodeks.pdf" target="_blank">Pobierz Kodeks Ambasadora w&nbsp;formie PDF</a></p>
-		<p><a href="files/dyspozycje.pdf" target="_blank">Pobierz przykładowe dyspozycje</a></p>
-		<p><a href="files/regulamin.pdf" target="_blank">Pobierz Regulamin Programu w&nbsp;PDF</a></p>
+		<p>
+			<a href="files/kodeks.pdf" target="_blank"><i class="fa fa-file-pdf-o" title="Plik w formacie PDF"></i> Pobierz Kodeks Ambasadora</a><br>
+			<a href="files/dyspozycje.pdf" target="_blank"><i class="fa fa-file-pdf-o" title="Plik w formacie PDF"></i> Pobierz przykładowe dyspozycje</a><br>
+			<a href="files/regulamin.pdf" target="_blank"><i class="fa fa-file-pdf-o" title="Plik w formacie PDF"></i> Pobierz Regulamin Programu</a>
+		</p>
 	</div>
 </div>
 <?php
