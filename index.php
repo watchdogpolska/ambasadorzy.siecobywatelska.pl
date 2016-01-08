@@ -72,7 +72,7 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 <div id="descriptionBlock" class="block grayBlock">
 	<div class="blockContent">
 		<h2>Dlaczego warto?</h2>
-		<div class="text-two-column">
+		<div class="text-two-column-md">
 			<p>
 				Na przestrzeni ostatnich kilku lat mogliśmy obserwować wiele pozytywnych zmian w&nbsp;dziedzinie
 				dostępu do&nbsp;informacji publicznej -  wzrosła świadomość praw przysługujących obywatelom, nie
