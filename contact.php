@@ -23,7 +23,7 @@ if(isset($_POST['submit'])) {
 
 ?>
 <div class="row">
-	<div class="col-md-4 col-md-push-8">
+	<div class="col-md-6 col-md-push-6 col-lg-4 col-lg-push-8 ">
 		<div id="contactInfoBlock">
 			<div id="contactInfo1" class="block grayBlock">
 				<div class="blockContent">
@@ -48,32 +48,41 @@ if(isset($_POST['submit'])) {
 				<div class="blockContent">
 					<h2>Adres</h2>
 					<address>
-						<b>Sieć obywatelska - Watchdog Polska</b>
-						<br>
-						ul. Ursynowska 22/2
-						<br>
+						<b>Sieć obywatelska - Watchdog Polska</b><br>
+						ul. Ursynowska 22/2<br>
 						02-605 Warszawa
 					</address>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="col-md-8 col-md-pull-4">
-		<div id="contactForm" class="block redBlock">
+	<div class="col-md-6 col-md-pull-6 col-lg-8 col-lg-pull-4 ">
+		<div id="contactForm" class="block grayBlock">
 			<div class="blockContent">
 				<h2>Skontaktuj się z nami</h2>
 				<?php if(isset($_POST['submit'])) {
 					echo "Dziękujemy! Twoja wiadomość została przesłana!";
 				}
 				else {  ?>
-				<div id="reqNote">Pola oznaczone gwiazdką (*) są wymagane</div>
 				<br/>
 				<form method=POST action=contact.php>
-					<input type=hidden name=csrfprotection value="<?php echo $_SESSION['csrf']; ?>"/>
-					Twój email *<br/><input class="textinput textInput form-control" maxlength="150" name="email" type="text" required /><br/>
-					Imię (i nazwisko) *<br/><input class="textinput textInput form-control" maxlength="150" name="name" type="text" required /><br/>
-					Temat *<br/><input class="textinput textInput form-control" maxlength="150" name="topic" type="text" required /><br/>
-					Wiadomość *<br/><textarea class="textinput textInput form-control" name=msg required></textarea><br/>
+					<input type="hidden" name="csrfprotection" value="<?php echo $_SESSION['csrf']; ?>"/>
+					<div class="form-group">
+						<label for="">Twój email <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
+						<input class="textinput textInput form-control" maxlength="150" name="email" type="text" required />
+					</div>
+					<div class="form-group">
+						<label for="">Imię (i nazwisko) <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
+						<input class="textinput textInput form-control" maxlength="150" name="name" type="text" required />
+					</div>
+					<div class="form-group">
+						<label for="">Temat <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
+						<input class="textinput textInput form-control" maxlength="150" name="topic" type="text" required />
+					</div>
+					<div class="form-group">
+						<label for="">Wiadomość <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
+						<textarea class="textinput textInput form-control" name=msg required></textarea>
+					</div>
 					<div class="form-actions"><input type="submit" name="submit" value="Wyślij" class="btn btn-primary btn-lg btn-block" id="submit-id-submit"> </div>
 				</form>
 				<?php } ?>

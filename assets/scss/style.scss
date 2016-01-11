@@ -3,26 +3,10 @@
 
 body {
     font:18px ClioRegular;
-    background:#f7f7f7;
+    background:white;
     text-shadow: rgba(0,0,0,0.2) 0 0 1px;
 }
 
-#container {
-    width:1400px;
-    margin:0 auto;
-    background:#fff;
-    max-width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-#contentContainer {
-    width:1020px;
-    clear:both;
-    padding-top:5px;
-    margin:10px auto;
-    max-width: 100%;
-}
 
 a {
     color:$brand-primary;
@@ -49,42 +33,52 @@ header img {
 }
 
 #mainMenu {
-    background:#4d4d4d;
-    float: right;
+    float: left;
+    font-family: "GloberRegular","helvetica",sans-serif;
 }
 
 #mainMenu ul{
-    display:flex;
-    flex-wrap:wrap;
-    margin:0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    list-style: none;
+    font-size: 24px;
+    line-height: 3;
 }
 
 #mainMenu a {
     display:block;
-    color:#fff;
+    color: #d72626;
+    padding:0 45px;
+
+}
+
+a.support-button{
+    position: absolute;
+    top: 0; right: 0;
+    display: block;
+    background: #D72626;
+    color: #fff;
     text-transform:uppercase;
     padding:0 45px;
     font:18px "GloberSemibold","GloberRegular",Helvetica,Arial,sans-serif;
     line-height: 90px;
+    transition: .2s background-color;
 }
 
-
-#mainMenu a:hover, #mainMenu a.activeMenu {
-    background:$brand-primary;
-    text-decoration:none;
-}
-
-#mainMenu .support a{
-    background: #e84343;
-}
-
-#mainMenu .support a:hover{
-    background: #dd1b1b;
+.support-button:hover{
+    background: #E84343;
+    text-decoration: none;
 }
 
 
 .block {
-    margin:15px 20px 15px 10px;
+    margin:{
+        top: 15px;
+        right: 20px;
+        bottom: 70px;
+        left: 15px;
+    }
     position:relative;
 }
 
@@ -101,8 +95,12 @@ header img {
 }
 
 .blockContent {
-    padding:10px 25px 40px;
-    text-align:justify;
+    padding:{
+        top: 30px;
+        right: 50px;
+        bottom: 50px;
+        left: 50px;
+    };
     font-size:18px;
 }
 
@@ -170,14 +168,10 @@ form .asteriskField {
     margin:15px 0;
 }
 
-#reqNote {
-    font-size:12px;
-    line-height:2em;
-}
-
 .fooBar span:after {
     font-family:FontAwesome;
     content:"\f1fa";
+    word-wrap: break-word;
 }
 
 .fooBar:after {
@@ -186,7 +180,6 @@ form .asteriskField {
 
 footer {
     padding:20px 5px;
-    background:#eee;
     margin: 0 -15px;
 }
 .footTop{
@@ -295,3 +288,27 @@ footer {
 .has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, .has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label, .has-error.radio-inline label {
     color: #F5FF50;
 }
+
+.text-two-column{
+    column-count: 2;
+}
+
+ul.list-dotted-brand{
+    list-style: none;
+    > li{
+        position: relative;
+        padding-left: 20px;
+        &:before{
+            content: '';
+            position: absolute;
+            top: .3em;
+            left: 0;
+            display: block;
+            width: .5em;
+            height: .5em;
+            background: $brand-primary;
+            border-radius: 50%;
+        }
+    }
+}
+
