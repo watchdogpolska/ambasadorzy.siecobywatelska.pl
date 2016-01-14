@@ -130,7 +130,7 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 					</li>
 					<li>
 						Pochwal się znajomym swoim zdjęciem z&nbsp;hasłem promującym jawność (możesz skorzystać
-						z naszych gotowych propozycji – <a href="http://localhost/download.php" title="Do pobrania">w&nbsp;zakładce do&nbsp;pobrania</a>) lub ilustrującym, co robisz dla tej
+						z naszych gotowych propozycji – <a href="/download.php" title="Do pobrania">w&nbsp;zakładce do&nbsp;pobrania</a>) lub ilustrującym, co robisz dla tej
 						sprawy. Wyjaśnij, czym się zajmujemy, dlaczego dołączyłaś/dołączyłeś do&nbsp;tej idei. Wyślij
 						nam to zdjęcie, abyśmy mogli zamieścić je na naszej stronie.
 					</li>
