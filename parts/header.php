@@ -26,26 +26,38 @@
 		<header>
 			<a href="http://siecobywatelska.pl"><img src="<?php echo htmlspecialchars(url_origin($_SERVER)); ?>/img/watchdog.png" width="259" height="61" alt="Logo Watchdog"></a>
 			<a href="http://siecobywatelska.pl/wlacz-sie-5min/#wspieraj_siec" class="support-button" target="_blank">Wspieraj nas</a>
+			<?php
+			$current_path = $_SERVER["SCRIPT_NAME"];
+			if($current_path == '/index.php'){
+				$current_path = '/';
+			}
+			$menu_items = [];
+			$menu_items['/'] = 'Zostań';
+			$menu_items['/ambassadors.php'] = 'Ambasadorzy';
+			$menu_items['/withus.php'] = 'Są z nami';
+			$menu_items['/firmy.php'] = 'Dla firm';
+			$menu_items['/download.php'] = 'Do pobrania';
+			$menu_items['/contact.php'] = 'Kontakt';
+			?>
 			<nav id="mainMenu">
 				<ul>
+					<?php
+					foreach ($menu_items as $path => $label):
+					?>
 					<li>
-						<a href="/">NAZWAA</a>
+						<?php
+						printf(
+							'<a href="%s"%s>%s</a>',
+							$path,
+							$path == $current_path?' class="active"':'',
+							$label
+							)
+						?>
 					</li>
-					<li>
-						<a href="ambassadors.php">Ambasadorzy</a>
-					</li>
-					<li>
-						<a href="withus.php">Są z nami</a>
-					</li>
-					<li>
-						<a href="firmy.php">Dla firm</a>
-					</li>
-					<li>
-						<a href="download.php">Do pobrania</a>
-					</li>
-					<li>
-						<a href="contact.php">Kontakt</a>
-					</li>
+					<?php
+					endforeach;
+					?>
+
 				</ul>
 			</nav>
 		</header>

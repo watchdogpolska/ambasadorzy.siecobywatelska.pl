@@ -50,8 +50,11 @@ header img {
     display:block;
     color: #d72626;
     padding:0 45px;
-
 }
+#mainMenu a.active {
+    color: black;
+}
+
 
 a.support-button{
     position: absolute;
