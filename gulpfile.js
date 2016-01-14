@@ -5,6 +5,8 @@ var plugins = require("gulp-load-plugins")();
 var json = JSON.parse(fs.readFileSync("./package.json"));
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
+var args = require('yargs').argv;
+
 
 var config = (function () {
 	var appName = json.name;
@@ -97,9 +99,8 @@ gulp.task('images', function (){
 });
 
 gulp.task('serve', function (){
-	// TODO: Allow change proxy address via arguments. I am planning to use package 'yargs'
 	browserSync({
-		proxy: 'localhost:8000'
+		proxy: args.host || 'localhost:8000'
 	});
 });
 
