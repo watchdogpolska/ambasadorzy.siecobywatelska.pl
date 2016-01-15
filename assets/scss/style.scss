@@ -50,8 +50,11 @@ header img {
     display:block;
     color: #d72626;
     padding:0 45px;
-
 }
+#mainMenu a.active {
+    color: black;
+}
+
 
 a.support-button{
     position: absolute;
@@ -292,6 +295,22 @@ footer {
 .text-two-column{
     column-count: 2;
 }
+@media screen and (min-width: $screen-sm-min) {
+    .text-two-column-sm{
+        column-count: 2;
+    }
+}
+@media screen and (min-width: $screen-md-min) {
+    .text-two-column-md{
+        column-count: 2;
+    }
+}
+@media screen and (min-width: $screen-lg-min) {
+    .text-two-column-lg{
+        column-count: 2;
+    }
+}
+
 
 ul.list-dotted-brand{
     list-style: none;

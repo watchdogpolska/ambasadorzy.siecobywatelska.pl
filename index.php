@@ -69,31 +69,35 @@ if(isset($_POST['submit']) && csrf_validate($_POST['csrf'])) {
 showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 
 ?>
-<div id="descriptionBlock" class="block grayBlock">
-	<div class="blockContent">
-		<h2>Dlaczego warto?</h2>
-		<div class="text-two-column">
-			<p>
-				Na przestrzeni ostatnich kilku lat mogliśmy obserwować wiele pozytywnych zmian w&nbsp;dziedzinie
-				dostępu do&nbsp;informacji publicznej -  wzrosła świadomość praw przysługujących obywatelom, nie
-				boimy się pytać urzędników i&nbsp;egzekwować odpowiedzi. Jednak jest wiele obszarów życia publicznego,
-				w których panuje kultura tajemnicy. Prawo dostępu do&nbsp;informacji i&nbsp;transparentność, to
-				niezaprzeczalne fundamenty zdrowej demokracji oraz praw człowieka i&nbsp;dlatego wciąż wymagają
-				naszej ochrony i&nbsp;promocji.
-			</p>
-			<p>
-				Dołącz do&nbsp;programu Ambasadorów/Ambasadorek Jawności, jeśli chcesz wesprzeć naszą ideę państwa
-				otwartego, przyjaznego i&nbsp;po prostu lepszego. Pomóżmy dowiedzieć się innym jakie mają prawa i&nbsp;
-				jak mogą z&nbsp;nich korzystać. Stwórzmy grupę osób z&nbsp;różnych środowisk, która
-				będzie zmieniać państwo na wszystkich poziomach.
-			</p>
-			<p>
-				Bycie Ambasadorem/Ambasadorką Jawności wiąże się również z&nbsp;indywidulanymi korzyściami m.in.
-				możliwością uczestniczenia w&nbsp;wydarzeniach organizowanych  przez Sieć Obywatelską Watchdog
-				Polska takich jak szkolenia, dyskusje oraz coroczny ,,Toast za jawność’’. Zapraszamy!
-				Jeśli nie możesz  dołączyć  do&nbsp;grona Ambasadorów/Ambasadorek, dowiedz się, jak <a href="http://siecobywatelska.pl/wlacz-sie-5min/">inaczej wspierać
-				jawność.</a>
-			</p>
+<div class="row">
+	<div class="col-xs-12">
+		<div id="descriptionBlock" class="block grayBlock">
+			<div class="blockContent">
+				<h2>Dlaczego warto?</h2>
+				<div class="text-two-column-md">
+					<p>
+						Na przestrzeni ostatnich kilku lat mogliśmy obserwować wiele pozytywnych zmian w&nbsp;dziedzinie
+						dostępu do&nbsp;informacji publicznej -  wzrosła świadomość praw przysługujących obywatelom, nie
+						boimy się pytać urzędników i&nbsp;egzekwować odpowiedzi. Jednak jest wiele obszarów życia publicznego,
+						w których panuje kultura tajemnicy. Prawo dostępu do&nbsp;informacji i&nbsp;transparentność, to
+						niezaprzeczalne fundamenty zdrowej demokracji oraz praw człowieka i&nbsp;dlatego wciąż wymagają
+						naszej ochrony i&nbsp;promocji.
+					</p>
+					<p>
+						Dołącz do&nbsp;programu Ambasadorów/Ambasadorek Jawności, jeśli chcesz wesprzeć naszą ideę państwa
+						otwartego, przyjaznego i&nbsp;po prostu lepszego. Pomóżmy dowiedzieć się innym jakie mają prawa i&nbsp;
+						jak mogą z&nbsp;nich korzystać. Stwórzmy grupę osób z&nbsp;różnych środowisk, która
+						będzie zmieniać państwo na wszystkich poziomach.
+					</p>
+					<p>
+						Bycie Ambasadorem/Ambasadorką Jawności wiąże się również z&nbsp;indywidulanymi korzyściami m.in.
+						możliwością uczestniczenia w&nbsp;wydarzeniach organizowanych  przez Sieć Obywatelską Watchdog
+						Polska takich jak szkolenia, dyskusje oraz coroczny ,,Toast za jawność’’. Zapraszamy!
+						Jeśli nie możesz  dołączyć  do&nbsp;grona Ambasadorów/Ambasadorek, dowiedz się, jak <a href="http://siecobywatelska.pl/wlacz-sie-5min/">inaczej wspierać
+						jawność.</a>
+					</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -126,7 +130,7 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 					</li>
 					<li>
 						Pochwal się znajomym swoim zdjęciem z&nbsp;hasłem promującym jawność (możesz skorzystać
-						z naszych gotowych propozycji – <a href="http://localhost/download.php" title="Do pobrania">w&nbsp;zakładce do&nbsp;pobrania</a>) lub ilustrującym, co robisz dla tej
+						z naszych gotowych propozycji – <a href="/download.php" title="Do pobrania">w&nbsp;zakładce do&nbsp;pobrania</a>) lub ilustrującym, co robisz dla tej
 						sprawy. Wyjaśnij, czym się zajmujemy, dlaczego dołączyłaś/dołączyłeś do&nbsp;tej idei. Wyślij
 						nam to zdjęcie, abyśmy mogli zamieścić je na naszej stronie.
 					</li>
@@ -200,37 +204,49 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 		<?php if($failed) echo '<div id="reqNote">NIE MOŻNA ZAREJESTROWAĆ. SPRAWDŹ POPRAWNOŚĆ DANYCH.</div><br/>'; ?>
 		<form action="index.php" method="post" enctype="multipart/form-data" id="register_form">
 			<input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf']; ?>">
-			<div class="form-group">
-				<label for="register_form_first">Imię <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
-				<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['first']); ?>" class="form-control" maxlength="45" name="first" type="text" required id="register_form_first"/>
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+					<div class="form-group">
+						<label for="register_form_first">Imię <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
+						<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['first']); ?>" class="form-control" maxlength="45" name="first" type="text" required id="register_form_first"/>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-6">
+					<div class="form-group">
+						<label for="register_form_name">Nazwisko <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
+						<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['name']); ?>" class="form-control" maxlength="45" name="name" type="text" required id="register_form_name"/>
+					</div>
+				</div>
 			</div>
-			<div class="form-group">
-				<label for="register_form_name">Nazwisko <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
-				<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['name']); ?>" class="form-control" maxlength="45" name="name" type="text" required id="register_form_name"/>
-			</div>
-			<div class="form-group">
-				<label for="register_form_mail">Email <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
-				<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['mail']); ?>" class="form-control" maxlength="60" name="mail" type="email" required id="register_form_mail"/>
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+					<div class="form-group">
+						<label for="register_form_mail">Email <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
+						<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['mail']); ?>" class="form-control" maxlength="60" name="mail" type="email" required id="register_form_mail"/>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-6">
+					<div class="form-group">
+						<label for="register_form_phone">Telefon <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
+						<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['phone']); ?>" class="form-control" maxlength="45" name="phone" type="tel" required id="register_form_phone"/>
+					</div>
+				</div>
 			</div>
 			<div class="form-group">
 				<label for="register_form_city">Miasto <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
 				<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['city']); ?>" class="form-control" maxlength="45" name="city" type="text" required id="register_form_city"/>
 			</div>
 			<div class="form-group">
-				<label for="register_form_phone">Telefon <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
-				<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['phone']); ?>" class="form-control" maxlength="45" name="phone" type="tel" required id="register_form_phone"/>
-			</div>
-			<div class="form-group">
 				<label for="register_form_job">Opisz, czym zajmujesz się zawodowo? <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
 				<textarea value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['job']); ?>" class="form-control" maxlength="200" name="job" type="text" required id="register_form_job"></textarea>
 			</div>
 			<div class="form-group">
-				<label for="register_form_address">Adres korespondencyjny</label>
-				<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['address']); ?>" class="form-control" placeholder="ul. Ulica 1/1, 00-001 Miejscowość" maxlength="200" name="address" type="text" id="register_form_address"/>
-			</div>
-			<div class="form-group">
 				<label for="register_form_why">Dlaczego chcesz zostać Ambasadorem Jawności? <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
 				<textarea value="<?php echo htmlspecialchars($_POST['why']); ?>" class="textinput textInput form-control" maxlength="3000" name="why" type="text" required id="register_form_why"></textarea>
+			</div>
+			<div class="form-group">
+				<label for="register_form_address">Adres korespondencyjny</label>
+				<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['address']); ?>" class="form-control" placeholder="ul. Ulica 1/1, 00-001 Miejscowość" maxlength="200" name="address" type="text" id="register_form_address"/>
 			</div>
 			<div class="form-group">
 				<label for="register_form_photo">Twoje zdjęcie - max 1 MB <abbr title="Poprzez przesłanie zdjęcia wyrażasz zgodę na wykorzystanie wizerunku i&nbsp;przesłanej fotografii przez Sieć Obywatelską Watchdog Polska.">(dodatkowe informacje)</abbr></label>
@@ -238,17 +254,17 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 			</div>
 			<div class="checkbox">
 				<label for="register_form_datatrue">
-					<input type="checkbox" name="datatrue" required id="register_form_datatrue"/>Oświadczam, że zawarte w&nbsp;powyższym formularzu dane są zgodne ze stanem faktycznym. *
+					<input type="checkbox" name="datatrue" required id="register_form_datatrue"/>Oświadczam, że zawarte w&nbsp;powyższym formularzu dane są zgodne ze stanem faktycznym. <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr>
 				</label>
 			</div>
 			<div class="checkbox">
 				<label for="register_form_datareg">
-					<input type="checkbox" name="datareg" required id="register_form_datareg"/>Oświadczam, że zapoznałem(-am) się z&nbsp;<a href="files/regulamin.pdf" target="_blank">Regulaminem Programu</a> i&nbsp;akceptuję jego postanowienia. *
+					<input type="checkbox" name="datareg" required id="register_form_datareg"/>Oświadczam, że zapoznałem(-am) się z&nbsp;<a href="files/regulamin.pdf" target="_blank">Regulaminem Programu</a> i&nbsp;akceptuję jego postanowienia. <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr>
 				</label>
 			</div>
 			<div class="checkbox">
 				<label for="register_form_data">
-					<input type="checkbox" name="data" required id="register_form_data"/>Oświadczam, iż wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z&nbsp;ustawą o&nbsp;ochronie danych osobowych (z 29 sierpnia 1997 roku) przez Sieć Obywatelską Watchdog Polska, ul. Ursynowska 22/2, 02-605 Warszawa w&nbsp;celach związanych z&nbsp;realizacją programu Ambasadorów i&nbsp;Ambasadorek Jawności oraz na podanie do&nbsp;wiadomości publicznej mojego imienia, nazwiska oraz miejscowości w&nbsp;przypadku zostania Ambasadorem/Ambasadorką Jawności. Jednocześnie potwierdzam, iż zostałem/zostałam poinformowany/a o&nbsp;możliwości sprawdzenia w&nbsp;jaki sposób i&nbsp;w jakim zakresie moje dane są przetwarzane, co zawierają, jak są udostępniane oraz o&nbsp;możliwości usunięcia danych z&nbsp;bazy Sieci Obywatelskiej Watchdog Polska. *
+					<input type="checkbox" name="data" required id="register_form_data"/>Oświadczam, iż wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z&nbsp;ustawą o&nbsp;ochronie danych osobowych (z 29 sierpnia 1997 roku) przez Sieć Obywatelską Watchdog Polska, ul. Ursynowska 22/2, 02-605 Warszawa w&nbsp;celach związanych z&nbsp;realizacją programu Ambasadorów i&nbsp;Ambasadorek Jawności oraz na podanie do&nbsp;wiadomości publicznej mojego imienia, nazwiska oraz miejscowości w&nbsp;przypadku zostania Ambasadorem/Ambasadorką Jawności. Jednocześnie potwierdzam, iż zostałem/zostałam poinformowany/a o&nbsp;możliwości sprawdzenia w&nbsp;jaki sposób i&nbsp;w jakim zakresie moje dane są przetwarzane, co zawierają, jak są udostępniane oraz o&nbsp;możliwości usunięcia danych z&nbsp;bazy Sieci Obywatelskiej Watchdog Polska.&nbsp;<abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr>
 				</label>
 			</div>
 			<div class="form-actions"><input type="submit" name="submit" value="Wyślij" class="btn btn-primary btn-lg btn-block" id="submit-id-submit"> </div>
