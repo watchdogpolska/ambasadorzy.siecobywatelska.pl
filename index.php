@@ -93,6 +93,8 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 						Bycie Ambasadorem/Ambasadorką Jawności wiąże się również z&nbsp;indywidulanymi korzyściami m.in.
 						możliwością uczestniczenia w&nbsp;wydarzeniach organizowanych  przez Sieć Obywatelską Watchdog
 						Polska takich jak szkolenia, dyskusje oraz coroczny ,,Toast za jawność’’. Zapraszamy!
+					</p>
+					<p>
 						Jeśli nie możesz  dołączyć  do&nbsp;grona Ambasadorów/Ambasadorek, dowiedz się, jak <a href="http://siecobywatelska.pl/wlacz-sie-5min/">inaczej wspierać
 						jawność.</a>
 					</p>
