@@ -3,7 +3,7 @@
 include_once('functions.inc.php');
 include_once('db.inc.php');
 
-showHead("Kontakt");
+showHead("Ambasadorzy"," ");
 
 $link = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_BASE);
 $amb = mysqli_query($link, "SELECT * FROM ambassadors WHERE zaakceptowany = 1");

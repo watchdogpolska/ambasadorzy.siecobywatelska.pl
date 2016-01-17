@@ -3,7 +3,7 @@
 include_once('functions.inc.php');
 include_once('db.inc.php');
 
-showHead("Są z nami", "Znani(-ne) Ambasadorzy/Ambasadorki Jawności");
+showHead("Są z nami", " ");
 
 ?>
 
@@ -50,7 +50,6 @@ showHead("Są z nami", "Znani(-ne) Ambasadorzy/Ambasadorki Jawności");
 	<div class="col-md-6">
 		<div id="signFormBlock" class="block redBlock">
 			<div class="blockContent">
-				<h2>Autorytety o tym, czy można żyć bez informacji?</h2>
 				<div class="embed-responsive embed-responsive-16by9">
 					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5feZrqYOisY" frameborder="0" allowfullscreen></iframe>
 				</div>
