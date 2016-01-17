@@ -34,7 +34,7 @@ showHead("Są z nami", "Znani(-ne) Ambasadorzy/Ambasadorki Jawności");
 					}
 					else echo "<img style='max-height: 200px; display: block; margin: 0 auto' src='$link' alt='$name'>";
 
-					echo $desc;
+					echo "<br/>".$desc;
 					?>
 
 				</div>
