@@ -5,7 +5,7 @@
 				<div class="col-md-4">
 					<div class="footHeader">Autor</div>
 					<address>
-						<a href="http://siecobywatelska.pl">Sieć obywatelska - Watchdog Polska</a><br>
+						<a href="http://siecobywatelska.pl">Sieć Obywatelska Watchdog Polska</a><br>
 						<a class="fooBar" href="http://www.google.com/recaptcha/mailhide/d?k=019SfyeYoOBXz-HBQPiC1dMw==&c=7t4uleBGHACWoT6pq8zcubkAl0UxUqb94jcrqtFq5N0="><span>biuro</span></a><br>
 						+48 22 844 73 55
 					</address>

@@ -49,7 +49,7 @@ var config = (function () {
 		},
 		'images': {
 			input: [ path.assets + "/images/*.*" ],
-			output: path.static + "/images/",
+			output: path.static + "/images",
 			watch: [ path.assets + "/images/*.*" ]
 		}
 	};
@@ -94,7 +94,7 @@ gulp.task("scss", function () {
 gulp.task('images', function (){
 	return gulp.src(config.images.input)
 		.pipe(plugins.imagemin())
-		.pipe(gulp.dest(config.images.ouput))
+		.pipe(gulp.dest(config.images.output))
 		.pipe(reload({ stream:true }));
 });
 

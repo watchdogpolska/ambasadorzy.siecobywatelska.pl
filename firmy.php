@@ -1,12 +1,12 @@
 <?php
 
 include_once('functions.inc.php');
-showHead("Firmy");
+showHead("Firmy", "Oferta dla biznesu");
 
 ?>
 <style>
 	h3 {
-		text-align: center;
+		text-align: left;
 		margin: 25px 25px;
 	}
 </style>
@@ -18,7 +18,7 @@ showHead("Firmy");
 		<h3>Do jakich firm kierowana jest oferta?</h3>
 		Do udziału w programie zapraszamy Firmy z całej Polski, które:
 		<ul class="list-dotted-brand">
-			<li>cenią takie wartości jak: przejrzystość, odpowiedzialność i etyczne działanie.</li>
+			<li>Cenią takie wartości jak: przejrzystość, odpowiedzialność i etyczne działanie.</li>
 			<li>Chcą wspierać te wartości i promować je.</li>
 			<li>Są gotowe podpisać Deklarację przejrzystości i jej przestrzegać.</li>
 		</ul>
@@ -38,21 +38,21 @@ showHead("Firmy");
 			<li>Podpisanie Deklaracji przejrzystości.</li>
 			<li>Realizacja działań w zakresie Programu Ambasadorzy Jawności.</li>
 		</ol>
-		<h3>W jaki sposób sprawdzamy dużą firmę:</h3>
+		<h3>W jaki sposób sprawdzamy dużą firmę?</h3>
 		Śledzimy informacje na temat firmy na stronie internetowej, prasie branżowej oraz rankingach branżowych. Sprawdzamy:
 		<ul class="list-dotted-brand">
-			<li>Czy współpracuje z organizacjami pozarządowymi bądź działa pro bono;</li>
-			<li>Czy prowadzi działania z zakresu CSR;</li>
-			<li>Czy wyznaje wartości zbieżne z naszymi; </li>
-			<li>opinie klientów i pracowników;</li>
+			<li>Czy współpracuje z organizacjami pozarządowymi bądź działa pro bono?</li>
+			<li>Czy prowadzi działania z zakresu CSR?</li>
+			<li>Czy wyznaje wartości zbieżne z naszymi?</li>
+			<li>Opinie klientów i pracowników.</li>
 		</ul>
-		<h3>Mniejszą firmę (poniżej 10 prawników) prosimy o odpowiedź na następujące pytania:</h3>
+		<h3>Mniejszą firmę (poniżej 10 pracowników) prosimy o odpowiedź na następujące pytania:</h3>
 		<ul class="list-dotted-brand">
 			<li>Dlaczego chce być Ambasadorem Jawności?</li>
 			<li>Czy i jak działa w zakresie odpowiedzialnego biznesu, czy i jakie organizacje pozarządowe wspiera?</li>
-			<li>Prosimy o dwie referencje od klientów.</li>
+			<li>Dwie referencje od klientów.</li>
 		</ul>
-		Zainteresowane firmy prosimy o <a href="contact.php">kontakt telefoniczny lub mailowy</a>
+		Zainteresowane firmy prosimy o <a href="contact.php">kontakt telefoniczny lub mailowy.</a>
 	</div>
 </div>
 
@@ -61,6 +61,3 @@ showHead("Firmy");
 showFooter();
 
 ?>
-
-
-

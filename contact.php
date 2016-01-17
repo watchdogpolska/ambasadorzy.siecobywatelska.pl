@@ -26,12 +26,14 @@ if(isset($_POST['submit'])) {
 	<div class="col-md-6 col-md-push-6 col-lg-4 col-lg-push-8 ">
 		<div id="contactInfoBlock">
 			<div id="contactInfo1" class="block grayBlock">
-				<div class="blockContent">
+				<div class="blockContent" style="word-wrap: break-word;">
 					<h2>Kontakt</h2>
 					<h3>Koordynator projektu</h3>
+					<img class="img-responsive" src="/static/images/roksana_m.jpg" alt="Roksana Maślankiewicz" />
+					<p><b>Roksana Maślankiewicz</b></p>
 					<address>
 						<i class="fa fa-envelope fa-fw"></i>
-						<a class="fooBar" href="http://www.google.com/recaptcha/mailhide/d?k=0133IYp4KK6_WtYnLoma6bsg==&c=xkFwb7Xs0uxvl9Kz56Fp9GHpm9kZRxoc6SI4Du0zXyGFIJpvo_XHt-_ksaeX7i92"><span>roksana.maslankiewicz</span></a>
+						<a class="fooBar" style="clear:both;" href="http://www.google.com/recaptcha/mailhide/d?k=0133IYp4KK6_WtYnLoma6bsg==&c=xkFwb7Xs0uxvl9Kz56Fp9GHpm9kZRxoc6SI4Du0zXyGFIJpvo_XHt-_ksaeX7i92"><span>roksana.maslankiewicz</span></a>
 						<br>
 						<i class="fa fa-phone fa-fw"></i> 22 844 73 55
 					</address>
@@ -48,7 +50,7 @@ if(isset($_POST['submit'])) {
 				<div class="blockContent">
 					<h2>Adres</h2>
 					<address>
-						<b>Sieć obywatelska - Watchdog Polska</b><br>
+						<b>Sieć Obywatelska Watchdog Polska</b><br>
 						ul. Ursynowska 22/2<br>
 						02-605 Warszawa
 					</address>

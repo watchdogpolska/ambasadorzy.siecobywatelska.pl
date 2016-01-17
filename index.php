@@ -196,10 +196,6 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 <div class="block grayBlock">
 	<div class="blockContent">
 		<h2>Formularz zgłoszenia</h2>
-		<p>
-			Oświadczam, że zapoznałem/łam się ze wszystkimi punktami Kodeksu i&nbsp; zobowiązuję się do&nbsp;jego
-			przestrzegania.
-		</p>
 		<h3 class="text-center">Twoje dane</h3>
 		<?php if($failed) echo '<div id="reqNote">NIE MOŻNA ZAREJESTROWAĆ. SPRAWDŹ POPRAWNOŚĆ DANYCH.</div><br/>'; ?>
 		<form action="index.php" method="post" enctype="multipart/form-data" id="register_form">
@@ -249,7 +245,7 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 				<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['address']); ?>" class="form-control" placeholder="ul. Ulica 1/1, 00-001 Miejscowość" maxlength="200" name="address" type="text" id="register_form_address"/>
 			</div>
 			<div class="form-group">
-				<label for="register_form_photo">Twoje zdjęcie - max 1 MB <abbr title="Poprzez przesłanie zdjęcia wyrażasz zgodę na wykorzystanie wizerunku i&nbsp;przesłanej fotografii przez Sieć Obywatelską Watchdog Polska.">(dodatkowe informacje)</abbr></label>
+				<label for="register_form_photo">Twoje zdjęcie - max 1 MB <abbr title="Poprzez przesłanie zdjęcia wyrażasz zgodę na wykorzystanie wizerunku i&nbsp;przesłanej fotografii przez Sieć Obywatelską Watchdog Polska.">(informacje)</abbr></label>
 				<input class="form-control" name="photo" type="file" id="register_form_photo"/>
 			</div>
 			<div class="checkbox">
@@ -259,7 +255,8 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 			</div>
 			<div class="checkbox">
 				<label for="register_form_datareg">
-					<input type="checkbox" name="datareg" required id="register_form_datareg"/>Oświadczam, że zapoznałem(-am) się z&nbsp;<a href="files/regulamin.pdf" target="_blank">Regulaminem Programu</a> i&nbsp;akceptuję jego postanowienia. <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr>
+					<input type="checkbox" name="datareg" required id="register_form_datareg"/>Oświadczam, że zapoznałem(-am) się z&nbsp;<a href="files/regulamin.pdf" target="_blank">Regulaminem Programu</a> i&nbsp;akceptuję jego postanowienia. Oświadczam, że zapoznałem/łam się ze wszystkimi punktami Kodeksu i&nbsp;zobowiązuję się do&nbsp;jego
+					przestrzegania.<abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr>
 				</label>
 			</div>
 			<div class="checkbox">
@@ -267,8 +264,9 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 					<input type="checkbox" name="data" required id="register_form_data"/>Oświadczam, iż wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z&nbsp;ustawą o&nbsp;ochronie danych osobowych (z 29 sierpnia 1997 roku) przez Sieć Obywatelską Watchdog Polska, ul. Ursynowska 22/2, 02-605 Warszawa w&nbsp;celach związanych z&nbsp;realizacją programu Ambasadorów i&nbsp;Ambasadorek Jawności oraz na podanie do&nbsp;wiadomości publicznej mojego imienia, nazwiska oraz miejscowości w&nbsp;przypadku zostania Ambasadorem/Ambasadorką Jawności. Jednocześnie potwierdzam, iż zostałem/zostałam poinformowany/a o&nbsp;możliwości sprawdzenia w&nbsp;jaki sposób i&nbsp;w jakim zakresie moje dane są przetwarzane, co zawierają, jak są udostępniane oraz o&nbsp;możliwości usunięcia danych z&nbsp;bazy Sieci Obywatelskiej Watchdog Polska.&nbsp;<abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr>
 				</label>
 			</div>
-			<div class="form-actions"><input type="submit" name="submit" value="Wyślij" class="btn btn-primary btn-lg btn-block" id="submit-id-submit"> </div>
+			<div class="form-actions"><input type="submit" name="submit" value="Wyślij" style="width: 60%; margin: 0 auto" class="btn btn-primary btn-lg btn-block" id="submit-id-submit"> </div>
 		</form>
+		<p></p>
 		<p>
 			<a href="files/kodeks.pdf" target="_blank"><i class="fa fa-file-pdf-o" title="Plik w formacie PDF"></i> Pobierz Kodeks Ambasadora</a><br>
 			<a href="files/dyspozycje.pdf" target="_blank"><i class="fa fa-file-pdf-o" title="Plik w formacie PDF"></i> Pobierz przykładowe dyspozycje</a><br>
@@ -282,6 +280,3 @@ showFooter();
 ob_end_flush();
 
 ?>
-
-
-

@@ -1,7 +1,7 @@
 <?php
 
 include_once('functions.inc.php');
-showHead("Do pobrania");
+showHead("Do pobrania","");
 
 ?>
 
