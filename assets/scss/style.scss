@@ -36,6 +36,7 @@ header img {
     float: left;
     font-family: "GloberRegular","helvetica",sans-serif;
     margin-bottom: 40px;
+    width: 100%;
 }
 
 #mainMenu ul{
@@ -45,12 +46,26 @@ header img {
     list-style: none;
     font-size: 20px;
     line-height: 3;
+    padding: 0;
+    justify-content: space-between;
 }
-
+#mainMenu li{
+    width: 100%;
+    width: percentage(1/2);
+    @media only screen and (min-width: $screen-md){
+        width: percentage(1/3);
+    }
+    @media only screen and (min-width: $screen-lg){
+        width: auto;
+    }
+}
 #mainMenu a {
     display:block;
     color: #d72626;
-    padding:0 45px;
+    padding:0 10px;
+    @media only screen and (min-width: $screen-md){
+        padding:0 45px;
+    }
 }
 #mainMenu a.active {
     color: black;
@@ -58,16 +73,22 @@ header img {
 
 
 a.support-button{
-    position: absolute;
     top: 0; right: 0;
     display: block;
     background: #D72626;
     color: #fff;
     text-transform:uppercase;
-    padding:0 45px;
+    padding:0 10px;
     font:18px "GloberSemibold","GloberRegular",Helvetica,Arial,sans-serif;
-    line-height: 90px;
+    line-height: 45px;
     transition: .2s background-color;
+    z-index: 99;
+    outline: 1px solid rgba(white, 0.2);
+    @media only screen and (min-width: $screen-md){
+        position: fixed;
+        padding:0 45px;
+        line-height: 90px;
+    }
 }
 
 .support-button:hover{
@@ -328,9 +349,13 @@ ul.list-dotted-brand{
 
 
 .contact-field{
-     display: table;
+    display: table;
 }
 .contact-field-cell{
-     display: table-cell;
-     word-break: break-all;
+    display: table-cell;
+    word-break: break-all;
+}
+
+p{
+    margin-bottom: 30px;
 }
