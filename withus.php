@@ -27,7 +27,10 @@ showHead("Są z nami", "Znani(-ne) Ambasadorzy/Ambasadorki Jawności");
 					<h2><?php echo $name; ?></h2>
 					<?php
 					if (strpos($link,'youtube') !== false) {
-						echo '<iframe width="560" height="315" src="'.$link.'" frameborder="0" allowfullscreen></iframe>';
+						$search = '/youtube\.com\/watch\?v=([a-zA-Z0-9]+)/smi';
+						$replace = "youtube.com/embed/$1";
+						$url = preg_replace($search,$replace,$link);
+						echo '<iframe class="embed-responsive-item" src="'.$url.'" frameborder="0" allowfullscreen></iframe>';
 					}
 					else echo "<img style='max-height: 200px; display: block; margin: 0 auto' src='$link' alt='$name'>";
 
