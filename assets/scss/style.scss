@@ -106,6 +106,10 @@ a.support-button{
     };
     font-size:18px;
 }
+.blockImage {
+    margin: 10px -50px;
+    width: calc(100% + 100px);
+}
 
 .block h2 {
     font-size: 35px;
@@ -169,16 +173,6 @@ form .asteriskField {
 
 #signFormBlock h3 {
     margin:15px 0;
-}
-
-.fooBar span:after {
-    font-family:FontAwesome;
-    content:"\f1fa";
-    word-wrap: break-word;
-}
-
-.fooBar:after {
-    content:"siecobywatelska.pl";
 }
 
 footer {
@@ -331,3 +325,11 @@ ul.list-dotted-brand{
     }
 }
 
+
+.contact-field{
+     display: table;
+}
+.contact-field-cell{
+     display: table-cell;
+     word-break: break-all;
+}
