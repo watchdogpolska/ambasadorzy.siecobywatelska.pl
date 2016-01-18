@@ -3,7 +3,7 @@
 include_once('functions.inc.php');
 include_once('db.inc.php');
 
-showHead("Ambasadorzy"," ");
+showHead("Ambasadorzy","&nbsp;");
 
 $link = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_BASE);
 $amb = mysqli_query($link, "SELECT * FROM ambassadors WHERE zaakceptowany = 1");
@@ -19,17 +19,17 @@ $amb = mysqli_query($link, "SELECT * FROM ambassadors WHERE zaakceptowany = 1");
 		</div>
 	</div>
 	<div class="col-md-6">
+		<div id="mapBlock" class="block blackBlock">
+			<div class="blockContent">
+				<h2>Jawność wspierają</h2>
+				<div style="height:450px" id="map"></div>
+			</div>
+		</div>
 		<div id="voteBlock" class="block redBlock">
 			<div class="blockContent">
 				<div id="voteCount"><?php echo $amb->num_rows; ?></div>
 				<h2>Ambasadorów Jawności</h2>
 				<?php /* TODO: Display list with paggination*/ ?>
-			</div>
-		</div>
-		<div id="mapBlock" class="block blackBlock">
-			<div class="blockContent">
-				<h2>Mapa Ambasadorów</h2>
-				<div style="height:450px" id="map"></div>
 			</div>
 		</div>
 	</div>

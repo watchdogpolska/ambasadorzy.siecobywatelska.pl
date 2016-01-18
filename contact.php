@@ -1,83 +1,24 @@
 <?php
 
 include_once('functions.inc.php');
-showHead("Kontakt");
-
-if(isset($_POST['submit'])) {
-
-	if(csrf_validate($_POST['csrfprotection'])) {
-
-		$topic = htmlspecialchars($_POST['topic']);
-		$name = htmlspecialchars($_POST['name']);
-		$email = htmlspecialchars($_POST['email']);
-		$text = htmlspecialchars($_POST['msg']);
-
-		$headers  = 'MIME-Version: 1.0' . "\r\n";
-		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-		$headers .= 'To: Biuro Watchdog <'.NET_MAIL.'>' . "\r\n";
-		$headers .= "From: $name <$email>" . "\r\n";
-
-		mail(NET_MAIL, "Wiadomość z formularza kontaktowego Ambasadorów Jawności", "Temat: <br/>".$topic."<br/><br/>Treść wiadomości: <br/>".$text."<br/><br/>IP: ".htmlspecialchars(get_client_ip_env()), $headers);
-	}
-}
+showHead("Kontakt", "&nbsp;");
 
 ?>
 <div class="row">
-	<div class="col-md-6 col-md-push-6 col-lg-4 col-lg-push-8 ">
+	<div class="col-md-8 col-md-push-6 col-lg-4 col-lg-push-8 ">
 		<div id="contactInfoBlock">
 			<div id="contactInfo1" class="block grayBlock">
-				<div class="blockContent" style="word-wrap: break-word;">
-					<h2>Kontakt</h2>
-					<h3>Koordynatorka projektu</h3>
-					<img src="/static/images/roksana.jpg" alt="Roksana Maślankiewicz" class="blockImage">
-					<div id="hcard-Roksana-Maślankiewicz" class="vcard">
-						<span class="fn">Roksana Maślankiewicz</span>
-						<div class="contact-field">
-							<div class="contact-field-cel">
-								<i class="fa fa-envelope fa-fw"></i>
-							</div>
-							<div class="contact-field-cell">
-								<a class="email" href="mailto:roksana.maslankiewicz@siecobywatelska.pl">roksana.maslankiewicz@siecobywatelska.pl</a>
-							</div>
-						</div>
-						<div class="contact-field">
-							<div class="contact-field-cell">
-								<i class="fa fa-phone fa-fw"></i>
-							</div>
-							<div class="contact-field-cell">
-								<div class="tel">22 844 73 55</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="contactInfo2" class="block grayBlock">
-				<div class="blockContent">
-					<h2>Adres</h2>
-					<div id="org-address" class="vcard">
-						<div class="org fn n">Sieć Obywatelska Watchdog Polska</div>
-						<div class="adr">
-							<div class="street-address">ul. Ursynowska 22/2</div>
-							<span class="locality">Warszawa</span>, <span class="postal-code">02-605</span>
-							<span class="country-name">Polska</span>
-						</div>
-						<div class="contact-field">
-							<div class="contact-field-cell">
-								<i class="fa fa-envelope fa-fw"></i>
-							</div>
-							<div class="contact-field-cell">
-								<a class="email" href="mailto:biuro@siecobywatelska.pl">biuro@siecobywatelska.pl</a></div>
-							</div>
-						<div class="contact-field">
-							<div class="contact-field-cell">
-								<i class="fa fa-phone fa-fw" title="Numer telefonu"></i>
-							</div>
-							<div class="contact-field-cell">
-								<div class="tel"> 22 844 73 55</div>
-							</div>
-						</div>
-						<a href="http://siecobywatelska.pl" class="url">www.siecobywatelska.pl</a>
-					</div>
+				<div class="blockContent" style="word-wrap: break-word;padding:50px 0px">
+					<h2 style="margin: 10px 30px">Kontakt</h2>
+					<img class="img-responsive" src="/static/images/roksana_m.jpg" style="width:100%" alt="Roksana Maślankiewicz" />
+					<h3 style="margin: 10px 30px"><b>Roksana Maślankiewicz</b></h3>
+					<p style="margin: 10px 30px">Koordynatorka projektu</p>
+					<address style="margin: 0px 30px">
+						<i class="fa fa-envelope fa-fw"></i>
+						<a class="fooBar" style="clear:both;" href="http://www.google.com/recaptcha/mailhide/d?k=0133IYp4KK6_WtYnLoma6bsg==&c=xkFwb7Xs0uxvl9Kz56Fp9GHpm9kZRxoc6SI4Du0zXyGFIJpvo_XHt-_ksaeX7i92"><span>roksana.maslankiewicz</span></a>
+						<br>
+						<i class="fa fa-phone fa-fw"></i> 22 844 73 55
+					</address>
 				</div>
 			</div>
 		</div>
@@ -85,33 +26,24 @@ if(isset($_POST['submit'])) {
 	<div class="col-md-6 col-md-pull-6 col-lg-8 col-lg-pull-4 ">
 		<div id="contactForm" class="block grayBlock">
 			<div class="blockContent">
-				<h2>Skontaktuj się z nami</h2>
-				<?php if(isset($_POST['submit'])) {
-					echo "Dziękujemy! Twoja wiadomość została przesłana!";
-				}
-				else {  ?>
-				<br/>
-				<form method=POST action=contact.php>
-					<input type="hidden" name="csrfprotection" value="<?php echo $_SESSION['csrf']; ?>"/>
-					<div class="form-group">
-						<label for="">Twój email <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
-						<input class="textinput textInput form-control" maxlength="150" name="email" type="text" required />
-					</div>
-					<div class="form-group">
-						<label for="">Imię (i nazwisko) <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
-						<input class="textinput textInput form-control" maxlength="150" name="name" type="text" required />
-					</div>
-					<div class="form-group">
-						<label for="">Temat <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
-						<input class="textinput textInput form-control" maxlength="150" name="topic" type="text" required />
-					</div>
-					<div class="form-group">
-						<label for="">Wiadomość <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
-						<textarea class="textinput textInput form-control" name=msg required></textarea>
-					</div>
-					<div class="form-actions"><input type="submit" name="submit" value="Wyślij" class="btn btn-primary btn-lg btn-block" id="submit-id-submit"> </div>
-				</form>
-				<?php } ?>
+				<h2>Biuro Sieci</h2>
+				<p>&nbsp;</p>
+				<h3>Napisz do nas:<br>
+				<a href="mailto:biuro@siecobywatelska.pl">biuro@siecobywatelska.pl</a></h3>
+				<h3></h3>
+				<h3>tel: <a href="tel:+48228447355"><i class="fa fa-phone"></i> +48 22 844 73 55</a><br>
+				fax:<a href="fax:+48 22 207 24 09">+48 22 207 24 09</a></h3>
+				<h3></h3>
+				<h3>Sieć Obywatelska – Watchdog Polska<br>
+				ul. Ursynowska 22/2 02-605<br>
+				Warszawa</h3>
+				<p>NIP: 526 284 28 72<br>
+				REGON: 015690020<br>
+				KRS: 0000181348</p>
+				<p>Nr konta do wpłat darowizn:<br>
+				29 2130 0004 2001 0343 2101 0001<br>
+				Volkswagen Bank Direct</p>
+				<p>&nbsp;</p>
 			</div>
 		</div>
 	</div>

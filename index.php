@@ -76,11 +76,8 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 				<h2>Dlaczego warto?</h2>
 				<div class="text-two-column-md">
 					<p>
-						Na przestrzeni ostatnich kilku lat mogliśmy obserwować wiele pozytywnych zmian w&nbsp;dziedzinie
-						dostępu do&nbsp;informacji publicznej -  wzrosła świadomość praw przysługujących obywatelom, nie
-						boimy się pytać urzędników i&nbsp;egzekwować odpowiedzi. Jednak jest wiele obszarów życia publicznego,
-						w których panuje kultura tajemnicy. Prawo dostępu do&nbsp;informacji i&nbsp;transparentność, to
-						niezaprzeczalne fundamenty zdrowej demokracji oraz praw człowieka i&nbsp;dlatego wciąż wymagają
+						Prawo dostępu do&nbsp;informacji i&nbsp;transparentność, to niezaprzeczalne fundamenty zdrowej
+						demokracji oraz praw człowieka i&nbsp;dlatego wciąż wymagają
 						naszej ochrony i&nbsp;promocji.
 					</p>
 					<p>
@@ -110,7 +107,7 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 		<div class="clearfix"></div>
 		<div id="descriptionBlock" class="block">
 			<div class="blockContent" style="margin: 0 auto">
-				<a target="_blank" href="http://watchdogportal.pl"><img src="/static/images/sprzyja.jpg" style="display: block; margin: 0 auto; max-width: 100%; max-height: 200px" alt="Jawność sprzyja!" title="Jawność sprzyja!" /></a>
+				<a target="_blank" href="http://watchdogportal.pl"><img src="/static/images/sprzyja.png" style="display: block; margin: 0 auto; max-width: 100%; max-height: 200px" alt="Jawność sprzyja!" title="Jawność sprzyja!" /></a>
 			</div>
 		</div>
 		<div id="descriptionBlock" class="block grayBlock">

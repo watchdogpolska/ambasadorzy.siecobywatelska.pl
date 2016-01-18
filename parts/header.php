@@ -25,14 +25,14 @@
 	<div class="container">
 		<header>
 			<a href="http://siecobywatelska.pl"><img src="<?php echo htmlspecialchars(url_origin($_SERVER)); ?>/img/watchdog.png" width="259" height="61" alt="Logo Watchdog"></a>
-			<a href="http://siecobywatelska.pl/wlacz-sie-5min/#wspieraj_siec" class="support-button" target="_blank">Wspieraj nas</a>
+			<a href="http://siecobywatelska.pl/wlacz-sie-5min/#wspieraj_siec" class="support-button" style="position: relative; float: right; right: auto" target="_blank">Wspieraj nas</a>
 			<?php
 			$current_path = $_SERVER["SCRIPT_NAME"];
 			if($current_path == '/index.php'){
 				$current_path = '/';
 			}
 			$menu_items = [];
-			$menu_items['/'] = 'Zostań';
+			$menu_items['/'] = 'Dołącz';
 			$menu_items['/ambassadors.php'] = 'Ambasadorzy';
 			$menu_items['/withus.php'] = 'Są z nami';
 			$menu_items['/firmy.php'] = 'Dla firm';
@@ -59,8 +59,7 @@
 					?>
 
 				</ul>
-			</nav>
 		</header>
-
+	</nav>
 		<div id="contentContainer">
 			<h1><?php echo $header; ?></h1>

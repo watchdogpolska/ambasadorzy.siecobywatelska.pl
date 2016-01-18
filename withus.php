@@ -3,7 +3,7 @@
 include_once('functions.inc.php');
 include_once('db.inc.php');
 
-showHead("Są z nami", " ");
+showHead("Są z nami", "&nbsp;");
 
 ?>
 
