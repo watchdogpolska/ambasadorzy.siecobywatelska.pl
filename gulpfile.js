@@ -123,4 +123,4 @@ gulp.task("watch", ['serve'], function () {
 });
 
 gulp.task("build", ["bower", "fonts", "js", "scss", "images"])
-gulp.task("default", ["js", "scss", "watch"]);
+gulp.task("default", ["js", "images", "scss", "watch"]);

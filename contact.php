@@ -28,32 +28,56 @@ if(isset($_POST['submit'])) {
 			<div id="contactInfo1" class="block grayBlock">
 				<div class="blockContent" style="word-wrap: break-word;">
 					<h2>Kontakt</h2>
-					<h3>Koordynator projektu</h3>
-					<img class="img-responsive" src="/static/images/roksana_m.jpg" alt="Roksana Maślankiewicz" />
-					<p><b>Roksana Maślankiewicz</b></p>
-					<address>
-						<i class="fa fa-envelope fa-fw"></i>
-						<a class="fooBar" style="clear:both;" href="http://www.google.com/recaptcha/mailhide/d?k=0133IYp4KK6_WtYnLoma6bsg==&c=xkFwb7Xs0uxvl9Kz56Fp9GHpm9kZRxoc6SI4Du0zXyGFIJpvo_XHt-_ksaeX7i92"><span>roksana.maslankiewicz</span></a>
-						<br>
-						<i class="fa fa-phone fa-fw"></i> 22 844 73 55
-					</address>
-					<h3>Nasze biuro</h3>
-					<address>
-						<i class="fa fa-envelope fa-fw"></i>
-						<a class="fooBar" href="http://www.google.com/recaptcha/mailhide/d?k=019SfyeYoOBXz-HBQPiC1dMw==&amp;c=7t4uleBGHACWoT6pq8zcubkAl0UxUqb94jcrqtFq5N0="><span>biuro</span></a>
-						<br>
-						<i class="fa fa-phone fa-fw"></i> 22 844 73 55
-					</address>
+					<h3>Koordynatorka projektu</h3>
+					<img src="/static/images/roksana.jpg" alt="Roksana Maślankiewicz" class="blockImage">
+					<div id="hcard-Roksana-Maślankiewicz" class="vcard">
+						<span class="fn">Roksana Maślankiewicz</span>
+						<div class="contact-field">
+							<div class="contact-field-cel">
+								<i class="fa fa-envelope fa-fw"></i>
+							</div>
+							<div class="contact-field-cell">
+								<a class="email" href="mailto:roksana.maslankiewicz@siecobywatelska.pl">roksana.maslankiewicz@siecobywatelska.pl</a>
+							</div>
+						</div>
+						<div class="contact-field">
+							<div class="contact-field-cell">
+								<i class="fa fa-phone fa-fw"></i>
+							</div>
+							<div class="contact-field-cell">
+								<div class="tel">22 844 73 55</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div id="contactInfo2" class="block grayBlock">
 				<div class="blockContent">
 					<h2>Adres</h2>
-					<address>
-						<b>Sieć Obywatelska Watchdog Polska</b><br>
-						ul. Ursynowska 22/2<br>
-						02-605 Warszawa
-					</address>
+					<div id="org-address" class="vcard">
+						<div class="org fn n">Sieć Obywatelska Watchdog Polska</div>
+						<div class="adr">
+							<div class="street-address">ul. Ursynowska 22/2</div>
+							<span class="locality">Warszawa</span>, <span class="postal-code">02-605</span>
+							<span class="country-name">Polska</span>
+						</div>
+						<div class="contact-field">
+							<div class="contact-field-cell">
+								<i class="fa fa-envelope fa-fw"></i>
+							</div>
+							<div class="contact-field-cell">
+								<a class="email" href="mailto:biuro@siecobywatelska.pl">biuro@siecobywatelska.pl</a></div>
+							</div>
+						<div class="contact-field">
+							<div class="contact-field-cell">
+								<i class="fa fa-phone fa-fw" title="Numer telefonu"></i>
+							</div>
+							<div class="contact-field-cell">
+								<div class="tel"> 22 844 73 55</div>
+							</div>
+						</div>
+						<a href="http://siecobywatelska.pl" class="url">www.siecobywatelska.pl</a>
+					</div>
 				</div>
 			</div>
 		</div>
