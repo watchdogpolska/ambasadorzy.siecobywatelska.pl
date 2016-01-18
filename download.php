@@ -86,7 +86,7 @@ $files[] = [
 				<div class="grid-item--inner">
 					<div class="grid-item--title">
 						<a href="<?php echo $path; ?>">
-							<img src="/static/images/download.png" alt="<?php echo $label?>" class="grid-item--icon">
+							<img src="/static/images/download.svg" alt="<?php echo $label?>" class="grid-item--icon" width="26" height="33">
 							<?php echo $ext; ?>
 						</a>
 					</div>
