@@ -19,83 +19,87 @@ showHead("Do pobrania","");
 	}
 </style>
 
+<?php
+$files = [];
+$files[] = [
+	'path' => '/files/regulamin.pdf',
+	'ext' => 'pdf',
+	'label' => 'Regulamin Ambasadorów Jawności',
+];
+
+$files[] = [
+	'path' => '/files/kodeks.pdf',
+	'ext' => 'pdf',
+	'label' => 'Kodeks Ambasadorów Jawności',
+];
+
+$files[] = [
+	'path' => '/files/kodeks.pdf',
+	'ext' => 'pdf',
+	'label' => 'Kodeks Ambasadorów Jawności',
+];
+
+$files[] = [
+	'path' => '/files/dyspozycje.pdf',
+	'ext' => 'pdf',
+	'label' => 'Przykładowe dyspozycje',
+];
+
+$files[] = [
+	'path' => '/files/podpisy.pdf',
+	'ext' => 'pdf',
+	'label' => 'Podpisy do zdjęć',
+];
+
+$files[] = [
+	'path' => '/files/ulotka.pdf',
+	'ext' => 'pdf',
+	'label' => 'Ulotka pt. "Zostań Ambasadorem Jawności!"',
+];
+
+$files[] = [
+	'path' => '/files/ulotka2.pdf',
+	'ext' => 'pdf',
+	'label' => 'Ulotka nt. dostępu do informacji publicznej',
+];
+
+$files[] = [
+	'path' => '/files/pub_zeby.pdf',
+	'ext' => 'pdf',
+	'label' => 'Publikacja pt. "Zdrowe zęby demokracji"',
+];
+
+
+
+?>
+<h2>Materiały do pobrania</h2>
 <div class="row">
-	<div class="col-md-12">
-		<h2>Materiały do pobrania</h2>
-		<div class="custome-page-template ">
-				<div class="row item-container">
- 						<div class="col-xs-12 col-sm-6 col-lg-4 entry-wrap item">
-							<div class="entry-summary">
-									<div class="icon-holder">
-										<a target="_blank" href="files/regulamin.pdf"><img src="/static/images/download.png" alt="download"></a>
-										<a target="_blank" href="files/regulamin.pdf"><strong>pdf</strong></a>
-									</div>
-									<a target="_blank" href="files/regulamin.pdf"><h4 class="title">Regulamin Ambasadorów Jawności</h4></a>
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-6 col-lg-4 entry-wrap item">
-							<div class="entry-summary">
-									<div class="icon-holder">
-										<a target="_blank" href="files/kodeks.pdf"><img src="/static/images/download.png" alt="download"></a>
-										<a target="_blank" href="files/kodeks.pdf"><strong>pdf</strong></a>
-									</div>
-									<a target="_blank" href="files/kodeks.pdf"><h4 class="title">Kodeks Ambasadorów Jawności</h4></a>
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-6 col-lg-4 entry-wrap item">
-							<div class="entry-summary">
-									<div class="icon-holder">
-										<a target="_blank" href="files/dyspozycje.pdf"><img src="/static/images/download.png" alt="download"></a>
-										<a target="_blank" href="files/dyspozycje.pdf"><strong>pdf</strong></a>
-									</div>
-									<a target="_blank" href="files/dyspozycje.pdf"><h4 class="title">Przykładowe dyspozycje</h4></a>
-							</div>
-						</div>
+	<div class="col-xs-12">
+		<div class="grid">
+			<div class="grid-sizer grid-item-xs-1-1 grid-item-md-1-2 grid-item-lg-1-3"></div>
+			<div class="grid-gutter"></div>
+			<?php
+			foreach ($files as $file):
+			extract($file);
+			?>
+			<div class="grid-item grid-item-xs-1-1 grid-item-md-1-2 grid-item-lg-1-3">
+				<div class="grid-item--inner">
+					<div class="grid-item--title">
+						<a href="<?php echo $path; ?>">
+							<img src="/static/images/download.png" alt="<?php echo $label?>" class="grid-item--icon">
+							<?php echo $ext; ?>
+						</a>
+					</div>
+					<div class="grid-item--content">
+						<a href="<?php echo $path; ?>">
+							<?php echo $label;?>
+						</a>
 					</div>
 				</div>
-		<div class="custome-page-template ">
-				<div class="row item-container">
-						<div class="col-xs-12 col-sm-6 col-lg-4 entry-wrap item">
-							<div class="entry-summary">
-									<div class="icon-holder">
-										<a target="_blank" href="files/podpisy.pdf"><img src="/static/images/download.png" alt="download"></a>
-										<a target="_blank" href="files/podpisy.pdf"><strong>pdf</strong></a>
-									</div>
-									<a target="_blank" href="files/podpisy.pdf"><h4 class="title">Podpisy do zdjęć</h4></a>
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-6 col-lg-4 entry-wrap item">
-							<div class="entry-summary">
-									<div class="icon-holder">
-										<a target="_blank" href="files/ulotka.pdf"><img src="/static/images/download.png" alt="download"></a>
-										<a target="_blank" href="files/ulotka.pdf"><strong>pdf</strong></a>
-									</div>
-									<a target="_blank" href="files/ulotka.pdf"><h4 class="title">Ulotka pt. "Zostań Ambasadorem Jawności!"</h4></a>
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-6 col-lg-4 entry-wrap item">
-							<div class="entry-summary">
-									<div class="icon-holder">
-										<a target="_blank" href="files/ulotka2.pdf"><img src="/static/images/download.png" alt="download"></a>
-										<a target="_blank" href="files/ulotka2.pdf"><strong>pdf</strong></a>
-									</div>
-									<a target="_blank" href="files/ulotka2.pdf"><h4 class="title">Ulotka nt. dostępu do informacji publicznej</h4></a>
-							</div>
-						</div>
-					</div>
-		</div>
-		<div class="custome-page-template ">
-				<div class="row item-container">
-						<div class="col-xs-12 col-sm-6 col-lg-4 entry-wrap item">
-							<div class="entry-summary">
-									<div class="icon-holder">
-										<a target="_blank" href="files/pub_zeby.pdf"><img src="/static/images/download.png" alt="download"></a>
-										<a target="_blank" href="files/pub_zeby.pdf"><strong>pdf</strong></a>
-									</div>
-									<a target="_blank" href="files/pub_zeby.pdf"><h4 class="title">Publikacja pt. "Zdrowe zęby demokracji"</h4></a>
-							</div>
-						</div>
 			</div>
+			<?php
+			endforeach;
+			?>
 		</div>
 	</div>
 </div>
