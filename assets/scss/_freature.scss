@@ -1,0 +1,23 @@
+.freature{
+	@media screen and (min-width: $screen-md-min) {
+		display: table;
+	}
+	img{
+		width: 60px;
+		height: 60px;
+		display: block;
+		margin: 0 auto;
+	}
+}
+.freature-image{
+	@media screen and (min-width: $screen-md-min) {
+		vertical-align: middle;
+		display: table-cell;
+		padding: 50px;
+	}
+}
+.freature-content{
+	@media screen and (min-width: $screen-md-min) {
+		display: table-cell;
+	}
+}

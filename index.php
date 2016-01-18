@@ -102,7 +102,7 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 </div>
 <div class="row">
 
-	<div class="col-md-6">
+	<div class="col-xs-12">
 
 		<div class="clearfix"></div>
 		<div id="descriptionBlock" class="block">
@@ -120,34 +120,50 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 					A może masz swoje propozycje? Zarejestruj się i&nbsp;przedstaw je nam. Ambasadorstwo można
 					realizować na wiele różnych sposobów!
 				</p>
-				<p><b>Na początek</b></p>
-				<ol>
-					<li>
-						Zostaw nam informacje o&nbsp;sobie, zapoznaj się z&nbsp;regulaminem i&nbsp;podpisz Kodeks Ambasadora/Ambasadorki.
-						Pamiętaj, że w&nbsp;ten sposób deklarujesz, iż bliskie Ci są nasze wartości. Informację o&nbsp;możliwości
-						dołączenia do&nbsp; Ambasadorów i&nbsp;Ambasadorek udostępnij znajomym.
-					</li>
-					<li>
-						Pochwal się znajomym swoim zdjęciem z&nbsp;hasłem promującym jawność (możesz skorzystać
-						z naszych gotowych propozycji – <a href="/download.php" title="Do pobrania">w&nbsp;zakładce do&nbsp;pobrania</a>) lub ilustrującym, co robisz dla tej
-						sprawy. Wyjaśnij, czym się zajmujemy, dlaczego dołączyłaś/dołączyłeś do&nbsp;tej idei. Wyślij
-						nam to zdjęcie, abyśmy mogli zamieścić je na naszej stronie.
-					</li>
-					<li>
-						Udostępniaj informacje zamieszczane przez Sieć Obywatelską Watchdog Polska. Obserwuj,
-						co się u nas dzieje (np. przez nasz <a href="http://siecobywatelska.pl" target="_blank" title="Sieć Obywatelska Watchdog Polska">portal</a> i&nbsp;<a href="https://www.facebook.com/SiecObywatelskaWatchdogPolska?_rdr=p" target="_blank" title="Nasz FB">profil na Facebooku</a>) i&nbsp;dziel się artykułami, postami,
-						ulotkami, wydarzeniami przez media społecznościowe lub tradycyjnie (wydrukuj materiał lub
-						o nim opowiedz). <a href="http://siecobywatelska.pl/wp-content/uploads/2015/09/Informacja-Publiczna_ulotka-A4-skladana-do-A5-DRUK.pdf">Możesz zacząć od ulotki o&nbsp;dostępie do&nbsp;informacji publicznej.</a>
-					</li>
-					<li>Poleć nam kogoś. Znasz osobę, która podziela nasze wartości? Zaproponuj ją na kolejnego
-						Ambasadora/Ambasadorkę jawności i&nbsp;opowiedz jej o&nbsp;naszych działaniach. Może znasz firmę
-						bądź instytucję, z&nbsp;którą powinniśmy się skontaktować?
-					</li>
-				</ol>
+				<div class="freature">
+					<div class="freature-image"><img src="/static/images/icons/contract.svg" alt="" width="" height=""></div>
+					<div class="freature-content">
+						<h3>Zostaw nam informacje o&nbsp;sobie</h3>
+						<p>Zapoznaj się z&nbsp;regulaminem i&nbsp;podpisz Kodeks Ambasadora/Ambasadorki.
+							Pamiętaj, że w&nbsp;ten sposób deklarujesz, iż bliskie Ci są nasze wartości. Informację o&nbsp;możliwości
+							dołączenia do&nbsp; Ambasadorów i&nbsp;Ambasadorek udostępnij znajomym.</p>
+					</div>
+				</div>
+				<div class="freature">
+					<div class="freature-image"><img src="/static/images/icons/camera.svg" alt="" width="" height=""></div>
+					<div class="freature-content">
+						<h3>Pochwal się swoim zdjęciem</h3>
+						<p>z&nbsp;hasłem promującym jawność (możesz skorzystać
+							z naszych gotowych propozycji – <a href="/download.php" title="Do pobrania">w&nbsp;zakładce do&nbsp;pobrania</a>) lub ilustrującym, co robisz dla tej
+							sprawy. Wyjaśnij, czym się zajmujemy, dlaczego dołączyłaś/dołączyłeś do&nbsp;tej idei. Wyślij
+							nam to zdjęcie, abyśmy mogli zamieścić je na naszej stronie.</p>
+					</div>
+				</div>
+				<div class="freature">
+					<div class="freature-image"><img src="/static/images/icons/two.svg" alt="" width="" height=""></div>
+					<div class="freature-content">
+						<h3>Udostępniaj informacje </h3>
+						<p>zamieszczane przez Sieć Obywatelską Watchdog Polska. Obserwuj,
+							co się u nas dzieje (np. przez nasz <a href="http://siecobywatelska.pl" target="_blank" title="Sieć Obywatelska Watchdog Polska">portal</a> i&nbsp;<a href="https://www.facebook.com/SiecObywatelskaWatchdogPolska?_rdr=p" target="_blank" title="Nasz FB">profil na Facebooku</a>) i&nbsp;dziel się artykułami, postami,
+							ulotkami, wydarzeniami przez media społecznościowe lub tradycyjnie (wydrukuj materiał lub
+							o nim opowiedz). <a href="http://siecobywatelska.pl/wp-content/uploads/2015/09/Informacja-Publiczna_ulotka-A4-skladana-do-A5-DRUK.pdf">Możesz zacząć od ulotki o&nbsp;dostępie do&nbsp;informacji publicznej.</a></p>
+					</div>
+				</div>
+				<div class="freature">
+					<div class="freature-image"><img src="/static/images/icons/users.svg" alt="" width="" height=""></div>
+					<div class="freature-content">
+						<h3>Poleć nam kogoś.</h3>
+						<p>Znasz osobę, która podziela nasze wartości? Zaproponuj ją na kolejnego
+							Ambasadora/Ambasadorkę jawności i&nbsp;opowiedz jej o&nbsp;naszych działaniach. Może znasz firmę
+							bądź instytucję, z&nbsp;którą powinniśmy się skontaktować?</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="col-md-6">
+</div>
+<div class="row">
+	<div class="col-xs-12">
 		<div id="signFormBlock" class="block redBlock">
 			<div class="blockContent">
 				<h2>Dołącz do wspierających jawność!</h2>

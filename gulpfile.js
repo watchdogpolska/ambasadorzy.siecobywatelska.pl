@@ -49,10 +49,10 @@ var config = (function () {
 			},
 			watch: [ path.assets + "/js/*.js" ]
 		},
-		'images': {
-			input: [ path.assets + "/images/*.*" ],
+		images: {
+			input: [ path.assets + "/images/**" ],
 			output: path.static + "/images",
-			watch: [ path.assets + "/images/*.*" ]
+			watch: [ path.assets + "/images/**" ]
 		}
 	};
 }());
