@@ -30,6 +30,9 @@ a:hover,a:visited,a:active {
     float:right;
 }
 
+.header-top{
+    @include clearfix;
+}
 header img {
     margin:20px;
 }
@@ -73,23 +76,23 @@ header img {
     color: black;
 }
 
-
 a.support-button{
     top: 0; right: 0;
     display: block;
     background: #D72626;
     color: #fff;
     text-transform:uppercase;
+    margin: 20px 0;
     padding:0 10px;
     font:18px "GloberSemibold","GloberRegular",Helvetica,Arial,sans-serif;
-    line-height: 45px;
+    line-height: 60px;
     transition: .2s background-color;
     z-index: 99;
     outline: 1px solid rgba(white, 0.2);
     @media only screen and (min-width: $screen-md){
         position: fixed;
         padding:0 45px;
-        line-height: 90px;
+        line-height: 60px;
     }
 }
 
