@@ -5,7 +5,7 @@ showHead("Kontakt", "&nbsp;");
 
 ?>
 <div class="row">
-	<div class="col-md-8 col-md-push-6 col-lg-4 col-lg-push-8 ">
+	<div class="col-xs-12 col-md-6 col-md-push-6 col-lg-4 col-lg-push-8">
 		<div id="contactInfoBlock">
 			<div id="contactInfo1" class="block grayBlock roksanaBox">
 				<div class="blockContent" style="word-wrap: break-word;padding:50px 0px">
@@ -23,7 +23,7 @@ showHead("Kontakt", "&nbsp;");
 			</div>
 		</div>
 	</div>
-	<div class="col-md-6 col-md-pull-6 col-lg-8 col-lg-pull-4 ">
+	<div class="col-xs-12 col-md-6 col-md-pull-6 col-lg-8 col-lg-pull-4">
 		<div id="contactForm" class="block grayBlock">
 			<div class="blockContent">
 				<h2>Organizator programu</h2>
