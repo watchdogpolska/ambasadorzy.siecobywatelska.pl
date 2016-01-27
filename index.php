@@ -70,7 +70,7 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 
 ?>
 <div class="row">
-	<div class="col-xs-6">
+	<div class="col-xs-12 col-md-6">
 		<div id="descriptionBlock" class="block grayBlock">
 			<div class="blockContent">
 				<h2>Dlaczego warto?</h2>
@@ -105,7 +105,7 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 			</div>
 		</div>
 	</div>
-	<div class="col-xs-6">
+	<div class="col-xs-12 col-md-6">
 		<div id="descriptionBlock" class="block grayBlock">
 			<div class="blockContent">
 				<h2>Jak zostać Ambasadorem / Ambasadorką Jawności?</h2>
@@ -166,7 +166,7 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 	</div>
 </div>
 <div class="row">
-	<div class="col-md-12">
+	<div class="col-xs-12">
 		<div class="clearfix"></div>
 		<div id="descriptionBlock" class="block">
 			<div class="blockContent" style="margin: 0 auto">
