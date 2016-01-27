@@ -7,7 +7,7 @@ if(!isset($_SESSION['registered'])) {
 //header('Location: index.php');
 }
 
-showHead("Zarejestrowano", "Dziękujemy!");
+showHead("Zarejestrowano", "Rejestracja ukończona!");
 
 ?>
 <div id="fb-root"></div>
@@ -23,11 +23,13 @@ showHead("Zarejestrowano", "Dziękujemy!");
 <div id="signFormBlock" class="block redBlock">
 
 	<div class="blockContent">
-		<h2>Dziękujemy za rejestrację!</h2>
-		<p>Dziękujemy za przesłanie zgłoszenia i chęć dołączenia do  Ambasadorów/Ambasadorek jawności!</p>
+		<img style="float: right; height: 10em" class="img-responsive" src="/static/images/jawnosc.jpg" alt="Jawność">
+		<p>Dziękujemy za przesłanie zgłoszenia i chęć dołączenia do  Ambasadorów/Ambasadorek Jawności!</p>
 		<p>Wkrótce skontaktuje się z Tobą mailowo koordynator programu.</p>
 		<p>Prosimy, podziel się informacją o programie ze znajomymi i przekaż im adres tej strony.</p>
 		<div class="fb-share-button" data-href="https://ambasadorzy.siecobywatelska.pl" data-layout="button_count"></div>
+		<a href="https://twitter.com/share" class="twitter-share-button"{count} data-url="http://ambasadorzy.siecobywatelska.pl" data-text="Zostałem Ambasadorem Jawności!" data-related="siecobywatelska" data-hashtags="jawność">Tweet</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 	</div>
 </div>
 

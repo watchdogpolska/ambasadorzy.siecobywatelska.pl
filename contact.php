@@ -7,7 +7,7 @@ showHead("Kontakt", "&nbsp;");
 <div class="row">
 	<div class="col-md-8 col-md-push-6 col-lg-4 col-lg-push-8 ">
 		<div id="contactInfoBlock">
-			<div id="contactInfo1" class="block grayBlock">
+			<div id="contactInfo1" class="block grayBlock roksanaBox">
 				<div class="blockContent" style="word-wrap: break-word;padding:50px 0px">
 					<h2 style="margin: 10px 30px">Kontakt</h2>
 					<img class="img-responsive" src="/static/images/roksana_m.jpg" style="width:100%" alt="Roksana Maślankiewicz" />
@@ -26,24 +26,22 @@ showHead("Kontakt", "&nbsp;");
 	<div class="col-md-6 col-md-pull-6 col-lg-8 col-lg-pull-4 ">
 		<div id="contactForm" class="block grayBlock">
 			<div class="blockContent">
-				<h2>Biuro Sieci</h2>
-				<p>&nbsp;</p>
-				<h3>Napisz do nas:<br>
-				<a href="mailto:biuro@siecobywatelska.pl">biuro@siecobywatelska.pl</a></h3>
+				<h2>Organizator programu</h2>
+				<h3>Sieć Obywatelska – Watchdog Polska<br>
+				ul. Ursynowska 22/2 02-605<br>
+				Warszawa</h3>
+				<h3><a href="mailto:biuro@siecobywatelska.pl">biuro@siecobywatelska.pl</a></h3>
 				<h3></h3>
 				<h3>tel: <a href="tel:+48228447355"><i class="fa fa-phone"></i> +48 22 844 73 55</a><br>
 				fax:<a href="fax:+48 22 207 24 09">+48 22 207 24 09</a></h3>
 				<h3></h3>
-				<h3>Sieć Obywatelska – Watchdog Polska<br>
-				ul. Ursynowska 22/2 02-605<br>
-				Warszawa</h3>
 				<p>NIP: 526 284 28 72<br>
 				REGON: 015690020<br>
 				KRS: 0000181348</p>
 				<p>Nr konta do wpłat darowizn:<br>
 				29 2130 0004 2001 0343 2101 0001<br>
 				Volkswagen Bank Direct</p>
-				<p>&nbsp;</p>
+				<img src="/static/images/rysunek.jpg" alt="jawność - rysunek" class="image-responsive" style="display: block;margin: 0 auto;">
 			</div>
 		</div>
 	</div>

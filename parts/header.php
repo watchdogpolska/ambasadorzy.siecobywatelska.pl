@@ -9,7 +9,7 @@
 	<meta property="og:site_name" content="<?php echo PAGE_NAME; ?>"/>
 	<meta property="og:description" content="<?php echo META_DESC; ?>" />
 	<meta property="og:locale" content="pl_PL" />
-	<meta property="og:image" content="/static/images/facebook.jpg" />
+	<meta property="og:image" content="/static/images/sprzyja.png" />
 
 	<link rel="stylesheet" href="/static/css/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">

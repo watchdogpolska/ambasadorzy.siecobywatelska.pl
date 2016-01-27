@@ -3,3 +3,5 @@ bower_components/
 node_modules/
 db.inc.php
 static/
+config2.php
+config.php

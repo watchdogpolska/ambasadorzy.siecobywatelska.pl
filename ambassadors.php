@@ -15,13 +15,28 @@ $amb = mysqli_query($link, "SELECT * FROM ambassadors WHERE zaakceptowany = 1");
 		<div id="voteListBlock" class="block grayBlock">
 			<div class="blockContent">
 				<h2>Lista Ambasadorów i Ambasadorek</h2>
+				<table class="table table-striped">
+					<thead>
+						<th>#</th>
+						<th>Imię i nazwisko</th>
+						<th>Miejscowość</th>
+					</thead>
+					<tr><td>1</td><td>Jan Kowalski</td><td>Warszawa</td></tr>
+					<tr><td>2</td><td>Janina Kowalska</td><td>Poznań</td></tr>
+					<tr><td>3</td><td>Janusz Kowalski</td><td>Wrocław</td></tr>
+				</table>
+			</div>
+		</div>
+		<div id="descriptionBlock" class="block">
+			<div class="blockContent" style="margin: 0 auto">
+				<img src="/static/images/tabliczki.jpg" style="display: block; margin: 0 auto; max-width: 100%; max-height: 15em" alt="Jawność sprzyja!" title="Jawność sprzyja!" />
 			</div>
 		</div>
 	</div>
 	<div class="col-md-6">
 		<div id="mapBlock" class="block blackBlock">
 			<div class="blockContent">
-				<h2>Jawność wspierają</h2>
+				<h2 style="margin-bottom: 0.5em">Jawność wspierają</h2>
 				<div style="height:450px" id="map"></div>
 			</div>
 		</div>

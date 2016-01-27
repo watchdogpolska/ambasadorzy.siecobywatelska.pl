@@ -72,8 +72,8 @@ $files[] = [
 
 
 ?>
-<h2>Materiały do pobrania</h2>
-<div class="row">
+<h2 style="margin-bottom: 1em">Materiały do pobrania</h2>
+<div class="row" style="margin-bottom: 2em">
 	<div class="col-xs-12">
 		<div class="grid">
 			<div class="grid-sizer grid-item-xs-1-1 grid-item-md-1-2 grid-item-lg-1-3"></div>
