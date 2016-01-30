@@ -32,7 +32,7 @@ if(!isset($_SESSION['admin'])) header('Location: login.php');
 		<?php
 		if($ambasadorzy_new->num_rows > 0) {
 			?>
-			<br/><b>Oczekujących na weryfikację:</b> ".$ambasadorzy_new->num_rows."<br/><i><a href=waiting.php>(lista i dane)</a></i>
+			<br/><b>Oczekujących na weryfikację:</b> <?php echo $ambasadorzy_new->num_rows; ?><br/><i><a href=waiting.php>(lista i dane)</a></i>
 		<?php
 		}
 		?>
