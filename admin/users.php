@@ -25,34 +25,60 @@ if(isset($_GET['remove'])) {
 <head>
 	<title>Użytkownicy - adminpanel</title>
 	<meta name="robots" content="nofollow, noindex">
-	<style>tr{border:1px solid;}td{border:1px solid;}</style>
+	<link rel="stylesheet" href="/static/css/style.css">
 </head>
-<body style="text-align: center; font-size:1.1em; width: 80%; margin: 0 auto; margin-top: 10px">
-	<h2>Lista użytkowników</h2><hr/>
-	<?php if(!empty($errormsg)) {
-		echo "<span style='color: red'>$errormsg</span><br/><br/>";
-	} ?>
-	<table style="width: 100%; display: block; margin: 0 auto; border: 1px solid; text-align: center">
-		<tr style="background-color: lightgray; font-weight: bold"><td>Nick</td><td>Imię i nazwisko</td><td>Usuń</td></tr>
+<body>
+	<div class="container">
+		<h2>Lista użytkowników</h2><hr/>
 		<?php
-		$link = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_BASE);
-		$userzy = mysqli_query($link, "SELECT * from users");
-		while($user = mysqli_fetch_array($userzy, MYSQLI_ASSOC)) {
-			$nick = htmlspecialchars($user['login']);
-			$name = htmlspecialchars($user['name']);
-			$id = htmlspecialchars($user['idusers']);
-			echo "<tr><td>$nick</td><td>$name</td>";
-			if($id != $_SESSION['admin_id']) if(!$user['usuniety']) echo "<td><input type=button value=\"Usuń!\" onclick=\"document.location.href = 'users.php?remove=$id';\" /></td>"; else echo "<td>Usunięty</td>";
-			else echo "<td></td>";
-			echo "</tr>";
+		if(!empty($errormsg)) {
+		?>
+			<div class="alert alert-success" role="alert"><?php echo $errormsg; ?></div>
+		<?php
 		}
 		?>
-	</table>
-	<br/>
-	<a href=login.php>Wyloguj się</a><br/>
-	<a href=new.php>Nowy użytkownik</a><br/>
-	<a href=index.php>Strona główna</a><br/>
-	<br/>
-	<hr/>
-	<img src="/static/images/watchdog.png" alt="Logo Watchdog" /><br/><br/>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Nick</th>
+					<th>Imię i nazwisko</th>
+					<th>Akcje</th>
+				</tr>
+			</thead>
+			<?php
+			$link = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_BASE);
+			$userzy = mysqli_query($link, "SELECT * from users");
+			while($user = mysqli_fetch_array($userzy, MYSQLI_ASSOC)) {
+				$nick = htmlspecialchars($user['login']);
+				$name = htmlspecialchars($user['name']);
+				$id = htmlspecialchars($user['idusers']);
+				?>
+				<tr>
+					<td><?php echo $nick; ?></td>
+					<td><?php echo $nick; ?></td>
+					<td>
+					<?php
+					if($id != $_SESSION['admin_id']){
+						if(!$user['usuniety']) {
+							echo "<button value=\"Usuń!\" onclick=\"document.location.href = 'users.php?remove=$id';\" class=\"btn btn-danger\">Usuń</button>";
+						}else {
+							echo "Usunięty";
+						}
+					}
+					?>
+					</td>
+
+				</tr>
+			<?php
+			}
+			?>
+		</table>
+		<br/>
+		<a href="login.php">Wyloguj się</a><br/>
+		<a href="new.php">Nowy użytkownik</a><br/>
+		<a href="index.php">Strona główna</a><br/>
+		<br/>
+		<hr/>
+		<img src="/static/images/watchdog.png" alt="Logo Watchdog" /><br/><br/>
+	</div>
 </body>
