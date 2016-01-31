@@ -18,6 +18,7 @@
   "dependencies": {
     "bootstrap-sass": "~3.3.6",
     "jquery": "~2.1.4",
-    "masonry": "~4.0.0"
+    "masonry": "~4.0.0",
+    "imagesloaded": "~4.1.0"
   }
 }
