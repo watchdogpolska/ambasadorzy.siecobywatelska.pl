@@ -2,7 +2,7 @@
 
 if(!file_exists("../db.inc.php"))header("Location: ../config.php");
 
-include_once('constants.inc.php');
+include_once('../constants.inc.php');
 include_once("../db.inc.php");
 
 error_reporting(-1); //Comments these two lines to disable error reporting - NEED TO BE DONE IN PRODUCTION PHRASE!

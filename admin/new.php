@@ -35,23 +35,51 @@ if(isset($_POST['sent']) && csrf_validate($_POST['csrf'])) {
 <head>
 	<title>Nowy użytkownik - adminpanel</title>
 	<meta name="robots" content="nofollow, noindex">
+	<link rel="stylesheet" href="/static/css/style.css">
 </head>
-<body style="text-align: center">
-	<h2>Wypełnij formularz, aby utworzyć nowe konto użytkownika!</h2>
-	<?php if($failed) {
-		echo "<h3 style='color: red'>Nie można utworzyć użytkownika. Sprawdź, czy login nie jest już w użyciu lub hasło nie jest krótsze niż 8 znaków.</h3>";
-	} ?>
-	<div style="width: 60%; margin: 0 auto; font-size: 1.2em"><hr />
-		<form action=new.php method=post>
-			<input type=hidden name=csrf value="<?php echo $_SESSION['csrf']; ?>">
-			Login: <input type=text name=user required /><br/><br/>
-			Hasło: <input type=password name=pass required /><br/><br/>
-			Nazwa (imię): <input type=text name=name required /><br/><br/>
-			<input type=submit value="Utwórz użytkownika!" name=sent />
-			<br/><br/>
-			<a href="index.php">Anuluj operację!</a>
-			<hr/>
-			<img src="/static/images/watchdog.png" alt="Logo Watchdog" /><br/><br/>
-		</form>
+<body>
+	<div class="container">
+		<h2>Tworzenie użytkownika</h2>
+		<p class="lead">Wypełnij formularz, aby utworzyć nowe konto użytkownika!</p>
+		<?php if(!$failed) {
+		?>
+			<div class="alert alert-danger" role="alert">Nie można utworzyć użytkownika. Sprawdź, czy login nie jest już w użyciu lub hasło nie jest krótsze niż 8 znaków.</div>
+		<?php
+		}
+		?>
+		<hr />
+		<div class="row">
+			<div class="col-xs-12 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
+				<form action="new.php" method="post" class="form-horizontal" role="form">
+					<input type=hidden name=csrf value="<?php echo $_SESSION['csrf']; ?>">
+					<div class="form-group">
+						<label for="field_user" class="col-sm-4 control-label">Login: </label>
+						<div class="col-sm-8">
+							<input type="text" name="user" required class="form-control" id="field_user">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="field_password" class="col-sm-4 control-label">Hasło: </label>
+						<div class="col-sm-8">
+							<input type="password" name="password" required class="form-control" id="field_password">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="field_name" class="col-sm-4 control-label">Nazwa (imię): </label>
+						<div class="col-sm-8">
+							<input type="text" name="name" required class="form-control" id="field_name">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-8 col-sm-offset-4">
+							<button type="submit" class="btn btn-primary" name="sent">Utwórz użytkownika!</button>
+							<a href="index.php" class="btn btn-default">Anuluj operację!</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<hr/>
+		<img src="/static/images/watchdog.png" alt="Logo Watchdog" /><br/><br/>
 	</div>
 </body>

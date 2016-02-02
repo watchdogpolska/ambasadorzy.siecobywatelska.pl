@@ -33,22 +33,39 @@ if(isset($_POST['sent']) && csrf_validate($_POST['csrf'])) {
 <head>
 	<title>Logowanie - adminpanel</title>
 	<meta name="robots" content="nofollow, noindex">
+	<link rel="stylesheet" href="/static/css/style.css">
 </head>
-<body style="text-align: center">
-	<h2>Podaj dane logowania, aby uzyskać dostęp!</h2>
-	<?php
-	if($failed) {
-		echo "<h3 style='color: red'>Podano nieprawidłowe dane logowania!</h3>";
-	} ?>
-	<div style="width: 60%; margin: 0 auto; font-size: 1.2em"><hr />
-		<form action=login.php method=post>
-			<input type=hidden name=csrf value="<?php echo $_SESSION['csrf']; ?>">
-			User: <input type=text name=user required /><br/><br/>
-			Hasło: <input type=password name=pass required /><br/><br/>
-			<input type=submit value="Zaloguj się do Systemu!" name=sent />
-			<hr/>
-			<img src="/static/images/watchdog.png" alt="Logo Watchdog" /><br/><br/>
-			<span style="font-size: 0.6em">System wewnętrzny Sieci Obywatelskiej Watchdog Polska. <br/>Próby uzyskania dostępu przez osoby nieuprawnione są zabronione.</span>
-		</form>
+<body>
+	<div class="container">
+<div class="row">
+	<div class="col xs-12 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
+		<div class="well">
+			<h2>Logowanie</h2>
+			<p>Podaj dane logowania, aby uzyskać dostęp!</p>
+			<?php
+			if($failed) {
+				?>
+				<div class="alert alert-success" role="alert">Podano nieprawidłowe dane logowania!</div>
+				<?php
+			}
+			?>
+			<form action="login.php" method="post">
+				<input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf']; ?>">
+				<div class="form-group">
+					<label for="field_user">Login:</label>
+					<input type="text" name="user" required="" class="form-control" id="field_user">
+				</div>
+				<div class="form-group">
+					<label for="field_pass">Hasło:</label>
+					<input type="text" name="pass" required="" class="form-control" id="field_pass">
+				</div>
+				<button type="submit" name="sent" class="btn btn-primary">Zaloguj się</button>
+			</form>
+		</div>
+	</div>
+</div>
+		<hr/>
+		<img src="/static/images/watchdog.png" alt="Logo Watchdog" /><br/><br/>
+		<span style="font-size: 0.6em">System wewnętrzny Sieci Obywatelskiej Watchdog Polska. <br/>Próby uzyskania dostępu przez osoby nieuprawnione są zabronione.</span>
 	</div>
 </body>

@@ -42,23 +42,47 @@ if(isset($_POST['sent']) && csrf_validate($_POST['csrf'])) {
 <head>
 	<title>Zmiana hasła - adminpanel</title>
 	<meta name="robots" content="nofollow, noindex">
+	<link rel="stylesheet" href="/static/css/style.css">
 </head>
-<body style="text-align: center; font-size:1.1em; width: 80%; margin: 0 auto; margin-top: 10px">
-	<h2>Zmiana hasła</h2>
-	<hr/>
-	<br/>
-	Uzupełnij poniższy formularz, aby zmienić swoje hasło!<br/> Pamiętaj, że nowe hasło powinno mieć co najmniej 8 znaków, zawierać małe, duże litery, znaki specjalne oraz cyfry!<br/>Musi ono być różne od poprzedniego!<br/>
-	Po wysłaniu formularza, zostaniesz wylogowany(a).<br/>(Istnieje prawny wymóg zmiany hasła co 30 dni)<br/><br/>
-	<?php if($failed) echo "<span style='color: red'><b>Nie można zmienić hasła. Sprawdź, czy podane wartości są takie same i czy mają co najmniej 8 znaków oraz spełniają wymogi!</b></span><br/><br/>"; ?>
-		<form action=newpass.php method=post>
-			<input type=hidden name=csrf value="<?php echo $_SESSION['csrf']; ?>"/>
-			Nowe hasło: <input type=password minlength=8 required name=pass1 /><br/><br/>
-			Powtórz hasło: <input type=password minlength=8 required name=pass2 /><br/><br/>
-			<input type=submit name=sent value="Dokonaj zmiany!" />
-		</form>
-		<br/>
-		<a href="index.php">Anuluj zmianę</a>
-		<br/>
+<body>
+	<div class="container">
+		<h2>Zmiana hasła</h2>
 		<hr/>
-		<img src="/static/images/watchdog.png" alt="Logo Watchdog" /><br/><br/>
+		<p>Uzupełnij poniższy formularz, aby zmienić swoje hasło!</p>
+		<p>Pamiętaj, że nowe hasło powinno mieć co najmniej 8 znaków, zawierać małe, duże litery, znaki specjalne oraz cyfry!</p>
+		<p>Musi ono być różne od poprzedniego!</p>
+		<p>Po wysłaniu formularza, zostaniesz wylogowany(a).</p>
+		<p>(Istnieje prawny wymóg zmiany hasła co 30 dni)</p>
+		<?php if($failed) {
+		?>
+			<div class="alert alert-danger" role="alert">Nie można zmienić hasła. Sprawdź, czy podane wartości są takie same i czy mają co najmniej 8 znaków oraz spełniają wymogi!</div>
+		<?php
+		}
+		?>
+			<form action="newpass.php" method="post">
+				<input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf']; ?>"/>
+				<div class="form-group">
+					<label for="field_pass1" class="col-sm-4 control-label">Nowe hasło: <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
+					<div class="col-sm-8">
+						<input type="text" name="pass1" required minlength="8" class="form-control" id="field_pass1">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="field_pass2" class="col-sm-4 control-label">Powtórz hasło:<abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
+					<div class="col-sm-8">
+						<input type="text" name="pass2" required minlength="8" class="form-control" id="field_pass2">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-10 col-sm-offset-2">
+						<button type="submit" name="sent" class="btn btn-primary">Dokonaj zmiany!</button>
+					</div>
+				</div>
+			</form>
+			<br/>
+			<a href="index.php">Anuluj zmianę</a>
+			<br/>
+			<hr/>
+			<img src="/static/images/watchdog.png" alt="Logo Watchdog" /><br/><br/>
+	</div>
 	</body>

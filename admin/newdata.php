@@ -21,21 +21,31 @@ if(isset($_POST['sent']) && csrf_validate($_POST['csrf'])) {
 <head>
 	<title>Zmiana danych - adminpanel</title>
 	<meta name="robots" content="nofollow, noindex">
+	<link rel="stylesheet" href="/static/css/style.css">
 </head>
-<body style="text-align: center; font-size:1.1em; width: 80%; margin: 0 auto; margin-top: 10px">
-	<h2>Zmiana danych</h2>
-	<hr/>
-	<br/>
-	Uzupełnij poniższy formularz, aby zmienić swoje dane!<br/>
-	Po wysłaniu formularza, zostaniesz wylogowany(a).<br/><br/>
-	<form action=newdata.php method=post>
-		<input type=hidden name=csrf value="<?php echo $_SESSION['csrf']; ?>"/>
-		Nowe imię i nazwisko (nazwa): <input type=text required name=name /><br/><br/>
-		<input type=submit name=sent value="Dokonaj zmiany!" />
-	</form>
-	<br/>
-	<a href="index.php">Anuluj zmianę</a>
-	<br/>
-	<hr/>
-	<img src="/static/images/watchdog.png" alt="Logo Watchdog" /><br/><br/>
+<body>
+	<div class="container">
+		<h2>Zmiana danych</h2>
+		<p>Uzupełnij poniższy formularz, aby zmienić swoje dane!</p>
+		<p>Po wysłaniu formularza, zostaniesz wylogowany(a).</p>
+		<form action="newdata.php" method="POST" class="form-horizontal" role="form">
+			<input type=hidden name=csrf value="<?php echo $_SESSION['csrf']; ?>"/>
+			<div class="form-group">
+				<label for="field_name" class="col-sm-4 control-label">Nowe imię i nazwisko (nazwa): </label>
+				<div class="col-sm-8">
+					<input type="text" name="name" required class="control-label" id="field_name">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-8 col-sm-offset-4">
+					<button type="submit" class="btn btn-primary" name="sent">Dokonaj zmiany!</button>
+				</div>
+			</div>
+		</form>
+		<br/>
+		<a href="index.php">Anuluj zmianę</a>
+		<br/>
+		<hr/>
+		<img src="/static/images/watchdog.png" alt="Logo Watchdog" /><br/><br/>
+	</div>
 </body>

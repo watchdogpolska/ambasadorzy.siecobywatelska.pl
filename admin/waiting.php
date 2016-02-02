@@ -10,8 +10,10 @@ if(!isset($_SESSION['admin'])) header('Location: login.php');
 	<title>Oczekujący - adminpanel</title>
 	<meta name="robots" content="nofollow, noindex">
 	<style>tr{border:1px solid;}td{border:1px solid;}</style>
+	<link rel="stylesheet" href="/static/css/style.css">
 </head>
-<body style="text-align: center; font-size:1.1em; width: 80%; margin: 0 auto; margin-top: 10px">
+<body>
+<div class="container">
 	<h2>Lista oczekujących Ambasadorów</h2>
 	<hr/>
 	<table style="width: 100%; display: block; margin: 0 auto; border: 1px solid; text-align: center">
@@ -45,4 +47,5 @@ if(!isset($_SESSION['admin'])) header('Location: login.php');
 	<br/>
 	<hr/>
 	<img src="/static/images/watchdog.png" alt="Logo Watchdog" /><br/><br/>
+</div>
 </body>
