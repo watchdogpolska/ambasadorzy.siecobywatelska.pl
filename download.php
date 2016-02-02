@@ -76,21 +76,21 @@ $files[] = [
 <div class="row" style="margin-bottom: 2em">
 	<div class="col-xs-12">
 		<div class="grid">
-			<div class="grid-sizer grid-item-xs-1-1 grid-item-md-1-2 grid-item-lg-1-3"></div>
+			<div class="grid-sizer grid-size-xs-1-1 grid-size-md-1-2 grid-size-lg-1-3"></div>
 			<div class="grid-gutter"></div>
 			<?php
 			foreach ($files as $file):
 			extract($file);
 			?>
-			<div class="grid-item grid-item-xs-1-1 grid-item-md-1-2 grid-item-lg-1-3">
-				<div class="grid-item--inner">
-					<div class="grid-item--title">
+			<div class="grid-item grid-size-xs-1-1 grid-size-md-1-2 grid-size-lg-1-3">
+				<div class="card">
+					<div class="card--title">
 						<a href="<?php echo $path; ?>">
-							<img src="/static/images/download.svg" alt="<?php echo $label?>" class="grid-item--icon" width="26" height="33">
+							<img src="/static/images/download.svg" alt="<?php echo $label?>" class="card--icon" width="26" height="33">
 							<?php echo $ext; ?>
 						</a>
 					</div>
-					<div class="grid-item--content">
+					<div class="card--content">
 						<a href="<?php echo $path; ?>">
 							<?php echo $label;?>
 						</a>

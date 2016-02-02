@@ -39,6 +39,7 @@ var config = (function () {
 		script: {
 			input: [
 				path.bower + "/jquery/dist/jquery.js",
+				path.bower + "/imagesloaded/imagesloaded.pkgd.js",
 				path.bower + "/masonry/dist/masonry.pkgd.js",
 				path.bower + "/bootstrap-sass/assets/javascripts/bootstrap.js",
 				path.assets + "/js/*.js"
