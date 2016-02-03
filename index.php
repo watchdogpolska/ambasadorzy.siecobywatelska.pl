@@ -100,8 +100,13 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 			</div>
 		</div>
 		<div id="descriptionBlock" class="block">
-			<div class="blockContent" style="margin: 0 auto">
-				<img src="/static/images/superbohater.svg" style="display: block; margin: 0 auto; max-width: 100%; max-height: 400px" alt="Jawność sprzyja!" title="Jawność sprzyja!" />
+			<div class="blockContent" style="padding: 20 50px; color: #D72626">
+				<?php
+					$img_path = dirname(__FILE__).'/static/images/superbohater.svg';
+					if(file_exists($img_path)){
+						echo file_get_contents($img_path);
+					}
+				?>
 			</div>
 		</div>
 	</div>
