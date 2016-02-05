@@ -17,13 +17,17 @@ $amb = mysqli_query($link, "SELECT * FROM ambassadors WHERE zaakceptowany = 1");
 				<h2>Lista Ambasadorów i Ambasadorek</h2>
 				<table class="table table-striped">
 					<thead>
-						<th>#</th>
-						<th>Imię i nazwisko</th>
-						<th>Miejscowość</th>
+						<tr>
+							<th>#</th>
+							<th>Imię i nazwisko</th>
+							<th>Miejscowość</th>
+						</tr>
 					</thead>
-					<tr><td>1</td><td>Jan Kowalski</td><td>Warszawa</td></tr>
-					<tr><td>2</td><td>Janina Kowalska</td><td>Poznań</td></tr>
-					<tr><td>3</td><td>Janusz Kowalski</td><td>Wrocław</td></tr>
+						<tbody>
+							<tr><td>1</td><td>Jan Kowalski</td><td>Warszawa</td></tr>
+							<tr><td>2</td><td>Janina Kowalska</td><td>Poznań</td></tr>
+							<tr><td>3</td><td>Janusz Kowalski</td><td>Wrocław</td></tr>
+						</tbody>
 				</table>
 			</div>
 		</div>
