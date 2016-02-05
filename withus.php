@@ -13,7 +13,7 @@ showHead("Są z nami", "&nbsp;");
 <div class="row">
 	<div class="grid" id="with-us-grid">
 		<div class="grid-sizer grid-item-with-us"></div>
-		<div class="grid-stamp grid-size-xs-1-1 grid-size-md-1-2 grid-size-stamp-top-right">
+		<div class="grid-stamp grid-size-xs-1-1 grid-size-md-1-3 grid-stamp-top-right">
 			<div class="card">
 				<div class="card--content">
 					<div class="embed-responsive embed-responsive-16by9">
