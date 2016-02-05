@@ -250,7 +250,7 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 				Jeśli się z&nbsp;nimi zgadzasz i&nbsp;zamierzasz się nimi kierować, prosimy o&nbsp;podpisanie Kodeksu
 				Ambasadora/Ambasadorki.
 			</p>
-			<p style="text-align: center"><b>Kodeks Ambasadora/Ambasadorki</b></p>
+			<h3 style="text-align: center">Kodeks Ambasadora/Ambasadorki</h3>
 			<p>Jako Ambasador/Ambasadorka Jawności zobowiązuję się:</p>
 			<ol>
 				<li>
