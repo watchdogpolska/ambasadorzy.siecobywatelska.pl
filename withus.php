@@ -40,7 +40,10 @@ showHead("Są z nami", "&nbsp;");
 					$replace = "youtube.com/embed/$1";
 					$url = preg_replace($search,$replace,$link);
 					$isYT = true;
-					$yt_embed = '<iframe class="embed-responsive-item" src="'.$url.'" frameborder="0" allowfullscreen></iframe>';
+					$yt_embed = '
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" src="' . $url . '" frameborder="0" allowfullscreen></iframe>
+					</div>';
 				}
 				else{
 					$isYT = false;
