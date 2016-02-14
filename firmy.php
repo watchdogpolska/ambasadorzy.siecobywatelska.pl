@@ -14,6 +14,7 @@ showHead("Firmy", "Oferta dla biznesu");
 <div class="block grayBlock" >
 	<div class="blockContent">
 		Do naszego programu Ambasadorów/Ambasadorek Jawności zapraszamy firmy, które chcą wesprzeć ideę państwa otwartego, odpowiedzialnego i przyjaznego obywatelom.
+		<img src="/static/images/jawnosc_p.jpg" class="img-responsive" alt="jawność sprzyja przedsiębiorcom" style="float: right;margin-top: 1em;max-height: 15em">
 		<h3>Do jakich firm kierowana jest oferta?</h3>
 		<p>Do udziału w programie zapraszamy Firmy z całej Polski, które:</p>
 		<ul class="list-dotted-brand">
@@ -28,7 +29,6 @@ showHead("Firmy", "Oferta dla biznesu");
 			<li> Sieć Obywatelska Watchdog Polska zapewnia firmom zaproszonym do współpracy udział w wydarzeniach projawnościowych oraz pakiet promocyjny, m.in. informacje na temat firmy będą widoczne na na stronie www.ambasadorzy.siecobywatelska.pl oraz mapie Wspierających jawność, na stronie siecobywatelska.pl w zakładce Program Ambasadorzy Jawności.</li>
 		</ul>
 		<p>Szczegółowe warunki współpracy będą omówione i ustalone z firmami deklarującymi chęć współpracy.</p>
-		<img src="/static/images/jawnosc_p.jpg" class="img-responsive" alt="jawność sprzyja przedsiębiorcom" style="display:block;margin:0 auto;max-height: 15em">
 		<h3>W jaki sposób firma zostaje Ambasadorem Jawności?</h3>
 		<ol>
 			<li class="nostyle"><i class="fa fa-arrow-right"></i> Zgłoszenie/zaproszenie do programu.</li>

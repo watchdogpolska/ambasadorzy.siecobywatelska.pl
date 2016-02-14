@@ -13,7 +13,7 @@
 		</div>
 		<div class="col-xs-12 col-lg-4 footer-cookie">
 			<p>Strona wykorzystuje ciasteczka. <br><a href="/privacy.php">Polityka prywatności</a></p>
-			<p>Kod zróðłowy publiczny: <a href="https://github.com/watchdogpolska/ambasadorzy.siecobywatelska.pl"><i class="fa fa-github"></i> Github</a></p>
+			<p>Kod zródłowy publiczny: <a href="https://github.com/watchdogpolska/ambasadorzy.siecobywatelska.pl"><i class="fa fa-github"></i> Github</a></p>
 		</div>
 		<div class="col-xs-12 col-lg-4 footer-right">
 			<p>

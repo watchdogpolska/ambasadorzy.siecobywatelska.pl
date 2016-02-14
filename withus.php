@@ -55,7 +55,7 @@ showHead("Są z nami", "&nbsp;");
 							<?php
 							if(!$isYT):
 							?>
-							<img src='<?php echo $link; ?>' alt='<?php echo $name; ?>'>
+							<img style="max-height: 300px" src='<?php echo $link; ?>' alt='<?php echo $name; ?>'>
 							<?php
 							endif;
 							?>
