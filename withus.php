@@ -13,7 +13,7 @@ showHead("Są z nami", "&nbsp;");
 <div class="row">
 	<div class="grid" id="with-us-grid">
 		<div class="grid-sizer grid-item-with-us"></div>
-		<div class="grid-stamp grid-size-xs-1-1 grid-size-md-1-2 grid-size-stamp-top-right">
+		<div class="grid-stamp grid-size-xs-1-1 grid-size-md-1-3 grid-stamp-top-right">
 			<div class="card">
 				<div class="card--content">
 					<div class="embed-responsive embed-responsive-16by9">
@@ -40,7 +40,10 @@ showHead("Są z nami", "&nbsp;");
 					$replace = "youtube.com/embed/$1";
 					$url = preg_replace($search,$replace,$link);
 					$isYT = true;
-					$yt_embed = '<iframe class="embed-responsive-item" src="'.$url.'" frameborder="0" allowfullscreen></iframe>';
+					$yt_embed = '
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" src="' . $url . '" frameborder="0" allowfullscreen></iframe>
+					</div>';
 				}
 				else{
 					$isYT = false;

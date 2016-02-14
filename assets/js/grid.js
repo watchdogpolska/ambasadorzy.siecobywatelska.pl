@@ -12,13 +12,17 @@
 
 		$('.js-expand-card').click(function (e) {
 			e.preventDefault();
-			var $card = $(this).closest('.card2');
-			var $grid_item = $card.closest('.grid-item');
+			var $current_card = $(this).closest('.card2');
+			var $current_grid_item = $current_card.closest('.grid-item');
 
-			$card.toggleClass('expanded');
-			$grid_item.toggleClass('expanded');
+			$current_card.toggleClass('expanded');
+			$current_grid_item.toggleClass('expanded');
+			$(this).text($current_card.hasClass('expanded') ? "Zwiń <" : "Rozwiń >");
 
-			$(this).text($card.hasClass('expanded') ? "Zwiń <" : "Rozwiń >");
+			$('.card2').not($current_card).removeClass('expanded');
+			$('.grid-item').not($current_grid_item).removeClass('expanded');
+			$('.js-expand-card').not(this).text("Rozwiń >");
+
 			// Refresh grid;
 			$grid.masonry();
 		});

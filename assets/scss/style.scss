@@ -146,16 +146,21 @@ a.support-button{
 .redBlock {
     background:$brand-primary;
     color:#fff;
+    h1, h2, h3, h4, h5, h5 {
+        color: white;
+    }
 }
 
 .blackBlock {
     background:#4d4d4d;
     color:#fff;
+    h1, h2, h3, h4, h5, h5 {
+        color: white;
+    }
 }
 
 .grayBlock {
     background:#F0F0F0;
-    color:#000;
 }
 
 .redBlock a,.blackBlock a {
