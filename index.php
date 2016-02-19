@@ -172,16 +172,6 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 </div>
 <div class="row">
 	<div class="col-xs-12">
-		<div class="clearfix"></div>
-		<div id="descriptionBlock" class="block">
-			<div class="blockContent" style="margin: 0 auto">
-				<a target="_blank" href="http://watchdogportal.pl"><img src="/static/images/sprzyja.png" style="display: block; margin: 0 auto; max-width: 100%; max-height: 200px" alt="Jawność sprzyja!" title="Jawność sprzyja!" /></a>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="row">
-	<div class="col-xs-12">
 		<div id="signFormBlock" class="block grayBlock">
 			<div class="blockContent">
 				<h2>Dołącz&nbsp;do wspierających jawność!</h2>
@@ -250,6 +240,7 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 				Jeśli&nbsp;się&nbsp;z nimi zgadzasz&nbsp;i zamierzasz&nbsp;się&nbsp;nimi kierować, prosimy&nbsp;o podpisanie Kodeksu
 				Ambasadora/Ambasadorki.
 			</p>
+			<div style="color: black">
 			<h3 style="text-align: center">Kodeks Ambasadora/Ambasadorki</h3>
 			<p>Jako Ambasador/Ambasadorka Jawności zobowiązuję się:</p>
 			<ol>
@@ -272,6 +263,7 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 					Ambasadorów&nbsp;i Ambasadorek Jawności.
 				</li>
 			</ol>
+		</div>
 			<hr/>
 			<div class="checkbox">
 				<label for="register_form_datatrue">
@@ -293,7 +285,7 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 					<input type="checkbox" name="data" required id="register_form_data"/>Oświadczam,&nbsp;iż&nbsp;wyrażam zgodę&nbsp;na przetwarzanie moich danych osobowych zgodnie&nbsp;z ustawą&nbsp;o ochronie danych osobowych (z 29 sierpnia 1997 roku) przez Sieć Obywatelską Watchdog Polska, ul.&nbsp;Ursynowska 22/2, 02-605 Warszawa&nbsp;w celach związanych&nbsp;z realizacją programu Ambasadorów&nbsp;i Ambasadorek Jawności oraz&nbsp;na podanie&nbsp;do wiadomości publicznej mojego imienia, nazwiska oraz miejscowości&nbsp;w przypadku zostania Ambasadorem/Ambasadorką Jawności. Jednocześnie potwierdzam, iż zostałem/zostałam poinformowany/a&nbsp;o możliwości sprawdzenia&nbsp;w jaki sposób&nbsp;i w jakim zakresie moje dane są przetwarzane,&nbsp;co zawierają,&nbsp;jak są udostępniane oraz&nbsp;o możliwości usunięcia danych&nbsp;z bazy Sieci Obywatelskiej Watchdog Polska.&nbsp;<abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr>
 				</label>
 			</div>
-			<div class="form-actions"><input type="submit" name="submit" value="Wyślij" style="width: 50%; margin: 0 auto" class="btn btn-primary btn-lg btn-block" id="submit-id-submit"> </div>
+			<div class="form-actions"><input type="submit" name="submit" value="Wyślij" style="width: 50%; margin: 0 auto; margin-top: 1em" class="btn btn-primary btn-lg btn-block" id="submit-id-submit"> </div>
 		</form>
 		<p></p>
 		<p>
@@ -303,6 +295,17 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 		</p>
 	</div>
 </div>
+<div class="row">
+	<div class="col-xs-12">
+		<div class="clearfix"></div>
+		<div id="descriptionBlock" class="block">
+			<div class="blockContent" style="margin: 0 auto">
+				<a target="_blank" href="http://watchdogportal.pl"><img src="/static/images/sprzyja.png" style="display: block; margin: 0 auto; max-width: 100%; max-height: 200px" alt="Jawność sprzyja!" title="Jawność sprzyja!" /></a>
+			</div>
+		</div>
+	</div>
+</div>
+
 <?php
 
 showFooter();
