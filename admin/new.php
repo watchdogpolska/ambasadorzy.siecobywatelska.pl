@@ -41,7 +41,7 @@ if(isset($_POST['sent']) && csrf_validate($_POST['csrf'])) {
 	<div class="container">
 		<h2>Tworzenie użytkownika</h2>
 		<p class="lead">Wypełnij formularz, aby utworzyć nowe konto użytkownika!</p>
-		<?php if(!$failed) {
+		<?php if($failed) {
 		?>
 			<div class="alert alert-danger" role="alert">Nie można utworzyć użytkownika. Sprawdź, czy login nie jest już w użyciu lub hasło nie jest krótsze niż 8 znaków.</div>
 		<?php
@@ -61,7 +61,7 @@ if(isset($_POST['sent']) && csrf_validate($_POST['csrf'])) {
 					<div class="form-group">
 						<label for="field_password" class="col-sm-4 control-label">Hasło: </label>
 						<div class="col-sm-8">
-							<input type="password" name="password" required class="form-control" id="field_password">
+							<input type="password" name="pass" required class="form-control" id="field_password">
 						</div>
 					</div>
 					<div class="form-group">
