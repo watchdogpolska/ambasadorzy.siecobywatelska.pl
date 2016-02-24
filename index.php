@@ -75,23 +75,23 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 			<div class="blockContent">
 				<h2>Dlaczego warto?</h2>
 					<p>
-						Prawo dostępu do&nbsp;informacji i&nbsp;transparentność, to niezaprzeczalne fundamenty zdrowej
-						demokracji oraz praw człowieka i&nbsp;dlatego wciąż wymagają
-						naszej ochrony i&nbsp;promocji.
+						Prawo dostępu&nbsp;do informacji&nbsp;i transparentność,&nbsp;to niezaprzeczalne fundamenty zdrowej
+						demokracji oraz praw człowieka&nbsp;i dlatego wciąż wymagają
+						naszej ochrony&nbsp;i promocji.
 					</p>
 					<p>
-						Dołącz do&nbsp;programu Ambasadorów/Ambasadorek Jawności, jeśli chcesz wesprzeć naszą ideę państwa
-						otwartego, przyjaznego i&nbsp;po prostu lepszego. Pomóżmy dowiedzieć się innym jakie mają prawa i&nbsp;
-						jak mogą z&nbsp;nich korzystać. Stwórzmy grupę osób z&nbsp;różnych środowisk, która
-						będzie zmieniać państwo na wszystkich poziomach.
+						Dołącz&nbsp;do programu Ambasadorów/Ambasadorek Jawności, jeśli chcesz wesprzeć naszą ideę państwa
+						otwartego, przyjaznego&nbsp;i po prostu lepszego. Pomóżmy dowiedzieć&nbsp;się&nbsp;innym jakie mają prawa&nbsp;i
+						jak mogą&nbsp;z nich korzystać. Stwórzmy grupę osób&nbsp;z różnych środowisk, która
+						będzie zmieniać państwo&nbsp;na wszystkich poziomach.
 					</p>
 					<p>
-						Bycie Ambasadorem/Ambasadorką Jawności wiąże się również z&nbsp;indywidulanymi korzyściami m.in.
-						możliwością uczestniczenia w&nbsp;wydarzeniach organizowanych  przez Sieć Obywatelską Watchdog
-						Polska takich jak szkolenia, dyskusje oraz coroczny ,,Toast za jawność’’. Zapraszamy!
+						Bycie Ambasadorem/Ambasadorką Jawności wiąże&nbsp;się&nbsp;również&nbsp;z indywidulanymi korzyściami m.in.
+						możliwością uczestniczenia&nbsp;w wydarzeniach organizowanych  przez Sieć Obywatelską Watchdog
+						Polska takich&nbsp;jak szkolenia, dyskusje oraz coroczny ,,Toast&nbsp;za jawność’’. Zapraszamy!
 					</p>
 					<p>
-						Jeśli nie możesz  dołączyć  do&nbsp;grona Ambasadorów/Ambasadorek, dowiedz się, jak <a href="http://siecobywatelska.pl/wlacz-sie-5min/">inaczej wspierać
+						Jeśli&nbsp;nie możesz  dołączyć &nbsp;do grona Ambasadorów/Ambasadorek, dowiedz się,&nbsp;jak <a href="http://siecobywatelska.pl/wlacz-sie-5min/">inaczej wspierać
 						jawność.</a>
 					</p>
 					<p>
@@ -115,29 +115,29 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 			<div class="blockContent">
 				<h2>Jak zostać Ambasadorem / Ambasadorką Jawności?</h2>
 				<p>
-					Przygotowaliśmy propozycje, które pozwolą Ci wspierać jawność każdego dnia. Realizacja niektórych
-					zajmie najwyżej kilka sekund, inne pozwalają wykazać się w&nbsp;szerszym zakresie. Mamy nadzieję, że w&nbsp;
-					przedstawionym poniżej katalogu działań znajdziesz takie, które Cię zainteresują.
-					A może masz swoje propozycje? Zarejestruj się i&nbsp;przedstaw je nam. Ambasadorstwo można
-					realizować na wiele różnych sposobów!
+					Przygotowaliśmy propozycje, które pozwolą&nbsp;Ci&nbsp;wspierać jawność każdego dnia. Realizacja niektórych
+					zajmie najwyżej kilka sekund, inne pozwalają wykazać&nbsp;się&nbsp;w szerszym zakresie. Mamy nadzieję, że&nbsp;w&nbsp;
+					przedstawionym poniżej katalogu działań znajdziesz takie, które&nbsp;Cię&nbsp;zainteresują.
+					A&nbsp;może masz swoje propozycje? Zarejestruj&nbsp;się&nbsp;i przedstaw&nbsp;je nam. Ambasadorstwo można
+					realizować&nbsp;na wiele różnych sposobów!
 				</p>
 				<div class="freature">
 					<div class="freature-image"><img src="/static/images/icons/contract.svg" alt="" width="" height=""></div>
 					<div class="freature-content">
-						<h3>Zostaw nam informacje o&nbsp;sobie</h3>
-						<p>Zapoznaj się z&nbsp;regulaminem i&nbsp;podpisz Kodeks Ambasadora/Ambasadorki.
-							Pamiętaj, że w&nbsp;ten sposób deklarujesz, iż bliskie Ci są nasze wartości. Informację o&nbsp;możliwości
-							dołączenia do&nbsp; Ambasadorów i&nbsp;Ambasadorek udostępnij znajomym.</p>
+						<h3>Zostaw&nbsp;nam informacje&nbsp;o sobie</h3>
+						<p>Zapoznaj&nbsp;się&nbsp;z regulaminem&nbsp;i podpisz Kodeks Ambasadora/Ambasadorki.
+							Pamiętaj, że&nbsp;w ten sposób deklarujesz, iż bliskie&nbsp;Ci&nbsp;są nasze wartości. Informację&nbsp;o możliwości
+							dołączenia&nbsp;do  Ambasadorów&nbsp;i Ambasadorek udostępnij znajomym.</p>
 					</div>
 				</div>
 				<div class="freature">
 					<div class="freature-image"><img src="/static/images/icons/camera.svg" alt="" width="" height=""></div>
 					<div class="freature-content">
-						<h3>Pochwal się swoim zdjęciem</h3>
+						<h3>Pochwal&nbsp;się&nbsp;swoim zdjęciem</h3>
 						<p>z&nbsp;hasłem promującym jawność (możesz skorzystać
-							z naszych gotowych propozycji – <a href="/download.php" title="Do pobrania">w&nbsp;zakładce do&nbsp;pobrania</a>) lub ilustrującym, co robisz dla tej
-							sprawy. Wyjaśnij, czym się zajmujemy, dlaczego dołączyłaś/dołączyłeś do&nbsp;tej idei. Wyślij
-							nam to zdjęcie, abyśmy mogli zamieścić je na naszej stronie.</p>
+							z&nbsp;naszych gotowych propozycji – <a href="/download.php" title="Do pobrania">w&nbsp;zakładce&nbsp;do pobrania</a>)&nbsp;lub ilustrującym,&nbsp;co robisz&nbsp;dla tej
+							sprawy. Wyjaśnij, czym&nbsp;się&nbsp;zajmujemy, dlaczego dołączyłaś/dołączyłeś&nbsp;do tej idei. Wyślij
+							nam&nbsp;to zdjęcie, abyśmy mogli zamieścić&nbsp;je na naszej stronie.</p>
 					</div>
 				</div>
 				<div class="freature">
@@ -145,25 +145,25 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 					<div class="freature-content">
 						<h3>Udostępniaj informacje </h3>
 						<p>zamieszczane przez Sieć Obywatelską Watchdog Polska. Obserwuj,
-							co się u nas dzieje (np. przez nasz <a href="http://siecobywatelska.pl" target="_blank" title="Sieć Obywatelska Watchdog Polska">portal</a> i&nbsp;<a href="https://www.facebook.com/SiecObywatelskaWatchdogPolska?_rdr=p" target="_blank" title="Nasz FB">profil na Facebooku</a>) i&nbsp;dziel się artykułami, postami,
-							ulotkami, wydarzeniami przez media społecznościowe lub tradycyjnie (wydrukuj materiał lub
-							o nim opowiedz). <a href="http://siecobywatelska.pl/wp-content/uploads/2015/09/Informacja-Publiczna_ulotka-A4-skladana-do-A5-DRUK.pdf">Możesz zacząć od ulotki o&nbsp;dostępie do&nbsp;informacji publicznej.</a></p>
+							co się&nbsp;u nas dzieje (np. przez nasz <a href="http://siecobywatelska.pl" target="_blank" title="Sieć Obywatelska Watchdog Polska">portal</a>&nbsp;i <a href="https://www.facebook.com/SiecObywatelskaWatchdogPolska?_rdr=p" target="_blank" title="Nasz FB">profil&nbsp;na Facebooku</a>)&nbsp;i dziel&nbsp;się&nbsp;artykułami, postami,
+							ulotkami, wydarzeniami przez media społecznościowe&nbsp;lub tradycyjnie (wydrukuj materiał lub
+							o&nbsp;nim opowiedz). <a href="http://siecobywatelska.pl/wp-content/uploads/2015/09/Informacja-Publiczna_ulotka-A4-skladana-do-A5-DRUK.pdf">Możesz zacząć&nbsp;od ulotki&nbsp;o dostępie&nbsp;do informacji publicznej.</a></p>
 					</div>
 				</div>
 				<div class="freature">
 					<div class="freature-image"><img src="/static/images/icons/users.svg" alt="" width="" height=""></div>
 					<div class="freature-content">
-						<h3>Poleć nam kogoś.</h3>
-						<p>Znasz osobę, która podziela nasze wartości? Zaproponuj ją na kolejnego
-							Ambasadora/Ambasadorkę jawności i&nbsp;opowiedz jej o&nbsp;naszych działaniach. Może znasz firmę
-							bądź instytucję, z&nbsp;którą powinniśmy się skontaktować?</p>
+						<h3>Poleć&nbsp;nam kogoś.</h3>
+						<p>Znasz osobę, która podziela nasze wartości? Zaproponuj ją&nbsp;na kolejnego
+							Ambasadora/Ambasadorkę jawności&nbsp;i opowiedz&nbsp;jej o&nbsp;naszych działaniach. Może znasz firmę
+							bądź instytucję,&nbsp;z którą powinniśmy&nbsp;się&nbsp;skontaktować?</p>
 					</div>
 				</div>
 				<div class="freature">
 					<div class="freature-image"><img src="/static/images/icons/currency.svg" alt="" width="" height=""></div>
 					<div class="freature-content">
-						<h3><a href="http://siecobywatelska.pl/wlacz-sie-5min/#wspieraj_siec">Wesprzyj nas finansowo</a></h3>
-						<p>Od lat dbamy, by ludzie wiedzieli, co robi władza. Udzielamy 2000 bezpłatnych porad rocznie, pomagamy w sądach, uczymy mieszkańców i mieszkanki gmin, aby sprawdzali lokalne władze. Dzięki Tobie możemy działać skuteczniej. Już dziś przekaż nam darowiznę i razem z nami twórz standardy jawnego życia publicznego!</p>
+						<h3><a href="http://siecobywatelska.pl/wlacz-sie-5min/#wspieraj_siec">Wesprzyj&nbsp;nas finansowo</a></h3>
+						<p>Od&nbsp;lat dbamy,&nbsp;by ludzie wiedzieli,&nbsp;co robi władza. Udzielamy 2000 bezpłatnych porad rocznie, pomagamy&nbsp;w sądach, uczymy mieszkańców&nbsp;i mieszkanki gmin,&nbsp;aby sprawdzali lokalne władze. Dzięki Tobie możemy działać skuteczniej. Już dziś przekaż&nbsp;nam darowiznę&nbsp;i razem&nbsp;z nami twórz standardy jawnego życia publicznego!</p>
 					</div>
 				</div>
 			</div>
@@ -174,11 +174,11 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 	<div class="col-xs-12">
 		<div id="signFormBlock" class="block grayBlock">
 			<div class="blockContent">
-				<h2>Dołącz do wspierających jawność!</h2>
+				<h2>Dołącz&nbsp;do wspierających jawność!</h2>
 				<p>
-					Zostaw nam krótką informację o&nbsp;sobie, zapoznaj się z&nbsp;regulaminem i&nbsp;podpisz Kodeks Ambasadora/Ambasadorki.
-					Na naszej stronie widoczne będą jedynie Twoje imię, nazwisko i&nbsp;miejscowość oraz zdjęcie, jeśli
-					wyrazisz zgodę na jego opublikowanie.
+					Zostaw&nbsp;nam krótką informację&nbsp;o sobie, zapoznaj&nbsp;się&nbsp;z regulaminem&nbsp;i podpisz Kodeks Ambasadora/Ambasadorki.
+					Na naszej stronie widoczne będą jedynie Twoje imię, nazwisko&nbsp;i miejscowość oraz zdjęcie, jeśli
+					wyrazisz zgodę&nbsp;na jego opublikowanie.
 				</p>
 		<h3 class="text-center">Twoje dane</h3>
 		<?php if($failed) echo '<div id="reqNote">NIE MOŻNA ZAREJESTROWAĆ. SPRAWDŹ POPRAWNOŚĆ DANYCH.</div><br/>'; ?>
@@ -217,7 +217,7 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 				<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['city']); ?>" class="form-control" maxlength="45" name="city" type="text" required id="register_form_city"/>
 			</div>
 			<div class="form-group">
-				<label for="register_form_job">Opisz, czym zajmujesz się zawodowo? <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
+				<label for="register_form_job">Opisz, czym zajmujesz&nbsp;się&nbsp;zawodowo? <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
 				<textarea value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['job']); ?>" class="form-control" maxlength="200" name="job" type="text" required id="register_form_job"></textarea>
 			</div>
 			<div class="form-group">
@@ -229,15 +229,15 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 				<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['address']); ?>" class="form-control" placeholder="ul. Ulica 1/1, 00-001 Miejscowość" maxlength="200" name="address" type="text" id="register_form_address"/>
 			</div>
 			<div class="form-group">
-				<label for="register_form_photo">Twoje zdjęcie - max 1 MB <abbr title="Poprzez przesłanie zdjęcia wyrażasz zgodę na wykorzystanie wizerunku i&nbsp;przesłanej fotografii przez Sieć Obywatelską Watchdog Polska.">(informacje)</abbr></label>
+				<label for="register_form_photo">Twoje zdjęcie -&nbsp;max 1&nbsp;MB&nbsp;<abbr title="Poprzez przesłanie zdjęcia wyrażasz zgodę&nbsp;na wykorzystanie wizerunku&nbsp;i przesłanej fotografii przez Sieć Obywatelską Watchdog Polska.">(informacje)</abbr></label>
 				<input class="form-control" name="photo" type="file" id="register_form_photo"/>
 			</div>
 			</ol>
 			<p>
-				Dziękujemy, że zechciałeś/-aś dołączyć do&nbsp;grona Ambasadorów/Ambasadorek Jawności. Mamy nadzieję, że razem będziemy dążyć do zmiany otaczającej nas rzeczywistości na przejrzystszą, przyjaźniejszą oraz wspólnie ją udoskonalać.
-				Realizacja tego ważnego i&nbsp;odpowiedzialnego zadania będzie możliwa jedynie wtedy, gdy wartości i&nbsp;idee
-				reprezentowane przez Sieć Obywatelską Watchdog Polska będą istotne także dla Ciebie.
-				Jeśli się z&nbsp;nimi zgadzasz i&nbsp;zamierzasz się nimi kierować, prosimy o&nbsp;podpisanie Kodeksu
+				Dziękujemy, że zechciałeś/-aś dołączyć&nbsp;do grona Ambasadorów/Ambasadorek Jawności. Mamy nadzieję, że razem będziemy dążyć&nbsp;do zmiany otaczającej&nbsp;nas rzeczywistości&nbsp;na przejrzystszą, przyjaźniejszą oraz wspólnie ją udoskonalać.
+				Realizacja tego ważnego&nbsp;i odpowiedzialnego zadania będzie możliwa jedynie wtedy,&nbsp;gdy wartości&nbsp;i idee
+				reprezentowane przez Sieć Obywatelską Watchdog Polska będą istotne także&nbsp;dla Ciebie.
+				Jeśli&nbsp;się&nbsp;z nimi zgadzasz&nbsp;i zamierzasz&nbsp;się&nbsp;nimi kierować, prosimy&nbsp;o podpisanie Kodeksu
 				Ambasadora/Ambasadorki.
 			</p>
 			<div style="color: black">
@@ -245,44 +245,44 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 			<p>Jako Ambasador/Ambasadorka Jawności zobowiązuję się:</p>
 			<ol>
 				<li>
-					Działać na rzecz  jawności w&nbsp;życiu publicznym i&nbsp;szeroko rozumianego dobra wspólnego,
+					Działać&nbsp;na rzecz  jawności&nbsp;w życiu publicznym&nbsp;i szeroko rozumianego dobra wspólnego,
 				</li>
 				<li>
-					Wystrzegać się sytuacji, w&nbsp;których moje działania mogłyby być postrzegane jako nieetyczne
+					Wystrzegać&nbsp;się&nbsp;sytuacji,&nbsp;w których moje działania mogłyby być postrzegane jako nieetyczne
 					lub bezprawne,
 				</li>
 				<li>
-					Rzetelnie realizować działania ambasadorskie w&nbsp;oparciu o&nbsp;przygotowane przez Sieć
-					Obywatelską Watchdog Polska dyspozycje, a&nbsp;w&nbsp;szczególności - informować otoczenie o&nbsp;prawie dostępu do&nbsp;informacji oraz wadze jawności w&nbsp;sferze publicznej,
+					Rzetelnie realizować działania ambasadorskie&nbsp;w oparciu&nbsp;o przygotowane przez Sieć
+					Obywatelską Watchdog Polska dyspozycje, a&nbsp;w szczególności - informować otoczenie&nbsp;o prawie dostępu&nbsp;do informacji oraz wadze jawności&nbsp;w sferze publicznej,
 				</li>
 				<li>
-					Oddzielać  działalność ambasadorską od przynoszącej indywidualne korzyści oraz politycznej.
+					Oddzielać  działalność ambasadorską&nbsp;od przynoszącej indywidualne korzyści oraz politycznej.
 				</li>
 				<li>
-					Swoim uczciwym, tolerancyjnym i&nbsp;godnym postępowaniem  budować pozytywny wizerunek
-					Ambasadorów i&nbsp;Ambasadorek Jawności.
+					Swoim uczciwym, tolerancyjnym&nbsp;i godnym postępowaniem  budować pozytywny wizerunek
+					Ambasadorów&nbsp;i Ambasadorek Jawności.
 				</li>
 			</ol>
 		</div>
 			<hr/>
 			<div class="checkbox">
 				<label for="register_form_datatrue">
-					<input type="checkbox" name="kodekstrue" required id="register_form_datatrue"/>Oświadczam, że zapoznałem się ze wszystkimi punktami Kodeksu Ambasadora/Ambasadorki Jawności i zobowiązuję się do jego przestrzegania.<abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr>
+					<input type="checkbox" name="kodekstrue" required id="register_form_datatrue"/>Oświadczam, że zapoznałem się&nbsp;ze wszystkimi punktami Kodeksu Ambasadora/Ambasadorki Jawności&nbsp;i zobowiązuję się&nbsp;do jego przestrzegania.<abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr>
 				</label>
 			</div>
 			<div class="checkbox">
 				<label for="register_form_datatrue">
-					<input type="checkbox" name="datatrue" required id="register_form_datatrue"/>Oświadczam, że zawarte w&nbsp;powyższym formularzu dane są zgodne ze stanem faktycznym. <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr>
+					<input type="checkbox" name="datatrue" required id="register_form_datatrue"/>Oświadczam, że zawarte&nbsp;w powyższym formularzu dane są zgodne&nbsp;ze stanem faktycznym. <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr>
 				</label>
 			</div>
 			<div class="checkbox">
 				<label for="register_form_datareg">
-					<input type="checkbox" name="datareg" required id="register_form_datareg"/>Oświadczam, że zapoznałem(-am) się z&nbsp;<a href="files/regulamin.pdf" target="_blank">Regulaminem Programu</a> i&nbsp;akceptuję jego postanowienia.<abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr>
+					<input type="checkbox" name="datareg" required id="register_form_datareg"/>Oświadczam, że zapoznałem(-am)&nbsp;się&nbsp;z <a href="files/regulamin.pdf" target="_blank">Regulaminem Programu</a>&nbsp;i akceptuję jego postanowienia.<abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr>
 				</label>
 			</div>
 			<div class="checkbox">
 				<label for="register_form_data">
-					<input type="checkbox" name="data" required id="register_form_data"/>Oświadczam, iż wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z&nbsp;ustawą o&nbsp;ochronie danych osobowych (z 29 sierpnia 1997 roku) przez Sieć Obywatelską Watchdog Polska, ul. Ursynowska 22/2, 02-605 Warszawa w&nbsp;celach związanych z&nbsp;realizacją programu Ambasadorów i&nbsp;Ambasadorek Jawności oraz na podanie do&nbsp;wiadomości publicznej mojego imienia, nazwiska oraz miejscowości w&nbsp;przypadku zostania Ambasadorem/Ambasadorką Jawności. Jednocześnie potwierdzam, iż zostałem/zostałam poinformowany/a o&nbsp;możliwości sprawdzenia w&nbsp;jaki sposób i&nbsp;w jakim zakresie moje dane są przetwarzane, co zawierają, jak są udostępniane oraz o&nbsp;możliwości usunięcia danych z&nbsp;bazy Sieci Obywatelskiej Watchdog Polska.&nbsp;<abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr>
+					<input type="checkbox" name="data" required id="register_form_data"/>Oświadczam,&nbsp;iż&nbsp;wyrażam zgodę&nbsp;na przetwarzanie moich danych osobowych zgodnie&nbsp;z ustawą&nbsp;o ochronie danych osobowych (z 29 sierpnia 1997 roku) przez Sieć Obywatelską Watchdog Polska, ul.&nbsp;Ursynowska 22/2, 02-605 Warszawa&nbsp;w celach związanych&nbsp;z realizacją programu Ambasadorów&nbsp;i Ambasadorek Jawności oraz&nbsp;na podanie&nbsp;do wiadomości publicznej mojego imienia, nazwiska oraz miejscowości&nbsp;w przypadku zostania Ambasadorem/Ambasadorką Jawności. Jednocześnie potwierdzam, iż zostałem/zostałam poinformowany/a&nbsp;o możliwości sprawdzenia&nbsp;w jaki sposób&nbsp;i w jakim zakresie moje dane są przetwarzane,&nbsp;co zawierają,&nbsp;jak są udostępniane oraz&nbsp;o możliwości usunięcia danych&nbsp;z bazy Sieci Obywatelskiej Watchdog Polska.&nbsp;<abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr>
 				</label>
 			</div>
 			<div class="form-actions"><input type="submit" name="submit" value="Wyślij" style="width: 50%; margin: 0 auto; margin-top: 1em" class="btn btn-primary btn-lg btn-block" id="submit-id-submit"> </div>

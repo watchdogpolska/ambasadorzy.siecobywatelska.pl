@@ -11,8 +11,8 @@
 	<meta property="og:locale" content="pl_PL" />
 	<meta property="og:image" content="/static/images/sprzyja.png" />
 
-	<link rel="stylesheet" href="/static/css/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/static/css/style.css">
 	<link rel="stylesheet" href="/css/cc-icons.min.css">
 	<link rel="shortcut icon" type='image/x-icon' href='<?php echo htmlspecialchars(url_origin($_SERVER)); ?>/favicon.ico' />
 

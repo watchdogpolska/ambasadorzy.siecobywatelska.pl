@@ -30,14 +30,14 @@ showHead("Firmy", "Oferta dla biznesu");
 		</ul>
 		<p>Szczegółowe warunki współpracy będą omówione i ustalone z firmami deklarującymi chęć współpracy.</p>
 		<h3>W jaki sposób firma zostaje Ambasadorem Jawności?</h3>
-		<ol>
-			<li class="nostyle"><i class="fa fa-arrow-right"></i> Zgłoszenie/zaproszenie do programu.</li>
-			<li class="nostyle"><i class="fa fa-arrow-right"></i> Weryfikacja zgłoszenia.</li>
-			<li class="nostyle"><i class="fa fa-arrow-right"></i> Sprawdzenie referencji kancelarii.</li>
-			<li class="nostyle"><i class="fa fa-arrow-right"></i> Omówienie warunków współpracy.</li>
-			<li class="nostyle"><i class="fa fa-arrow-right"></i> Podpisanie Deklaracji przejrzystości.</li>
-			<li class="nostyle"><i class="fa fa-arrow-right"></i> Realizacja działań w zakresie Programu Ambasadorzy Jawności.</li>
-		</ol>
+		<ul class="list-dotted-brand">
+			<li> Zgłoszenie/zaproszenie do programu.</li>
+			<li> Weryfikacja zgłoszenia.</li>
+			<li> Sprawdzenie referencji kancelarii.</li>
+			<li> Omówienie warunków współpracy.</li>
+			<li> Podpisanie Deklaracji przejrzystości.</li>
+			<li> Realizacja działań w zakresie Programu Ambasadorzy Jawności.</li>
+		</ul>
 		<h3>W jaki sposób sprawdzamy dużą firmę?</h3>
 		<p>Śledzimy informacje na temat firmy na stronie internetowej, prasie branżowej oraz rankingach branżowych. Sprawdzamy:</p>
 		<ul class="list-dotted-brand">

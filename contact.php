@@ -10,7 +10,7 @@ showHead("Kontakt", "&nbsp;");
 			<div id="contactInfo1" class="block grayBlock roksanaBox">
 				<div class="blockContent" style="word-wrap: break-word;padding:50px 0px">
 					<h2 style="margin: 10px 30px">Kontakt</h2>
-					<img class="img-responsive" src="/static/images/roksana_m.jpg" style="width:100%" alt="Roksana Maślankiewicz" />
+					<img class="people-picture" src="/static/images/roksana.jpg" alt="Roksana Maślankiewicz" />
 					<h3 style="margin: 10px 30px"><b>Roksana Maślankiewicz</b></h3>
 					<p style="margin: 10px 30px">Koordynatorka projektu</p>
 					<address style="margin: 0px 30px">
