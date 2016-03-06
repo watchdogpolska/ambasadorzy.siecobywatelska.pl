@@ -4,6 +4,17 @@ include_once("functions.inc.php");
 
 if(!isset($_SESSION['admin'])) header('Location: login.php');
 
+if(isset($_GET['remove'])) {
+	$id = $_GET['remove'];
+	$link = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_BASE);
+	$user = mysqli_query($link, "SELECT * FROM famous WHERE idfamous = ".mysqli_real_escape_string($link, $id));
+	if($user->num_rows == 0) $errormsg = "Sława o zadanym ID nie istnieje. Nie można usunąć.";
+	else {
+		mysqli_query($link, "DELETE FROM famous WHERE idfamous = ".mysqli_real_escape_string($link, $id));
+		$errormsg = "Sława #".htmlspecialchars($id)." została pomyślnie usunięta!";
+	}
+}
+
 if(isset($_POST['sent'])) {
 	$a = $_POST['name'];
 	$b = $_POST['desc'];
@@ -19,6 +30,7 @@ if(isset($_POST['sent'])) {
 	if(!empty($d)) $c = $d;
 
 	mysqli_query($link, "INSERT INTO famous (`name`,`desc`,`videolink`) VALUES ('$a','$b','$c')");
+	
 }
 
 ?>
@@ -32,6 +44,13 @@ if(isset($_POST['sent'])) {
 <div class="container">
 	<h2>Lista celebrytów</h2>
 	<hr/>
+	<?php
+	if(!empty($errormsg)) {
+	?>
+	<div class="alert alert-success" role="alert"><?php echo $errormsg; ?></div>
+	<?php
+	}
+	?>
 	<table class="table table-hover">
 		<thead>
 			<tr>
@@ -53,7 +72,7 @@ if(isset($_POST['sent'])) {
 				<tr data-id="$id">
 					<td><?php echo $name; ?></td>
 					<td><?php echo $link; ?></td>
-					<td><button class="btn btn-danger js-remove-row">Usuń</button></td>
+					<td><button class="btn btn-danger" onclick="document.location.href = 'famous.php?remove=<?php echo $id; ?>';">Usuń</button></td>
 				<?php
 			}
 			?>
@@ -102,17 +121,5 @@ if(isset($_POST['sent'])) {
 	<img src="/static/images/watchdog.png" alt="Logo Watchdog" />
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	<script type="text/javascript">
-	(function($) {
-		$('.js-remove-row').click(function(){
-			var $row = $(this).closest('tr');
-			var id = $row.attr('data-id');
-			$.post('/admin/famous.php', {id: id}, function(data, textStatus, xhr) {
-				$row.remove()
-			});
-			alert("Not implemented :-/")
-		})
-	} (jQuery));
-	</script>
 </div>
 </body>

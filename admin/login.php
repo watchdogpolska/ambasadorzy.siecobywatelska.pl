@@ -57,7 +57,7 @@ if(isset($_POST['sent']) && csrf_validate($_POST['csrf'])) {
 				</div>
 				<div class="form-group">
 					<label for="field_pass">Hasło:</label>
-					<input type="text" name="pass" required="" class="form-control" id="field_pass">
+					<input type="password" name="pass" required="" class="form-control" id="field_pass">
 				</div>
 				<button type="submit" name="sent" class="btn btn-primary">Zaloguj się</button>
 			</form>
