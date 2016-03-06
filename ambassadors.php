@@ -24,9 +24,15 @@ $amb = mysqli_query($link, "SELECT * FROM ambassadors WHERE zaakceptowany = 1");
 						</tr>
 					</thead>
 						<tbody>
-							<tr><td>1</td><td>Jan Kowalski</td><td>Warszawa</td></tr>
-							<tr><td>2</td><td>Janina Kowalska</td><td>Poznań</td></tr>
-							<tr><td>3</td><td>Janusz Kowalski</td><td>Wrocław</td></tr>
+						<?php
+							$id_amb = 1;
+							while($row = mysqli_fetch_array($amb)) {
+								$name = htmlspecialchars($row['imie']." ".$row['nazwisko']);
+								$city = htmlspecialchars($row['miasto']);
+								echo "<tr><td>$id_amb</td><td>$name</td><td>$city</td></tr>";
+							$id_amb++;
+							}
+						?>
 						</tbody>
 				</table>
 			</div>
@@ -262,7 +268,8 @@ $amb = mysqli_query($link, "SELECT * FROM ambassadors WHERE zaakceptowany = 1");
 	}
 
 	<?php
-
+	
+	$amb = mysqli_query($link, "SELECT * FROM ambassadors WHERE zaakceptowany = 1");
 	while($u = mysqli_fetch_array($amb, MYSQLI_ASSOC)) {
 		echo "codeAddressAmb('".htmlspecialchars($u['miasto'])."', '".htmlspecialchars($u['imie']." ".$u['nazwisko']." / ".$u['miasto'])."');
 		";
