@@ -12,7 +12,7 @@
 			</div>
 		</div>
 		<div class="col-xs-12 col-lg-6">
-			<b>Pilnuj też nas: </b><br>
+			<b>Obserwuj nas: </b><br>
 			<a href="https://www.facebook.com/SiecObywatelskaWatchdogPolska/?ref=ts&fref=ts"><span class="fa fa-facebook-official icon-facebook"></span>/SiecObywatelskaWatchdogPolska</a><br>
 			<a href="https://twitter.com/SiecObywatelska"><span class="fa fa-twitter-square icon-twitter"></span>/SiecObywatelska</a>
 		</div>
