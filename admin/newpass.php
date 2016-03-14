@@ -2,39 +2,40 @@
 
 include_once("functions.inc.php");
 
-if(!isset($_SESSION['admin'])) header('Location: login.php');
+if (!isset($_SESSION['admin'])) {
+    header('Location: login.php');
+}
 
 $failed = 0;
 
-if(isset($_POST['sent']) && csrf_validate($_POST['csrf'])) {
+if (isset($_POST['sent']) && csrf_validate($_POST['csrf'])) {
+    $pass1 = $_POST['pass1'];
+    $pass2 = $_POST['pass2'];
 
-	$pass1 = $_POST['pass1'];
-	$pass2 = $_POST['pass2'];
+    if (strlen($pass1) < 8 || strlen($pass2) < 8 || $pass1 != $pass2) {
+        $failed = 1;
+    }
 
-	if(strlen($pass1) < 8 || strlen($pass2) < 8 || $pass1 != $pass2) {
-		$failed = 1;
-	}
+    if (strtoupper($pass1) == $pass1 || strtolower($pass1) == $pass1 || !preg_match("[\W]", $pass1)) {
+        $failed = 1;
+    }
 
-	if(strtoupper($pass1) == $pass1 || strtolower($pass1) == $pass1 || !preg_match("[\W]", $pass1)) {
-		$failed = 1;
-	}
+    if (!$failed) {
+        $link = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_BASE);
 
-	if(!$failed) {
-		$link = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_BASE);
+        $pass1 = mysqli_real_escape_string($link, $pass1);
+        $pass1 = hash("sha512", $pass1);
 
-		$pass1 = mysqli_real_escape_string($link, $pass1);
-		$pass1 = hash("sha512", $pass1);
+        $test = mysqli_query($link, "SELECT * FROM users WHERE idusers = {$_SESSION['admin_id']}");
+        $test = mysqli_fetch_array($test, MYSQLI_ASSOC);
 
-		$test = mysqli_query($link, "SELECT * FROM users WHERE idusers = {$_SESSION['admin_id']}");
-		$test = mysqli_fetch_array($test,MYSQLI_ASSOC);
-
-		if($pass1 == $test['password']) $failed = 1;
-
-		else {
-			mysqli_query($link, "UPDATE users SET password = '$pass1', lastchange='".date("Y-m-d")."' WHERE idusers = {$_SESSION['admin_id']}");
-			header("location: login.php");
-		}
-	}
+        if ($pass1 == $test['password']) {
+            $failed = 1;
+        } else {
+            mysqli_query($link, "UPDATE users SET password = '$pass1', lastchange='".date("Y-m-d")."' WHERE idusers = {$_SESSION['admin_id']}");
+            header("location: login.php");
+        }
+    }
 }
 
 ?>
@@ -53,12 +54,11 @@ if(isset($_POST['sent']) && csrf_validate($_POST['csrf'])) {
 		<p>Musi ono być różne od poprzedniego!</p>
 		<p>Po wysłaniu formularza, zostaniesz wylogowany(a).</p>
 		<p>(Istnieje prawny wymóg zmiany hasła co 30 dni)</p>
-		<?php if($failed) {
-		?>
-			<div class="alert alert-danger" role="alert">Nie można zmienić hasła. Sprawdź, czy podane wartości są takie same i czy mają co najmniej 8 znaków oraz spełniają wymogi!</div>
-		<?php
-		}
-		?>
+		<?php if ($failed) {
+            <div class="alert alert-danger" role="alert">Nie można zmienić hasła. Sprawdź, czy podane wartości są takie same i czy mają co najmniej 8 znaków oraz spełniają wymogi!</div>
+            <?php
+}
+        ?>
 			<form action="newpass.php" method="post">
 				<input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf']; ?>"/>
 				<div class="form-group">

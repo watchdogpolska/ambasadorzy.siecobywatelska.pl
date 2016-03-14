@@ -7,62 +7,71 @@ include_once('db.inc.php');
 
 $failed = 0;
 
-if(isset($_POST['submit']) && csrf_validate($_POST['csrf'])) {
+if (isset($_POST['submit']) && csrf_validate($_POST['csrf'])) {
+    $link = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_BASE);
 
-	$link = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_BASE);
+    $first = mysqli_real_escape_string($link, $_POST['first']);
+    $name = mysqli_real_escape_string($link, $_POST['name']);
+    $phone = mysqli_real_escape_string($link, $_POST['phone']);
+    $city = mysqli_real_escape_string($link, $_POST['city']);
+    $address = mysqli_real_escape_string($link, $_POST['address']);
+    $job = mysqli_real_escape_string($link, $_POST['job']);
+    $mail = mysqli_real_escape_string($link, $_POST['mail']);
+    $why = mysqli_real_escape_string($link, $_POST['why']);
+    if (isset($_FILES['photo'])) {
+        if (file_exists($_FILES['photo']['tmp_name'])) {
+            $foto = $_FILES['photo'];
+        }
+    }
 
-	$first = mysqli_real_escape_string($link, $_POST['first']);
-	$name = mysqli_real_escape_string($link, $_POST['name']);
-	$phone = mysqli_real_escape_string($link, $_POST['phone']);
-	$city = mysqli_real_escape_string($link, $_POST['city']);
-	$address = mysqli_real_escape_string($link, $_POST['address']);
-	$job = mysqli_real_escape_string($link, $_POST['job']);
-	$mail = mysqli_real_escape_string($link, $_POST['mail']);
-	$why = mysqli_real_escape_string($link, $_POST['why']);
-	if(isset($_FILES['photo'])) if(file_exists($_FILES['photo']['tmp_name'])) $foto = $_FILES['photo'];
+    $nam="";
+    $ext="";
 
-	$nam="";$ext="";
+    if (empty($_POST['first']) || empty($_POST['datareg']) || empty($_POST['datatrue']) || empty($_POST['name']) || empty($_POST['phone']) || empty($_POST['city']) || empty($_POST['job'])  || empty($_POST['why']) || empty($_POST['mail']) || empty($_POST['data'])) {
+        $failed = 1;
+    } else {
+        $q = mysqli_query($link, "SELECT * FROM ambassadors WHERE email = '$mail' LIMIT 1");
+        if ($q->num_rows != 0) {
+            $failed = 1;
+        } else {
+            if (isset($foto)) {
+                if (is_uploaded_file($foto["tmp_name"]) && $foto['size'] <= (1024*1024*1024)) {
+                    $x = explode(".", $foto["name"]);
+                    $ext = mysqli_real_escape_string($link, $x[sizeof($x)-1]);
+                    if ($ext == "jpg" || $ext == "png" || $ext == "bmp" || $ext == "gif" || $ext == "jpeg") {
+                        $nam = generateRandomString(32);
+                        move_uploaded_file($foto["tmp_name"], $_SERVER['DOCUMENT_ROOT']."/tmp/$nam.$ext");
+                    } else {
+                        $failed = 1;
+                    }
+                } else {
+                    $failed = 1;
+                }
+            }
 
-	if(empty($_POST['first']) || empty($_POST['datareg']) || empty($_POST['datatrue']) || empty($_POST['name']) || empty($_POST['phone']) || empty($_POST['city']) || empty($_POST['job'])  || empty($_POST['why']) || empty($_POST['mail']) || empty($_POST['data'])) {
-		$failed = 1;
-	}
+            if (!$failed) {
+                $ip = mysqli_real_escape_string($link, get_client_ip_env());
+                $sql = "INSERT INTO ambassadors (imie,nazwisko,email,miasto,telefon,zawod,dlaczego,adres,zdjecie,zaakceptowany,odrzucony,ip) VALUES ('$first','$name','$mail','$city','$phone','$job','$why',";
+                if (empty($address)) {
+                    $sql .= "NULL,";
+                } else {
+                    $sql .= "'$address',";
+                }
+                if (isset($foto)) {
+                    $sql .= "'".$nam.".".$ext."',";
+                } else {
+                    $sql .= "NULL,";
+                }
+                $sql .= "0,0,'$ip')";
 
-	else {
-		$q = mysqli_query($link, "SELECT * FROM ambassadors WHERE email = '$mail' LIMIT 1");
-		if($q->num_rows != 0) $failed = 1;
-		else {
-			if(isset($foto)) {
-				if(is_uploaded_file($foto["tmp_name"]) && $foto['size'] <= (1024*1024*1024)) {
-	 				$x = explode(".",$foto["name"]);
-	 				$ext = mysqli_real_escape_string($link, $x[sizeof($x)-1]);
-	 				if($ext == "jpg" || $ext == "png" || $ext == "bmp" || $ext == "gif" || $ext == "jpeg") {
-	 					$nam = generateRandomString(32);
-	 					move_uploaded_file($foto["tmp_name"], $_SERVER['DOCUMENT_ROOT']."/tmp/$nam.$ext");
-	 				}
-	 				else $failed = 1;
-	 			}
-	 			else {
-	 				$failed = 1;
-	 			}
- 			}
+                mysqli_query($link, $sql);
 
- 			if(!$failed) {
-	 			$ip = mysqli_real_escape_string($link,get_client_ip_env());
-				$sql = "INSERT INTO ambassadors (imie,nazwisko,email,miasto,telefon,zawod,dlaczego,adres,zdjecie,zaakceptowany,odrzucony,ip) VALUES ('$first','$name','$mail','$city','$phone','$job','$why',";
-	 			if(empty($address)) $sql .= "NULL,";
-	 			else $sql .= "'$address',";
-	 			if(isset($foto)) $sql .= "'".$nam.".".$ext."',";
-	 			else $sql .= "NULL,";
-	 			$sql .= "0,0,'$ip')";
-
-	 			mysqli_query($link, $sql);
-
-	 			$_SESSION['registered'] = 1;
-	 			header('Location: registered.php');
-	 			echo "<script>document.location.href = registered.php</script>";
- 			}
-		}
-	}
+                $_SESSION['registered'] = 1;
+                header('Location: registered.php');
+                echo "<script>document.location.href = registered.php</script>";
+            }
+        }
+    }
 
 }
 
@@ -102,11 +111,11 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 		<div id="descriptionBlock" class="block">
 			<div class="blockContent" style="padding: 20 50px; color: #D72626">
 				<?php
-					$img_path = dirname(__FILE__).'/static/images/superbohater.svg';
-					if(file_exists($img_path)){
-						echo file_get_contents($img_path);
-					}
-				?>
+                    $img_path = dirname(__FILE__).'/static/images/superbohater.svg';
+                if (file_exists($img_path)) {
+                    echo file_get_contents($img_path);
+                }
+                ?>
 			</div>
 		</div>
 	</div>
@@ -181,20 +190,26 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 					wyrazisz zgodę&nbsp;na jego opublikowanie.
 				</p>
 		<h3 class="text-center">Twoje dane</h3>
-		<?php if($failed) echo '<div id="reqNote">NIE MOŻNA ZAREJESTROWAĆ. SPRAWDŹ POPRAWNOŚĆ DANYCH.</div><br/>'; ?>
+		<?php if ($failed) {
+            echo '<div id="reqNote">NIE MOŻNA ZAREJESTROWAĆ. SPRAWDŹ POPRAWNOŚĆ DANYCH.</div><br/>';
+} ?>
 		<form action="index.php" method="post" enctype="multipart/form-data" id="register_form">
 			<input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf']; ?>">
 			<div class="row">
 				<div class="col-xs-12 col-md-6">
 					<div class="form-group">
 						<label for="register_form_first">Imię <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
-						<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['first']); ?>" class="form-control" maxlength="45" name="first" type="text" required id="register_form_first"/>
+						<input value="<?php if (isset($_POST['submit'])) {
+                            echo htmlspecialchars($_POST['first']);
+} ?>" class="form-control" maxlength="45" name="first" type="text" required id="register_form_first"/>
 					</div>
 				</div>
 				<div class="col-xs-12 col-md-6">
 					<div class="form-group">
 						<label for="register_form_name">Nazwisko <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
-						<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['name']); ?>" class="form-control" maxlength="45" name="name" type="text" required id="register_form_name"/>
+						<input value="<?php if (isset($_POST['submit'])) {
+                            echo htmlspecialchars($_POST['name']);
+} ?>" class="form-control" maxlength="45" name="name" type="text" required id="register_form_name"/>
 					</div>
 				</div>
 			</div>
@@ -202,23 +217,31 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 				<div class="col-xs-12 col-md-6">
 					<div class="form-group">
 						<label for="register_form_mail">Email <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
-						<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['mail']); ?>" class="form-control" maxlength="60" name="mail" type="email" required id="register_form_mail"/>
+						<input value="<?php if (isset($_POST['submit'])) {
+                            echo htmlspecialchars($_POST['mail']);
+} ?>" class="form-control" maxlength="60" name="mail" type="email" required id="register_form_mail"/>
 					</div>
 				</div>
 				<div class="col-xs-12 col-md-6">
 					<div class="form-group">
 						<label for="register_form_phone">Telefon <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
-						<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['phone']); ?>" class="form-control" maxlength="45" name="phone" type="tel" required id="register_form_phone"/>
+						<input value="<?php if (isset($_POST['submit'])) {
+                            echo htmlspecialchars($_POST['phone']);
+} ?>" class="form-control" maxlength="45" name="phone" type="tel" required id="register_form_phone"/>
 					</div>
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="register_form_city">Miasto <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
-				<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['city']); ?>" class="form-control" maxlength="45" name="city" type="text" required id="register_form_city"/>
+				<input value="<?php if (isset($_POST['submit'])) {
+                    echo htmlspecialchars($_POST['city']);
+} ?>" class="form-control" maxlength="45" name="city" type="text" required id="register_form_city"/>
 			</div>
 			<div class="form-group">
 				<label for="register_form_job">Opisz, czym zajmujesz&nbsp;się&nbsp;zawodowo? <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
-				<textarea value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['job']); ?>" class="form-control" maxlength="200" name="job" type="text" required id="register_form_job"></textarea>
+				<textarea value="<?php if (isset($_POST['submit'])) {
+                    echo htmlspecialchars($_POST['job']);
+} ?>" class="form-control" maxlength="200" name="job" type="text" required id="register_form_job"></textarea>
 			</div>
 			<div class="form-group">
 				<label for="register_form_why">Dlaczego chcesz zostać Ambasadorem Jawności? <abbr title="Pola oznaczone gwiazdką (*) są wymagane">*</abbr></label>
@@ -226,7 +249,9 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 			</div>
 			<div class="form-group">
 				<label for="register_form_address">Adres korespondencyjny</label>
-				<input value="<?php if(isset($_POST['submit'])) echo htmlspecialchars($_POST['address']); ?>" class="form-control" placeholder="ul. Ulica 1/1, 00-001 Miejscowość" maxlength="200" name="address" type="text" id="register_form_address"/>
+				<input value="<?php if (isset($_POST['submit'])) {
+                    echo htmlspecialchars($_POST['address']);
+} ?>" class="form-control" placeholder="ul. Ulica 1/1, 00-001 Miejscowość" maxlength="200" name="address" type="text" id="register_form_address"/>
 			</div>
 			<div class="form-group">
 				<label for="register_form_photo">Twoje zdjęcie -&nbsp;max 1&nbsp;MB&nbsp;<abbr title="Poprzez przesłanie zdjęcia wyrażasz zgodę&nbsp;na wykorzystanie wizerunku&nbsp;i przesłanej fotografii przez Sieć Obywatelską Watchdog Polska.">(informacje)</abbr></label>

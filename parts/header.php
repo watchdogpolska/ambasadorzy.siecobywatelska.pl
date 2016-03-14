@@ -17,7 +17,9 @@
 	<link rel="shortcut icon" type='image/x-icon' href='<?php echo htmlspecialchars(url_origin($_SERVER)); ?>/favicon.ico' />
 
 	<title>
-		<?php if(!empty($subname)) echo $subname.' - '; ?>
+		<?php if (!empty($subname)) {
+            echo $subname.' - ';
+} ?>
 		<?php echo PAGE_NAME; ?>
 	</title>
 </head>
@@ -29,36 +31,35 @@
 				<a href="http://siecobywatelska.pl/wlacz-sie-5min/#ambasadorzy" class="support-button" style="position: relative; float: right; right: auto" target="_blank">Wspieraj nas</a>
 			</div>
 			<?php
-			$current_path = $_SERVER["SCRIPT_NAME"];
-			if($current_path == '/index.php'){
-				$current_path = '/';
-			}
-			$menu_items = [];
-			$menu_items['/'] = 'Dołącz';
-			$menu_items['/ambassadors.php'] = 'Ambasadorzy';
-			$menu_items['/withus.php'] = 'Są z nami';
-			$menu_items['/firmy.php'] = 'Dla firm';
-			$menu_items['/download.php'] = 'Do pobrania';
-			$menu_items['/contact.php'] = 'Kontakt';
-			?>
+            $current_path = $_SERVER["SCRIPT_NAME"];
+            if ($current_path == '/index.php') {
+                $current_path = '/';
+            }
+            $menu_items = [];
+            $menu_items['/'] = 'Dołącz';
+            $menu_items['/ambassadors.php'] = 'Ambasadorzy';
+            $menu_items['/withus.php'] = 'Są z nami';
+            $menu_items['/firmy.php'] = 'Dla firm';
+            $menu_items['/download.php'] = 'Do pobrania';
+            $menu_items['/contact.php'] = 'Kontakt';
+            ?>
 			<nav id="mainMenu">
 				<ul>
 					<?php
-					foreach ($menu_items as $path => $label):
-					?>
-					<li>
-						<?php
-						printf(
-							'<a href="%s"%s>%s</a>',
-							$path,
-							$path == $current_path?' class="active"':'',
-							$label
-							)
-						?>
+                    foreach ($menu_items as $path => $label) :
+                        <li>
+                        <?php
+                        printf(
+                            '<a href="%s"%s>%s</a>',
+                            $path,
+                            $path == $current_path?' class="active"':'',
+                            $label
+                        )
+                        ?>
 					</li>
 					<?php
-					endforeach;
-					?>
+                    endforeach;
+                    ?>
 
 				</ul>
 		</header>

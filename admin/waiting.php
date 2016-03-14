@@ -2,7 +2,9 @@
 
 include_once("functions.inc.php");
 
-if(!isset($_SESSION['admin'])) header('Location: login.php');
+if (!isset($_SESSION['admin'])) {
+    header('Location: login.php');
+}
 
 ?>
 
@@ -21,25 +23,25 @@ if(!isset($_SESSION['admin'])) header('Location: login.php');
 
 		<?php
 
-		$link = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_BASE);
-		$waiting = mysqli_query($link, "SELECT * FROM ambassadors WHERE odrzucony = 0 AND zaakceptowany = 0");
+        $link = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_BASE);
+        $waiting = mysqli_query($link, "SELECT * FROM ambassadors WHERE odrzucony = 0 AND zaakceptowany = 0");
 
-		while($ambasador = mysqli_fetch_array($waiting, MYSQLI_ASSOC)) {
-			$imie = htmlspecialchars($ambasador['imie']);
-			$nazwisko = htmlspecialchars($ambasador['nazwisko']);
-			$email = htmlspecialchars($ambasador['email']);
-			$miasto = htmlspecialchars($ambasador['miasto']);
-			$telefon = htmlspecialchars($ambasador['telefon']);
-			$zawod = htmlspecialchars($ambasador['zawod']);
-			$dlaczego = htmlspecialchars($ambasador['dlaczego']);
-			$adres = htmlspecialchars($ambasador['adres']);
-			$id = htmlspecialchars($ambasador['idambassadors']);
-			$foto = htmlspecialchars($ambasador['zdjecie']);
-			echo "<tr><td>$imie</td><td>$nazwisko</td><td>$miasto</td><td>$telefon</td><td>$email</td><td>$dlaczego</td><td>$zawod</td><td>$adres</td><td><img style='max-width: 200px; max-height: 300px' src='../tmp/$foto' alt=''></td><td><a href='decide.php?uid=$id&a=true&photoid=$foto'>Zatwierdź</a>/<a href='decide.php?uid=$id&a=false&photoid=$foto'>Odrzuć</a></td></tr>";
+        while ($ambasador = mysqli_fetch_array($waiting, MYSQLI_ASSOC)) {
+            $imie = htmlspecialchars($ambasador['imie']);
+            $nazwisko = htmlspecialchars($ambasador['nazwisko']);
+            $email = htmlspecialchars($ambasador['email']);
+            $miasto = htmlspecialchars($ambasador['miasto']);
+            $telefon = htmlspecialchars($ambasador['telefon']);
+            $zawod = htmlspecialchars($ambasador['zawod']);
+            $dlaczego = htmlspecialchars($ambasador['dlaczego']);
+            $adres = htmlspecialchars($ambasador['adres']);
+            $id = htmlspecialchars($ambasador['idambassadors']);
+            $foto = htmlspecialchars($ambasador['zdjecie']);
+            echo "<tr><td>$imie</td><td>$nazwisko</td><td>$miasto</td><td>$telefon</td><td>$email</td><td>$dlaczego</td><td>$zawod</td><td>$adres</td><td><img style='max-width: 200px; max-height: 300px' src='../tmp/$foto' alt=''></td><td><a href='decide.php?uid=$id&a=true&photoid=$foto'>Zatwierdź</a>/<a href='decide.php?uid=$id&a=false&photoid=$foto'>Odrzuć</a></td></tr>";
 
-		}
+        }
 
-		?>
+        ?>
 
 	</table>
 	<br/>

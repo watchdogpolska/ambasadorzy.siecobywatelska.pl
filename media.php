@@ -11,7 +11,6 @@ showHead("Media");
 
 showFooter();
 
-?>
             
 
 

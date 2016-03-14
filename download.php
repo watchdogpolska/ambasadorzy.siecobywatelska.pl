@@ -1,7 +1,7 @@
 <?php
 
 include_once('functions.inc.php');
-showHead("Do pobrania","");
+showHead("Do pobrania", "");
 
 ?>
 
@@ -22,51 +22,51 @@ showHead("Do pobrania","");
 <?php
 $files = [];
 $files[] = [
-	'path' => '/files/regulamin.pdf',
-	'ext' => 'pdf',
-	'label' => 'Regulamin Ambasadorów Jawności',
+    'path' => '/files/regulamin.pdf',
+    'ext' => 'pdf',
+    'label' => 'Regulamin Ambasadorów Jawności',
 ];
 
 $files[] = [
-	'path' => '/files/kodeks.pdf',
-	'ext' => 'pdf',
-	'label' => 'Kodeks Ambasadorów Jawności',
+    'path' => '/files/kodeks.pdf',
+    'ext' => 'pdf',
+    'label' => 'Kodeks Ambasadorów Jawności',
 ];
 
 $files[] = [
-	'path' => '/files/kodeks.pdf',
-	'ext' => 'pdf',
-	'label' => 'Kodeks Ambasadorów Jawności',
+    'path' => '/files/kodeks.pdf',
+    'ext' => 'pdf',
+    'label' => 'Kodeks Ambasadorów Jawności',
 ];
 
 $files[] = [
-	'path' => '/files/dyspozycje.pdf',
-	'ext' => 'pdf',
-	'label' => 'Przykładowe dyspozycje',
+    'path' => '/files/dyspozycje.pdf',
+    'ext' => 'pdf',
+    'label' => 'Przykładowe dyspozycje',
 ];
 
 $files[] = [
-	'path' => '/files/podpisy.pdf',
-	'ext' => 'pdf',
-	'label' => 'Podpisy do zdjęć',
+    'path' => '/files/podpisy.pdf',
+    'ext' => 'pdf',
+    'label' => 'Podpisy do zdjęć',
 ];
 
 $files[] = [
-	'path' => '/files/ulotka.pdf',
-	'ext' => 'pdf',
-	'label' => 'Ulotka pt. "Zostań Ambasadorem Jawności!"',
+    'path' => '/files/ulotka.pdf',
+    'ext' => 'pdf',
+    'label' => 'Ulotka pt. "Zostań Ambasadorem Jawności!"',
 ];
 
 $files[] = [
-	'path' => '/files/ulotka2.pdf',
-	'ext' => 'pdf',
-	'label' => 'Ulotka nt. dostępu do informacji publicznej',
+    'path' => '/files/ulotka2.pdf',
+    'ext' => 'pdf',
+    'label' => 'Ulotka nt. dostępu do informacji publicznej',
 ];
 
 $files[] = [
-	'path' => '/files/pub_zeby.pdf',
-	'ext' => 'pdf',
-	'label' => 'Publikacja pt. "Zdrowe zęby demokracji"',
+    'path' => '/files/pub_zeby.pdf',
+    'ext' => 'pdf',
+    'label' => 'Publikacja pt. "Zdrowe zęby demokracji"',
 ];
 
 
@@ -79,9 +79,9 @@ $files[] = [
 			<div class="grid-sizer grid-size-xs-1-1 grid-size-md-1-2 grid-size-lg-1-3"></div>
 			<div class="grid-gutter"></div>
 			<?php
-			foreach ($files as $file):
-			extract($file);
-			?>
+            foreach ($files as $file) :
+                extract($file);
+            ?>
 			<div class="grid-item grid-size-xs-1-1 grid-size-md-1-2 grid-size-lg-1-3">
 				<div class="card">
 					<div class="card--title">
@@ -98,8 +98,8 @@ $files[] = [
 				</div>
 			</div>
 			<?php
-			endforeach;
-			?>
+            endforeach;
+            ?>
 		</div>
 	</div>
 </div>

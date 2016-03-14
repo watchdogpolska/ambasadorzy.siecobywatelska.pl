@@ -2,18 +2,19 @@
 
 include_once("functions.inc.php");
 
-if(!isset($_SESSION['admin'])) header('Location: login.php');
+if (!isset($_SESSION['admin'])) {
+    header('Location: login.php');
+}
 
-if(isset($_POST['sent']) && csrf_validate($_POST['csrf'])) {
+if (isset($_POST['sent']) && csrf_validate($_POST['csrf'])) {
+    $newname = $_POST['name'];
 
-	$newname = $_POST['name'];
+    $link = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_BASE);
 
-	$link = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_BASE);
+    $newname = mysqli_real_escape_string($link, $newname);
 
-	$newname = mysqli_real_escape_string($link, $newname);
-
-	mysqli_query($link, "UPDATE users SET name = '$newname' WHERE idusers = {$_SESSION['admin_id']}");
-	header("location: login.php");
+    mysqli_query($link, "UPDATE users SET name = '$newname' WHERE idusers = {$_SESSION['admin_id']}");
+    header("location: login.php");
 }
 
 ?>

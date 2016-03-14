@@ -3,9 +3,9 @@
 include_once('functions.inc.php');
 include_once('db.inc.php');
 
-showHead("Ambasadorzy","&nbsp;");
+showHead("Ambasadorzy", "&nbsp;");
 
-$link = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_BASE);
+$link = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_BASE);
 $amb = mysqli_query($link, "SELECT * FROM ambassadors WHERE zaakceptowany = 1");
 
 ?>
@@ -25,14 +25,14 @@ $amb = mysqli_query($link, "SELECT * FROM ambassadors WHERE zaakceptowany = 1");
 					</thead>
 						<tbody>
 						<?php
-							$id_amb = 1;
-							while($row = mysqli_fetch_array($amb)) {
-								$name = htmlspecialchars($row['imie']." ".$row['nazwisko']);
-								$city = htmlspecialchars($row['miasto']);
-								echo "<tr><td>$id_amb</td><td>$name</td><td>$city</td></tr>";
-							$id_amb++;
-							}
-						?>
+                            $id_amb = 1;
+                        while ($row = mysqli_fetch_array($amb)) {
+                            $name = htmlspecialchars($row['imie']." ".$row['nazwisko']);
+                            $city = htmlspecialchars($row['miasto']);
+                            echo "<tr><td>$id_amb</td><td>$name</td><td>$city</td></tr>";
+                            $id_amb++;
+                        }
+                        ?>
 						</tbody>
 				</table>
 			</div>
@@ -268,14 +268,14 @@ $amb = mysqli_query($link, "SELECT * FROM ambassadors WHERE zaakceptowany = 1");
 	}
 
 	<?php
-	
-	$amb = mysqli_query($link, "SELECT * FROM ambassadors WHERE zaakceptowany = 1");
-	while($u = mysqli_fetch_array($amb, MYSQLI_ASSOC)) {
-		echo "codeAddressAmb('".htmlspecialchars($u['miasto'])."', '".htmlspecialchars($u['imie']." ".$u['nazwisko']." / ".$u['miasto'])."');
+    
+    $amb = mysqli_query($link, "SELECT * FROM ambassadors WHERE zaakceptowany = 1");
+    while ($u = mysqli_fetch_array($amb, MYSQLI_ASSOC)) {
+        echo "codeAddressAmb('".htmlspecialchars($u['miasto'])."', '".htmlspecialchars($u['imie']." ".$u['nazwisko']." / ".$u['miasto'])."');
 		";
-	}
+    }
 
-	?>
+    ?>
 
 </script>
 

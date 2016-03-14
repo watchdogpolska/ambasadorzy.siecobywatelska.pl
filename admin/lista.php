@@ -2,7 +2,9 @@
 
 include_once("functions.inc.php");
 
-if(!isset($_SESSION['admin'])) header('Location: login.php');
+if (!isset($_SESSION['admin'])) {
+    header('Location: login.php');
+}
 
 ?>
 
@@ -33,21 +35,21 @@ if(!isset($_SESSION['admin'])) header('Location: login.php');
 			<tbody>
 				<?php
 
-				$link = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_BASE);
-				$waiting = mysqli_query($link, "SELECT * FROM ambassadors WHERE zaakceptowany = 1");
+                $link = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_BASE);
+                $waiting = mysqli_query($link, "SELECT * FROM ambassadors WHERE zaakceptowany = 1");
 
-				while($ambasador = mysqli_fetch_array($waiting, MYSQLI_ASSOC)) {
-					$imie = htmlspecialchars($ambasador['imie']);
-					$nazwisko = htmlspecialchars($ambasador['nazwisko']);
-					$email = htmlspecialchars($ambasador['email']);
-					$miasto = htmlspecialchars($ambasador['miasto']);
-					$telefon = htmlspecialchars($ambasador['telefon']);
-					$zawod = htmlspecialchars($ambasador['zawod']);
-					$dlaczego = htmlspecialchars($ambasador['dlaczego']);
-					$adres = htmlspecialchars($ambasador['adres']);
-					$id = htmlspecialchars($ambasador['idambassadors']);
-					$foto = htmlspecialchars($ambasador['zdjecie']);
-					?>
+                while ($ambasador = mysqli_fetch_array($waiting, MYSQLI_ASSOC)) {
+                    $imie = htmlspecialchars($ambasador['imie']);
+                    $nazwisko = htmlspecialchars($ambasador['nazwisko']);
+                    $email = htmlspecialchars($ambasador['email']);
+                    $miasto = htmlspecialchars($ambasador['miasto']);
+                    $telefon = htmlspecialchars($ambasador['telefon']);
+                    $zawod = htmlspecialchars($ambasador['zawod']);
+                    $dlaczego = htmlspecialchars($ambasador['dlaczego']);
+                    $adres = htmlspecialchars($ambasador['adres']);
+                    $id = htmlspecialchars($ambasador['idambassadors']);
+                    $foto = htmlspecialchars($ambasador['zdjecie']);
+                    ?>
 					<tr>
 						<td><?php echo $imie; ?></td>
 						<td><?php echo $nazwisko; ?></td>
@@ -60,8 +62,8 @@ if(!isset($_SESSION['admin'])) header('Location: login.php');
 						<td><img style='max-width: 200px; max-height: 300px' src='../pic/<?php echo $foto; ?>' alt=''></td>
 					</tr>
 					<?php
-				}
-				?>
+                }
+                ?>
 			</tbody>
 		</table>
 		<br/>

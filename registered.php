@@ -3,7 +3,7 @@
 include_once('functions.inc.php');
 include_once('db.inc.php');
 
-if(!isset($_SESSION['registered'])) {
+if (!isset($_SESSION['registered'])) {
 //header('Location: index.php');
 }
 
