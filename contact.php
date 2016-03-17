@@ -41,7 +41,7 @@ showHead("Kontakt", "&nbsp;");
 				<p>Nr konta do wpłat darowizn:<br>
 				29 2130 0004 2001 0343 2101 0001<br>
 				Volkswagen Bank Direct</p>
-				<img src="/static/images/rysunek.jpg" alt="jawność - rysunek" class="image-responsive" style="display: block;margin: 0 auto;">
+				<img src="/static/images/rysunek.jpg" alt="jawność - rysunek" class="img-responsive center-block">
 			</div>
 		</div>
 	</div>
