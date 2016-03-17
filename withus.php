@@ -24,45 +24,47 @@ showHead("Są z nami", "&nbsp;");
 		</div>
 
 		<?php
-        $link = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_BASE);
-        $celebryci = mysqli_query($link, "SELECT * from famous");
-        while ($celebryta = mysqli_fetch_array($celebryci, MYSQLI_ASSOC)) {
-            $id = $celebryta['idfamous'];
-            $name = htmlspecialchars($celebryta['name']);
-            $link = htmlspecialchars($celebryta['videolink']);
-            $desc = htmlspecialchars($celebryta['desc']);
+		$link = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_BASE);
+		$celebryci = mysqli_query($link, "SELECT * from famous");
+		while($celebryta = mysqli_fetch_array($celebryci, MYSQLI_ASSOC)) {
+			$id = $celebryta['idfamous'];
+			$name = htmlspecialchars($celebryta['name']);
+			$link = htmlspecialchars($celebryta['videolink']);
+			$desc = htmlspecialchars($celebryta['desc']);
 
-            ?>
+			?>
 			<div class="grid-item grid-item-with-us">
 				<?php
-                if (strpos($link, 'youtube') !== false) {
-                    $search = '/youtube\.com\/watch\?v=([a-zA-Z0-9]+)/smi';
-                    $replace = "youtube.com/embed/$1";
-                    $url = preg_replace($search, $replace, $link);
-                    $isYT = true;
-                    $yt_embed = '
+				if (strpos($link,'youtube') !== false) {
+					$search = '/youtube\.com\/watch\?v=([a-zA-Z0-9]+)/smi';
+					$replace = "youtube.com/embed/$1";
+					$url = preg_replace($search,$replace,$link);
+					$isYT = true;
+					$yt_embed = '
 					<div class="embed-responsive embed-responsive-16by9">
 						<iframe class="embed-responsive-item" src="' . $url . '" frameborder="0" allowfullscreen></iframe>
 					</div>';
-                } else {
-                    $isYT = false;
-                }
-                ?>
+				}
+				else{
+					$isYT = false;
+				}
+				?>
 				<div class="card2">
 					<div class="card2--summary">
 						<div class="card2--holder">
 							<?php
-                            if (!$isYT) :
-                                <img style="max-height: 300px" src='<?php echo $link; ?>' alt='<?php echo $name; ?>'>
-                                <?php
-                            endif;
-                            ?>
+							if(!$isYT):
+							?>
+							<img style="max-height: 300px" src='<?php echo $link; ?>' alt='<?php echo $name; ?>'>
+							<?php
+							endif;
+							?>
 						</div>
 						<?php
-                        if ($isYT) {
-                            echo $yt_embed;
-                        }
-                        ?>
+						if($isYT){
+							echo $yt_embed;
+						}
+						?>
 						<div class="card2--short">
 							<h2><?php echo $name; ?></h2>
 							<a href="#" class="js-expand-card">Rozwiń ></a>
@@ -74,8 +76,8 @@ showHead("Są z nami", "&nbsp;");
 				</div>
 			</div>
 			<?php
-        }
-        ?>
+		}
+		?>
 	</div>
 </div>
 <?php

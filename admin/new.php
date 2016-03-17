@@ -2,35 +2,33 @@
 
 include_once("functions.inc.php");
 
-if (!isset($_SESSION['admin'])) {
-    header('Location: login.php');
-}
+if(!isset($_SESSION['admin'])) header('Location: login.php');
 
 $failed = 0;
 
-if (isset($_POST['sent']) && csrf_validate($_POST['csrf'])) {
-    $newname = $_POST['name'];
-    $newlogin = $_POST['user'];
-    $newpass = $_POST['pass'];
+if(isset($_POST['sent']) && csrf_validate($_POST['csrf'])) {
 
-    $link = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_BASE);
+	$newname = $_POST['name'];
+	$newlogin = $_POST['user'];
+	$newpass = $_POST['pass'];
 
-    $newname = mysqli_real_escape_string($link, $newname);
-    $newlogin = mysqli_real_escape_string($link, $newlogin);
+	$link = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_BASE);
 
-    $newpass = mysqli_real_escape_string($link, $newpass);
-    if (strlen($newpass) < 8) {
-        $failed = 1;
-    }
-    $newpass = hash("sha512", $newpass);
+	$newname = mysqli_real_escape_string($link, $newname);
+	$newlogin = mysqli_real_escape_string($link, $newlogin);
 
-    $test = mysqli_query($link, "SELECT * FROM users WHERE login = '$newlogin'");
-    if ($test->num_rows > 0 || $failed) {
-        $failed = 1;
-    } else {
-        mysqli_query($link, "INSERT INTO users (login, password, name) VALUES ('$newlogin','$newpass','$newname')");
-        header("location: index.php?action=created");
-    }
+	$newpass = mysqli_real_escape_string($link, $newpass);
+	if(strlen($newpass) < 8) $failed = 1;
+	$newpass = hash("sha512", $newpass);
+
+	$test = mysqli_query($link, "SELECT * FROM users WHERE login = '$newlogin'");
+	if($test->num_rows > 0 || $failed) $failed = 1;
+
+	else {
+
+		mysqli_query($link, "INSERT INTO users (login, password, name) VALUES ('$newlogin','$newpass','$newname')");
+		header("location: index.php?action=created");
+	}
 }
 
 ?>
@@ -43,11 +41,12 @@ if (isset($_POST['sent']) && csrf_validate($_POST['csrf'])) {
 	<div class="container">
 		<h2>Tworzenie użytkownika</h2>
 		<p class="lead">Wypełnij formularz, aby utworzyć nowe konto użytkownika!</p>
-		<?php if ($failed) {
-            <div class="alert alert-danger" role="alert">Nie można utworzyć użytkownika. Sprawdź, czy login nie jest już w użyciu lub hasło nie jest krótsze niż 8 znaków.</div>
-            <?php
-}
-        ?>
+		<?php if($failed) {
+		?>
+			<div class="alert alert-danger" role="alert">Nie można utworzyć użytkownika. Sprawdź, czy login nie jest już w użyciu lub hasło nie jest krótsze niż 8 znaków.</div>
+		<?php
+		}
+		?>
 		<hr />
 		<div class="row">
 			<div class="col-xs-12 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">

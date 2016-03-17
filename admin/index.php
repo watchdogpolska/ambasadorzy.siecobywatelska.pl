@@ -2,9 +2,7 @@
 
 include_once("functions.inc.php");
 
-if (!isset($_SESSION['admin'])) {
-    header('Location: login.php');
-}
+if(!isset($_SESSION['admin'])) header('Location: login.php');
 
 ?>
 
@@ -19,23 +17,25 @@ if (!isset($_SESSION['admin'])) {
 		<hr/>
 		<?php
 
-        $link = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_BASE);
-        $ambasadorzy = mysqli_query($link, "SELECT * from ambassadors WHERE zaakceptowany = 1");
-        $ambasadorzy_new = mysqli_query($link, "SELECT * from ambassadors WHERE odrzucony = 0 AND zaakceptowany = 0");
+		$link = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_BASE);
+		$ambasadorzy = mysqli_query($link, "SELECT * from ambassadors WHERE zaakceptowany = 1");
+		$ambasadorzy_new = mysqli_query($link, "SELECT * from ambassadors WHERE odrzucony = 0 AND zaakceptowany = 0");
 
-        if (isset($_GET['action']) && $_GET['action'] == "created") {
-            <div class="alert alert-success" role="alert">Użytkownik został utworzony!</div>
-            <?php
-        }
-        ?>
+		if(isset($_GET['action']) && $_GET['action'] == "created"){
+		?>
+			<div class="alert alert-success" role="alert">Użytkownik został utworzony!</div>
+		<?php
+		}
+		?>
 		Aktualna liczba ambasadorów: <?php echo $ambasadorzy->num_rows; ?>
 		<i><a href="lista.php">(lista i dane)</a></i><br/>
 		<?php
-        if ($ambasadorzy_new->num_rows > 0) {
-            <br/><b>Oczekujących na weryfikację:</b> <?php echo $ambasadorzy_new->num_rows; ?><br/><i><a href=waiting.php>(lista i dane)</a></i>
+		if($ambasadorzy_new->num_rows > 0) {
+			?>
+			<br/><b>Oczekujących na weryfikację:</b> <?php echo $ambasadorzy_new->num_rows; ?><br/><i><a href=waiting.php>(lista i dane)</a></i>
 		<?php
-        }
-        ?>
+		}
+		?>
 		<hr/><br/>
 
 		<a href="famous.php">Zarządzaj celebrytami</a><br/>
