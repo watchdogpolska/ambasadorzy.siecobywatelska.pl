@@ -39,7 +39,7 @@
 }
 
 .grid-item-with-us{
-	width: percentage(1/3);
+	width: percentage(1/1);
 	@media screen and (min-width: $screen-md-min) {
 		width: percentage(1/3);
 		&.expanded{
