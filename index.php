@@ -163,7 +163,7 @@ showHead("Strona główna", "Zostań Ambasadorem/Ambasadorką Jawności");
 					<div class="freature-image"><img src="/static/images/icons/currency.svg" alt="" width="" height=""></div>
 					<div class="freature-content">
 						<h3><a href="http://siecobywatelska.pl/wlacz-sie-5min/#wspieraj_siec">Wesprzyj&nbsp;nas finansowo</a></h3>
-						<p>Od&nbsp;lat dbamy,&nbsp;by ludzie wiedzieli,&nbsp;co robi władza. Udzielamy 2000 bezpłatnych porad rocznie, pomagamy&nbsp;w sądach, uczymy mieszkańców&nbsp;i mieszkanki gmin,&nbsp;aby sprawdzali lokalne władze. Dzięki Tobie możemy działać skuteczniej. Już dziś przekaż&nbsp;nam darowiznę&nbsp;i razem&nbsp;z nami twórz standardy jawnego życia publicznego!</p>
+						<p>To dzięki Twojemu wsparciu możemy działać. Jesteśmy niezależni, apolityczni, nie korzystamy z pieniędzy rozdzielanych przez administrację publiczną. Już dziś przekaż nam darowiznę lub ustaw w swoim banku stałe zlecenie. Każda kwota jest dla nas ważna! Nr konta 29 2130 0004 2001 0343 2101 0001 (Volkswagen Bank Direct). Dowiedz się więcej, klikając <a href="http://siecobywatelska.pl/wlacz-sie-5min/#wspieraj_siec">w link.</a></p>
 					</div>
 				</div>
 			</div>
