@@ -14,11 +14,11 @@ showHead("Są z nami", "&nbsp;");
 	<div class="grid" id="with-us-grid">
 		<div class="grid-sizer grid-item-with-us"></div>
 		<div class="grid-stamp grid-size-xs-1-1 grid-size-md-1-3 grid-stamp-top-right">
-			<div class="card">
+			<div class="card" style="padding: 0;">
 				<div class="card--content">
-					<div class="embed-responsive embed-responsive-16by9">
-						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5feZrqYOisY" frameborder="0" allowfullscreen></iframe>
-					</div>
+					<a href="#" class="js-open-video-modal" data-toggle="modal" data-target="#video-modal" data-url="https://www.youtube.com/embed/uPxqXYTzzp8">
+						<img src="http://img.youtube.com/vi/uPxqXYTzzp8/0.jpg" style="width: 100%;" class="img-responsive" alt="Czy można żyć bez informacji? - Youtube">
+					</a>
 				</div>
 			</div>
 		</div>
@@ -36,14 +36,9 @@ showHead("Są z nami", "&nbsp;");
 			<div class="grid-item grid-item-with-us">
 				<?php
 				if (strpos($link,'youtube') !== false) {
-					$search = '/youtube\.com\/watch\?v=([a-zA-Z0-9]+)/smi';
-					$replace = "youtube.com/embed/$1";
-					$url = preg_replace($search,$replace,$link);
+					$embed_url = preg_replace('/^https?:\/\/(?:www.)?youtube\.com\/watch\?v\=([a-zA-Z0-9_]+)/smi', "https://www.youtube.com/embed/$1", $link);
+					$thumbnail_url = preg_replace('/^https?:\/\/(?:www.)?youtube\.com\/watch\?v\=([a-zA-Z0-9_]+)/smi', "https://img.youtube.com/vi/$1/0.jpg", $link);
 					$isYT = true;
-					$yt_embed = '
-					<div class="embed-responsive embed-responsive-16by9">
-						<iframe class="embed-responsive-item" src="' . $url . '" frameborder="0" allowfullscreen></iframe>
-					</div>';
 				}
 				else{
 					$isYT = false;
@@ -60,11 +55,11 @@ showHead("Są z nami", "&nbsp;");
 							endif;
 							?>
 						</div>
-						<?php
-						if($isYT){
-							echo $yt_embed;
-						}
-						?>
+						<?php if($isYT): ?>
+						<a href="#" class="js-open-video-modal" data-toggle="modal" data-target="#video-modal" data-url="<?= htmlspecialchars($embed_url)?>">
+							<img src="<?= htmlspecialchars($thumbnail_url); ?>" style="width: 100%;" class="img-responsive" alt="Youtube">
+						</a>
+						<?php endif; ?>
 						<div class="card2--short">
 							<h2><?php echo $name; ?></h2>
 							<a href="#" class="js-expand-card">Rozwiń ></a>
@@ -78,8 +73,22 @@ showHead("Są z nami", "&nbsp;");
 			<?php
 		}
 		?>
-	</div>
 </div>
+<div class="modal fade" id="video-modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">Podgląd filmu</h4>
+			</div>
+			<div class="modal-body">
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-item embed-responsive-item" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 <?php
 
 showFooter();
