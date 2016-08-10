@@ -6,6 +6,7 @@ var json = JSON.parse(fs.readFileSync("./package.json"));
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var args = require('yargs').argv;
+var spawn = require('child_process').spawn;
 
 
 var config = (function () {
@@ -101,16 +102,26 @@ gulp.task('images', function (){
 		.pipe(reload({ stream:true }));
 });
 
-gulp.task('serve', function (){
+gulp.task('server', function (){
+	var host = args.host || 'localhost:8015';
+	spawn('php', ['-S', host, '-t', '.'], {
+		detached: false,
+		stdio: 'inherit',
+		env: process.env
+	});
+});
+
+gulp.task('proxy', ['server'], function (){
+	var host = args.host || 'localhost:8015';
 	browserSync({
-		proxy: args.host || 'localhost:8000'
+		proxy: args.host || 'localhost:8015'
 	});
 });
 
 gulp.task('config', function (){
 	console.log(config);
 })
-gulp.task("watch", ['serve'], function () {
+gulp.task("watch", ['proxy'], function () {
 
 	config.scss.watch.forEach(function (path) {
 		gulp.watch(path, ["scss"]);
