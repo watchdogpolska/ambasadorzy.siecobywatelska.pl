@@ -10,12 +10,12 @@ showHead("Kontakt", "&nbsp;");
 			<div id="contactInfo1" class="block grayBlock roksanaBox">
 				<div class="blockContent" style="word-wrap: break-word;padding:50px 0px">
 					<h2 style="margin: 10px 30px">Kontakt</h2>
-					<img class="people-picture" src="/static/images/roksana.jpg" alt="Roksana Maślankiewicz" />
-					<h3 style="margin: 10px 30px"><b>Roksana Maślankiewicz</b></h3>
+					<img class="people-picture" src="/static/images/joanna.jpg" alt="Joanna Gucman" />
+					<h3 style="margin: 10px 30px"><b>Joanna Gucman</b></h3>
 					<p style="margin: 10px 30px">Koordynatorka projektu</p>
 					<address style="margin: 0px 30px">
 						<i class="fa fa-envelope fa-fw"></i>
-						<a class="fooBar" style="clear:both;" href="http://www.google.com/recaptcha/mailhide/d?k=0133IYp4KK6_WtYnLoma6bsg==&c=xkFwb7Xs0uxvl9Kz56Fp9GHpm9kZRxoc6SI4Du0zXyGFIJpvo_XHt-_ksaeX7i92"><span>roksana.maslankiewicz</span></a>
+						<a class="fooBar" style="clear:both;" href="http://www.google.com/recaptcha/mailhide/d?k=01u9p-nEmRDruvps08fnl8TQ==&c=rNztTqlgXbHADsqmpWrDyKG22qb606cuyzy4uGcKL9xNTxRLmgnKA1Hwga118IvL"><span>joanna.gucman</span></a>
 						<br>
 						<i class="fa fa-phone fa-fw"></i> 22 844 73 55
 					</address>
