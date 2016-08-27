@@ -34,7 +34,7 @@
 				$current_path = '/';
 			}
 			$menu_items = [];
-			$menu_items['/'] = 'Dołącz';
+			$menu_items['/'] = '<i class="fa fa-home" aria-hidden="true"></i> Dołącz';
 			$menu_items['/ambassadors.php'] = 'Ambasadorzy';
 			$menu_items['/withus.php'] = 'Są z nami';
 			$menu_items['/firmy.php'] = 'Dla firm';
