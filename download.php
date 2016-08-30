@@ -28,19 +28,13 @@ $files[] = [
 ];
 
 $files[] = [
-	'path' => '/files/2016-08-10-Za%C5%82%C4%85cznik%20nr%202%20Deklaracja%20przejrzysto%C5%9Bci.pdf',
+	'path' => '/files/2016-08-30%20Za%C5%82%C4%85cznik%20nr%202%20Deklaracja%20przejrzysto%C5%9Bci.pdf',
 	'ext' => 'pdf',
-	'label' => 'Kodeks Ambasadorów Jawności',
+	'label' => 'Deklaracja Przejrzystości',
 ];
 
 $files[] = [
-	'path' => '/files/kodeks.pdf',
-	'ext' => 'pdf',
-	'label' => 'Deklaracja przejrzystości',
-];
-
-$files[] = [
-	'path' => '/files/dyspozycje.pdf',
+	'path' => '/files/Propozycje%20dzia%C5%82a%C5%84%20AJ.pdf',
 	'ext' => 'pdf',
 	'label' => 'Przykładowe dyspozycje',
 ];
@@ -52,7 +46,7 @@ $files[] = [
 ];
 
 $files[] = [
-	'path' => '/files/ulotka.pdf',
+	'path' => '/files/Ambasadorzy_rki%20Jawno%C5%9Bci-%20ulotka.pdf',
 	'ext' => 'pdf',
 	'label' => 'Ulotka pt. "Zostań Ambasadorem Jawności!"',
 ];
@@ -64,10 +58,36 @@ $files[] = [
 ];
 
 $files[] = [
+	'path' => '/files/2016-08-30%20Za%C5%82%C4%85cznik%20nr%202%20Regulamin%20Programu%20Ambasador%C3%B3w_ek%20Jawno%C5%9Bci.pdf',
+	'ext' => 'pdf',
+	'label' => 'Regulamin Programu Ambasadorów_ek Jawności',
+];
+
+$files[] = [
+	'path' => '/files/2016-08-30%20Regulamin%20strony%20ambasadorzy.siecobywatelska.pl.pdf',
+	'ext' => 'pdf',
+	'label' => 'Regulamin strony',
+];
+
+$files[] = [
+	'path' => '/files/Formularz%20zg%C5%82oszeniowy_Program%20AJ.pdf',
+	'ext' => 'pdf',
+	'label' => 'Formularz zgłoszeniowy dla firm',
+];
+
+$files[] = [
+	'path' => '/files/Formularz%20zg%C5%82oszeniowy_Program%20AJ.docx',
+	'ext' => 'doc',
+	'label' => 'Formularz zgłoszeniowy dla firm',
+];
+
+$files[] = [
 	'path' => '/files/pub_zeby.pdf',
 	'ext' => 'pdf',
 	'label' => 'Publikacja pt. "Zdrowe zęby demokracji"',
 ];
+
+
 
 
 
@@ -85,13 +105,13 @@ $files[] = [
 			<div class="grid-item grid-size-xs-1-1 grid-size-md-1-2 grid-size-lg-1-3">
 				<div class="card">
 					<div class="card--title">
-						<a href="<?php echo $path; ?>">
+						<a href="<?php echo $path; ?>" target="_blank">
 							<img src="/static/images/download.svg" alt="<?php echo $label?>" class="card--icon" width="26" height="33">
 							<?php echo $ext; ?>
 						</a>
 					</div>
 					<div class="card--content">
-						<a href="<?php echo $path; ?>">
+						<a href="<?php echo $path; ?>" target="_blank">
 							<?php echo $label;?>
 						</a>
 					</div>

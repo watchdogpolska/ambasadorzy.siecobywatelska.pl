@@ -48,7 +48,7 @@ showHead("Firmy", "Oferta dla biznesu");
 			<li>banner Programu do zamieszczenia na stronie internetowej Kancelarii;</li>
 			<li>broszurę Dostęp do informacji publicznej w wersji papierowej i elektronicznej;</li>
 		</ul>
-		<p><b>Aby przystąpić do Programu</b> należy <b>wypełnić Formularz zgłoszeniowy</b>, który następnie podlega weryfikacji, polegającej na sprawdzeniu informacji</p> na temat Kancelarii na jej stronie internetowej, w prasie branżowej oraz rankingach branżowych. Szczególne znaczenie ma dla nas:
+		<p><b>Aby przystąpić do Programu</b> należy <b>wypełnić <a href="/files/Formularz%20zg%C5%82oszeniowy_Program%20AJ.pdf" putarget="_blank">Formularz zgłoszeniowy</a></b>, który następnie podlega weryfikacji, polegającej na sprawdzeniu informacji</p> na temat Kancelarii na jej stronie internetowej, w prasie branżowej oraz rankingach branżowych. Szczególne znaczenie ma dla nas:
 		<ul class="list-dotted-brand">
 			<li>Czy Kancelaria współpracuje z organizacjami pozarządowymi bądź działa pro bono;</li>
 			<li>Czy Kancelaria prowadzi działania z zakresu CSR;</li>
