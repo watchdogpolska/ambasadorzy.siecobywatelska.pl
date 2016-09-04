@@ -21,11 +21,6 @@ showHead("Do pobrania","");
 
 <?php
 $files = [];
-$files[] = [
-	'path' => '/files/2016-08-10-Za%C5%82%C4%85cznik%20nr%202%20Regulamin%20Programu%20Ambasador%C3%B3w_ek%20Jawno%C5%9Bci.pdf',
-	'ext' => 'pdf',
-	'label' => 'Regulamin Ambasadorów Jawności',
-];
 
 $files[] = [
 	'path' => '/files/2016-08-30%20Za%C5%82%C4%85cznik%20nr%202%20Deklaracja%20przejrzysto%C5%9Bci.pdf',

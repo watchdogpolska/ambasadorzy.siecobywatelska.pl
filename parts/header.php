@@ -25,7 +25,7 @@
 	<div class="container">
 		<header>
 			<div class="header-top">
-				<a href="/"><img src="/static/images/logo.png" height="81" alt="Logo Ambasadorzy Jawności"></a>
+				<a href="/"><img src="/static/images/logo.png" height="120" alt="Logo Ambasadorzy Jawności"></a>
 				<a href="http://siecobywatelska.pl/wlacz-sie-5min/#ambasadorzy" class="support-button" style="position: relative; float: right; right: auto" target="_blank">Wspieraj nas</a>
 			</div>
 			<?php

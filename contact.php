@@ -10,8 +10,8 @@ showHead("Kontakt", "&nbsp;");
 			<div id="contactInfo1" class="block grayBlock roksanaBox">
 				<div class="blockContent" style="word-wrap: break-word;padding:50px 0px">
 					<h2 style="margin: 10px 30px">Kontakt</h2>
-					<img class="people-picture" src="/static/images/joanna.jpg" alt="Joanna Gucman" />
-					<h3 style="margin: 10px 30px"><b>Joanna Gucman</b></h3>
+					<img class="people-picture" src="/static/images/joanna.jpg" alt="Joanna Gucman-Muż" />
+					<h3 style="margin: 10px 30px"><b>Joanna Gucman-Muż</b></h3>
 					<p style="margin: 10px 30px">Koordynatorka projektu</p>
 					<address style="margin: 0px 30px">
 						<i class="fa fa-envelope fa-fw"></i>
@@ -27,7 +27,7 @@ showHead("Kontakt", "&nbsp;");
 		<div id="contactForm" class="block grayBlock">
 			<div class="blockContent">
 				<h2>Organizator programu</h2>
-				<h3>Sieć Obywatelska – Watchdog Polska<br>
+				<h3>Sieć Obywatelska Watchdog Polska<br>
 				ul. Ursynowska 22/2 02-605<br>
 				Warszawa</h3>
 				<h3><a href="mailto:biuro@siecobywatelska.pl">biuro@siecobywatelska.pl</a></h3>
@@ -41,7 +41,7 @@ showHead("Kontakt", "&nbsp;");
 				<p>Nr konta do wpłat darowizn:<br>
 				29 2130 0004 2001 0343 2101 0001<br>
 				Volkswagen Bank Direct</p>
-				<img src="/static/images/rysunek.jpg" alt="jawność - rysunek" class="img-responsive center-block">
+				<img src="/static/images/watchdog.png" alt="Stowarzyszenie Sieć Obywatelska Watchdog Polska" class="img-responsive center-block">
 			</div>
 		</div>
 	</div>
