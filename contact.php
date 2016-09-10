@@ -15,7 +15,7 @@ showHead("Kontakt", "&nbsp;");
 					<p style="margin: 10px 30px">Koordynatorka projektu</p>
 					<address style="margin: 0px 30px">
 						<i class="fa fa-envelope fa-fw"></i>
-						<a class="fooBar" style="clear:both;" href="http://www.google.com/recaptcha/mailhide/d?k=01u9p-nEmRDruvps08fnl8TQ==&c=rNztTqlgXbHADsqmpWrDyKG22qb606cuyzy4uGcKL9xNTxRLmgnKA1Hwga118IvL"><span>joanna.gucman</span></a>
+						<a class="fooBar" style="clear:both;" href="mailto:joanna.gucman@siecobywatelska.pl"><span>joanna.gucman@siecobywatelska.pl</span></a>
 						<br>
 						<i class="fa fa-phone fa-fw"></i> 22 844 73 55
 					</address>
