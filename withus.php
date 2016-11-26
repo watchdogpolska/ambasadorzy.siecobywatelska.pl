@@ -30,6 +30,7 @@ showHead("Są z nami", "&nbsp;");
 			$id = $celebryta['idfamous'];
 			$name = htmlspecialchars($celebryta['name']);
 			$link = htmlspecialchars($celebryta['videolink']);
+			$www = htmlspecialchars($celebryta['www']);
 			$desc = htmlspecialchars($celebryta['desc']);
 
 			?>
@@ -67,6 +68,9 @@ showHead("Są z nami", "&nbsp;");
 					</div>
 					<div class="card2--detail">
 						<?php echo $desc; ?>
+						<? if(!empty($www)):?>
+						<p><a href="<?php echo $www; ?>">WWW</a></p>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>

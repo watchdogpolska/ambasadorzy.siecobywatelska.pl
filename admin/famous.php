@@ -20,17 +20,19 @@ if(isset($_POST['sent'])) {
 	$b = $_POST['desc'];
 	$c = $_POST['link'];
 	$d = $_POST['piclink'];
+	$e = $_POST['www'];
 
 	$link = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_BASE);
 	$a = mysqli_real_escape_string($link, $a);
 	$b = mysqli_real_escape_string($link, $b);
 	$c = mysqli_real_escape_string($link, $c);
 	$d = mysqli_real_escape_string($link, $d);
+	$e = mysqli_real_escape_string($link, $e);
 
 	if(!empty($d)) $c = $d;
 
-	mysqli_query($link, "INSERT INTO famous (`name`,`desc`,`videolink`) VALUES ('$a','$b','$c')");
-	
+	mysqli_query($link, "INSERT INTO famous (`name`,`desc`,`videolink`,`www`) VALUES ('$a','$b','$c', '$e')");
+
 }
 
 ?>
@@ -98,6 +100,12 @@ if(isset($_POST['sent'])) {
 				<label for="field_4" class="col-sm-4 control-label">Link do filmiku:</label>
 				<div class="col-sm-8">
 					<input name="link" length="90" class="form-control" id="field_link">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="field_www" class="col-sm-4 control-label">WWW:</label>
+				<div class="col-sm-8">
+					<input name="link" length="90" class="form-control" id="field_www">
 				</div>
 			</div>
 			<div class="form-group">
