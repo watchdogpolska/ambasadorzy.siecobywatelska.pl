@@ -16,10 +16,15 @@
 	<link rel="stylesheet" href="/css/cc-icons.min.css">
 	<link rel="shortcut icon" type='image/x-icon' href='<?php echo htmlspecialchars(url_origin($_SERVER)); ?>/favicon.ico' />
 
-	<title>
-		<?php if(!empty($subname)) echo $subname.' - '; ?>
-		<?php echo PAGE_NAME; ?>
-	</title>
+	<title><?php if(!empty($subname)) echo $subname.' - '; ?><?php echo PAGE_NAME; ?></title>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-71083051-5', 'auto');
+		ga('send', 'pageview');
+	</script>
 </head>
 <body style='font-family: "GloberSemibold","GloberRegular",Helvetica,Arial,sans-serif;'>
 	<div class="container">
